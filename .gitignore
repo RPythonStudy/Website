@@ -4,3 +4,4 @@
 .Rproj.user
 *.Rproj
 renv/
+/.quarto/
