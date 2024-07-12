@@ -164,9 +164,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#r-설치" id="toc-r-설치" class="nav-link active" data-scroll-target="#r-설치">R 설치</a></li>
   <li><a href="#rtools-설치" id="toc-rtools-설치" class="nav-link" data-scroll-target="#rtools-설치">Rtools 설치</a></li>
   <li><a href="#r-통합개발환경-integrated-development-enviroment-ide-선택" id="toc-r-통합개발환경-integrated-development-enviroment-ide-선택" class="nav-link" data-scroll-target="#r-통합개발환경-integrated-development-enviroment-ide-선택">R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">Github</a></li>
   <li><a href="#예제-r프로젝트-다운로드" id="toc-예제-r프로젝트-다운로드" class="nav-link" data-scroll-target="#예제-r프로젝트-다운로드">예제 R프로젝트 다운로드</a></li>
   <li><a href="#r-프로젝트-관리" id="toc-r-프로젝트-관리" class="nav-link" data-scroll-target="#r-프로젝트-관리"><strong>R 프로젝트 관리</strong></a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">Github</a></li>
   </ul>
 </nav>
     </div>
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="r-통합개발환경-integrated-development-enviroment-ide-선택" class="level3">
 <h3 class="anchored" data-anchor-id="r-통합개발환경-integrated-development-enviroment-ide-선택">R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</h3>
 <p>RStudio와 VS Code는 모두 각자의 특징을 가진 R 프로그래밍을 위한 통합 개발 환경(IDE)입니다. RStudio는 전용화된 환경으로 R 언어와 관련된 다양한 기능을 직관적으로 제공하며, R 코드 작성, 데이터 시각화, 리포팅 등에 최적화되어 있습니다. 반면에 VS Code는 다양한 프로그래밍 언어를 지원하며, Marketplace에서 제공하는 확장 기능을 통해 개발자가 필요한 기능을 추가할 수 있는 유연성을 가지고 있습니다. VS Code는 경량화된 성능과 통합 터미널 기능을 제공하여 다양한 개발 환경에서 활용될 수 있지만, R에 특화된 기능은 상대적으로 부족할 수 있습니다.</p>
-<p>우리 연구회에서는 RStudio를 우선 추천합니다.</p>
+<p>연구회에서는 RStudio를 우선 추천합니다.</p>
 <section id="rstudio-설치" class="level4">
 <h4 class="anchored" data-anchor-id="rstudio-설치">RStudio 설치</h4>
 <p>자신의 운영체제에 맞는 최신버전의 RStudio를 아래의 공식 다운로드 사이트에서 다운로드 후</p>
@@ -240,22 +240,90 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
+<section id="github" class="level3">
+<h3 class="anchored" data-anchor-id="github">Github</h3>
+<p>GitHub는 버전 관리 시스템인 Git을 기반으로 하여 코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 이를 통해 프로젝트의 과거 버전으로 쉽게 돌아갈 수 있으며, 여러 개발자가 동시에 작업할 때 발생할 수 있는 충돌을 효율적으로 해결할 수 있습니다. 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수 있습니다. GitHub는 또한 프로젝트 관리를 위한 다양한 도구를 제공합니다. 이슈 트래커(issue tracker)를 통해 버그와 기능 개선 사항을 관리할 수 있고, 프로젝트 보드(project board)를 사용하여 작업 흐름을 시각적으로 관리할 수 있습니다. R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 제가 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다. 만약에 git의 사용이 어려우신 분들은 github 원격저장소를 클라우드처럼 생각하시고 필요한 파일들을 직접 하나씩 다운로드 받으셔도 됩니다.</p>
+<section id="설치" class="level4">
+<h4 class="anchored" data-anchor-id="설치">설치</h4>
+<p>Git 공식 사이트에서 자신의 운영체제에 맞는 설치파일로 default 폴더에 설치하시면 됩니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Git 설치파일 다운로드 사이트</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>https<span class="sc">:</span><span class="er">//</span>git<span class="sc">-</span>scm.com<span class="sc">/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>확인은 커맨드창에서 “git –version”을 실행하여 버전이 맞는지 확인하면 됩니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Command</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>git –version</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>다음으로 사용자이름과 이메일 주소를 아래의 git 명령으로 설정해야 합니다. Git은 로컬저장소에서 원격저장소로 파일을 갱신시킬 떄 등에서 (구체적으로는 커밋할 때) 이 정보를 사용하게 됩니다.&nbsp;저의 경우에는 제가 github에 가입했던 name과 email로 설정하였습니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>uer.name 설정예시</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"BenKorea"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>uer.email 설정예시</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email <span class="st">"kimbi.kirams@gmail.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다.</p>
+</section>
+</section>
 <section id="예제-r프로젝트-다운로드" class="level3">
 <h3 class="anchored" data-anchor-id="예제-r프로젝트-다운로드">예제 R프로젝트 다운로드</h3>
-<p>RStudio에서 새로운 프로젝트를 먼저 만듭니다.</p>
+<section id="rstudio-프로젝트-만들기" class="level4">
+<h4 class="anchored" data-anchor-id="rstudio-프로젝트-만들기">1. RStudio 프로젝트 만들기</h4>
 <p>New Project… &gt; New Directory &gt; New Project를 단계적으로 선택하고</p>
-<p>C:\R\Projects 하위에</p>
-<p>Directory name: 에는 R의 버전과 프로젝트를 상징하는 이름을 조합하여 기입합니다.</p>
+<p>C:\R\Projects (=Default working directory) 하위에</p>
+<p>Directory name 입력란에는 아래의 예시와 같이 R의 버전과 프로젝트를 상징하는 이름을 조합하여 입력할 것을 추천합니다.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>예시</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>RPythonStudy<span class="sc">-</span>HANJM</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>R<span class="dv">-4</span>.<span class="fl">4.1</span><span class="sc">-</span>RPythonStudy<span class="sc">-</span>HANJM</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>git repository(=저장소) 만들기와 renv 사용하기 check box는 예제 R프로젝트를 다운로드 하기 위해서는 선택해야 합니다.</p>
+<p>이제 탐색기로 프로젝트 폴더(C:.1-RPythonStudy-HANJM)를 살펴보면 .git 폴더, .Rproj.user 폴더, renv 폴더, .gitignore 파일, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일, renv.lock 파일들이 생성되었음을 확인하실 수 있습니다.</p>
+<p><img src="images/캡처-01.JPG" class="img-fluid"></p>
+<p>git를 사용하기 때문에 설정이 보관되는 .git 폴더와 버전관리 예외(규칙)이 기록되어 있는 .gitignore 파일이 생성되어 있습니다. renv를 사용하기 때문에 프로젝트에 패키지가 설치되는 renv 폴더가 생성되었고 설치되는 패키지의 대한 기록이 되는 renv.lock 파일 생성되어 있습니다. RStudio에서 프로젝트로 이 폴더를 사용하기 때문에 .Rproj.user 폴더, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일이 생성되어 있습니다.</p>
+</section>
+<section id="원격저장소-예제파일-다운로드" class="level4">
+<h4 class="anchored" data-anchor-id="원격저장소-예제파일-다운로드">2. 원격저장소 예제파일 다운로드</h4>
+<p>예제 R프로젝트를 github에 원격저장소에 보관 중이며 URL은 아래와 같습니다.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>원격저장소 URL</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonStudy<span class="sc">/</span>Website.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>uer.email 설정예시</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.name <span class="st">"kimbi.kirams@gmail.com"</span><span class="er">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p>RStudio의 4개의 창 이름은 아래의 그림과 같으며 세부내용은 해당 가이드라인을 참고하시길 바랍니다. <a href="https://docs.posit.co/ide/user/" class="uri">https://docs.posit.co/ide/user/</a></p>
-<p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
+</section>
 </section>
 <section id="r-프로젝트-관리" class="level3">
 <h3 class="anchored" data-anchor-id="r-프로젝트-관리"><strong>R 프로젝트 관리</strong></h3>
@@ -279,18 +347,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="패키지-종속성-관리를-위한-renv" class="level4">
 <h4 class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h4>
 <p>원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. <code>renv</code>는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.</p>
-</section>
-</section>
-<section id="github" class="level3">
-<h3 class="anchored" data-anchor-id="github">Github</h3>
-<p>GitHub는 버전 관리 시스템인 Git을 기반으로 하여 코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 이를 통해 프로젝트의 과거 버전으로 쉽게 돌아갈 수 있으며, 여러 개발자가 동시에 작업할 때 발생할 수 있는 충돌을 효율적으로 해결할 수 있습니다. 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수 있습니다. GitHub는 또한 프로젝트 관리를 위한 다양한 도구를 제공합니다. 이슈 트래커(issue tracker)를 통해 버그와 기능 개선 사항을 관리할 수 있고, 프로젝트 보드(project board)를 사용하여 작업 흐름을 시각적으로 관리할 수 있습니다.</p>
-<section id="설치-및-실행" class="level4">
-<h4 class="anchored" data-anchor-id="설치-및-실행">설치 및 실행</h4>
-<p>Git 공식 사이트(<a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>)에서 자신의 운영체제에 맞는 설치파일로 default 폴더에 설치하고 확인은 커맨드창에서 “git –version”을 실행하여 버전이 맞는지 확인하면 됩니다.</p>
-<p>다음으로 사용자이름과 이메일 주소를 설정해야 합니다. Git은 커밋할 때마다 이 정보를 사용하게 됩니다.&nbsp;</p>
-<p>git config –global user.name “Your Name”</p>
-<p>git config –global user.email “your.email@example.com”</p>
-<p>버전관리를 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 이후에는 RStudio에서 git의 사용 global option과 project option에서 git을 사용하도록 설정해 주시면 됩니다.</p>
 <p>clone</p>
 <p>R 코드예시를 github 원격저장소에서 찾아 볼 수도 있습니다. 찾았을 때 원격저장소의 파일들을 모두 나의 프로젝트 폴더에 다운로드 받는 것을 clone이라 합니다.</p>
 <p>예시로 지금 보시는 website의 원격저장소에 있는 파일들을 clone해 봅시다. RStudio로 프로젝트을 열고 터미널에서 아래의 git 명령을 실행하면 됩니다.</p>
