@@ -1,0 +1,20 @@
+{
+  "about.qmd": {
+    "about.html": "416744b2"
+  },
+  "index.qmd": {
+    "index.html": "71815fb2"
+  },
+  "R_IDE.qmd": {
+    "R_IDE.html": "b8c03d3f"
+  },
+  "R_syntex.qmd": {
+    "R_syntex.html": "51bbf790"
+  },
+  "survival_analysis.qmd": {
+    "survival_analysis.html": "1cd977be"
+  },
+  "Visalization.qmd": {
+    "Visalization.html": "d3a11cf8"
+  }
+}
