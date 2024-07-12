@@ -1,17 +1,17 @@
 project:
   type: website
-  output-dir: .
+  output-dir: ./docs
   
 
 website:
-  title: "RPythonStudy Website"
+  title: "RPythonStudy"
   navbar:
     logo: RPythonStudy_logo.png
     left:
       - href: index.qmd
         text: Home
       - href: R_IDE.qmd
-        text: R통합개발환경
+        text: R통합개발환경구축
       - href: R_manuscript.qmd
         text: R로 논문쓰기
       - href: preprocessing.qmd
@@ -24,4 +24,5 @@ format:
   html:
     theme: cosmo
     css: styles.css
+    code-copy: true
     toc: true

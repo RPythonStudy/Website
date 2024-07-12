@@ -1,12 +1,7 @@
----
-title: R과 Python을 이용한 의료데이터 분석연구회
----
 
-::: {style="text-align: right;"}
+```{r eval=FALSE, filename="e-mail"}
 r.python.study\@gmail.com
-:::
-
-<div style="text-align: left;">
+```
 
 ### **의료데이터 분석연구에서 R과 Python의 필요성**
 
