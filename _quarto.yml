@@ -8,13 +8,13 @@ website:
   navbar:
     logo: RPythonStudy_logo.png
     left:
-      - href: about.qmd
-        text: about
-      - href: R_IDE.qmd
-        text: R 통합개발환경 구축
-      - href: R_syntex.qmd
-        text: R 문법
       - href: index.qmd
+        text: Home
+      - href: R_IDE.qmd
+        text: R통합개발환경
+      - href: R_manuscript.qmd
+        text: R로 논문쓰기
+      - href: preprocessing.qmd
         text: 데이터전처리
       - href: survival_analysis.qmd
         text: 생존분석

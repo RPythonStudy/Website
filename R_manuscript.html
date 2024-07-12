@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>RPythonStudy Website - R 통합개발환경 구축</title>
+<title>RPythonStudy Website - R로 논문쓰기</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,11 +96,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./R_IDE.html" aria-current="page"> 
+    <a class="nav-link" href="./R_IDE.html"> 
 <span class="menu-text">R통합개발환경</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R_manuscript.html"> 
+    <a class="nav-link active" href="./R_manuscript.html" aria-current="page"> 
 <span class="menu-text">R로 논문쓰기</span></a>
   </li>  
   <li class="nav-item">
@@ -127,7 +127,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-프로젝트-관리" id="toc-r-프로젝트-관리" class="nav-link active" data-scroll-target="#r-프로젝트-관리"><strong>R 프로젝트 관리</strong></a></li>
+  <li><a href="#r-코드-실행" id="toc-r-코드-실행" class="nav-link active" data-scroll-target="#r-코드-실행">R 코드 실행</a></li>
+  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R Markdown</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" id="toc-진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" class="nav-link" data-scroll-target="#진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기">1. 진행 중인 프로젝트 파일들을 내 프로젝트로 가져오기</a></li>
+  <li><a href="#자료형-data-type" id="toc-자료형-data-type" class="nav-link" data-scroll-target="#자료형-data-type">자료형 (data type)</a></li>
+  <li><a href="#자료구조-data-structure" id="toc-자료구조-data-structure" class="nav-link" data-scroll-target="#자료구조-data-structure">자료구조 (data structure)</a></li>
   </ul>
 </nav>
     </div>
@@ -136,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R 통합개발환경 구축</h1>
+<h1 class="title">R로 논문쓰기</h1>
 </div>
 
 
@@ -153,80 +158,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="r-설치" class="level4">
-<h4 class="anchored" data-anchor-id="r-설치">R 설치</h4>
-<p>CRAN (The Comprehensive R Archive Network, <a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최선 버전을 다운로드 받아 설치합니다.</p>
-<p>윈도우의 경우 설치폴더는 R 버전이 4.4.0이면 default로 C:\Program Files\R\R-4.0.0로 되지만 C:\R\R-4.4.0을 추천합니다.</p>
+<section id="r-코드-실행" class="level3">
+<h3 class="anchored" data-anchor-id="r-코드-실행">R 코드 실행</h3>
+<p>R을 실행하는 방법에는 여러 가지가 있습니다. R 콘솔에서 한 줄씩 실행하거나, R 스크립트 파일을 Source Pane에서 실행할 수 있습니다.</p>
+</section>
+<section id="r-markdown" class="level3">
+<h3 class="anchored" data-anchor-id="r-markdown">R Markdown</h3>
+<p>R Markdown은 R을 사용하여 데이터를 분석하고 그 결과를 문서화하는 도구입니다. R Markdown을 사용하면 R 코드, 텍스트, 수식, 그래픽을 하나의 문서에 통합하여 보고서, 논문, 슬라이드 프레젠테이션 등을 만들 수 있습니다. 이는 연구 결과를 재현 가능하고 투명하게 문서화하는 데 매우 유용합니다. R Markdown 문서는 기본적으로 YAML 헤더, 본문, R 코드 청크로 구성됩니다.</p>
+<section id="yaml-헤더" class="level4">
+<h4 class="anchored" data-anchor-id="yaml-헤더">1. YAML 헤더</h4>
+<p>YAML 헤더는 문서의 메타데이터를 정의합니다. 여기에는 문서의 제목, 저자, 날짜, 출력 형식 등을 지정할 수 있습니다.</p>
+</section>
+<section id="본문" class="level4">
+<h4 class="anchored" data-anchor-id="본문">2. 본문</h4>
+<p>본문은 Markdown 형식으로 작성되며, 텍스트, 수식, 표, 이미지 등을 포함할 수 있습니다. Markdown 문법을 사용하여 텍스트를 서식화합니다.</p>
+</section>
+<section id="r-코드-청크" class="level4">
+<h4 class="anchored" data-anchor-id="r-코드-청크">3. R 코드 청크</h4>
+<p>R 코드 청크는 R 코드를 포함하여 실행하고 그 결과를 문서에 포함할 수 있습니다. 코드 청크는 백틱(```) 세 개와 <code>{r}</code>으로 시작하고, 닫는 백틱 세 개로 끝납니다.</p>
+</section>
+</section>
+<section id="quarto" class="level3">
+<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+<p>R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 <code>R로 논문쓰기</code> 프로젝트를 Quarto를 사용하여 진행합니다,</p>
+<section id="quarto-프로젝트-구조" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-프로젝트-구조">Quarto 프로젝트 구조</h4>
+</section>
+<section id="프로젝트-폴더" class="level4">
+<h4 class="anchored" data-anchor-id="프로젝트-폴더">1. 프로젝트 폴더</h4>
+<p>Quarto 프로젝트의 최상위 폴더입니다. 이 폴더는 프로젝트의 모든 파일과 디렉토리를 포함합니다. 일반적으로 프로젝트 폴더는 다음과 같은 구조를 가집니다.</p>
+<p><img src="images/clipboard-1017101061.png" class="img-fluid"></p>
+</section>
+<section id="quarto-설정-파일" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-설정-파일">2. Quarto 설정 파일</h4>
+<p><code>_quarto.yml</code> 파일은 Quarto 프로젝트의 설정을 정의합니다. 이 파일에는 프로젝트의 전역 설정, 문서 형식, 테마, 플러그인 등을 정의할 수 있습니다.</p>
+<p><img src="images/clipboard-126186288.png" class="img-fluid"></p>
+<p><code>project</code>: 프로젝트 유형과 출력 디렉토리를 정의합니다.</p>
 <ul>
-<li><p><code>C:\Program Files</code> 폴더 하에 설치: 대부분의 Windows 애플리케이션은 <code>program Files</code> 폴더에 설치되므로 시스템 소프트웨어와 애플리케이션을 관리하는 표준 위치이기 때문에 시스템의 정리가 용이합니다. 또한 <code>Program Files</code> 폴더는 특별한 시스템 권한을 요구하므로 일반 사용자가 이 폴더 내의 파일을 쉽게 변경할 수 없으므로, 악의적인 소프트웨어에 의한 변경으로부터 보호할 수 있습니다. 그러나 R 패키지를 설치하거나 업데이트할 때마다 관리자 권한이 필요하여 사용자가 R을 자유롭게 사용하고자 할 때 불편을 초래할 수 있고 `<code>Program Files`</code>는 경로 내에 공백을 포함하고 있어 일부 오래된 스크립트나 도구에서는 경로 내의 공백을 제대로 처리하지 못할 수 있어 문제가 발생할 수 있습니다.</p></li>
-<li><p><code>C:\</code> 하부에 직접 설치 (예: <code>C:\R</code>): 패키지 설치나 업데이트 시 관리자 권한을 요구하지 않고, 경로에 공백이 없기 때문에, 모든 스크립트나 프로그램에서 호환성 문제 없이 이 경로를 사용할 수 있습니다. 그러나 사용자 권한으로 설치된 프로그램은 보안이 상대적으로 약할 수 있으며, 악의적인 소프트웨어에 의해 변경되기 쉽고, 표준 설치 위치를 사용하지 않는 경우, 시스템의 소프트웨어와 애플리케이션이 분산되어 관리가 어려워질 수 있습니다.</p></li>
-<li><p>결론적으로, 설치 위치를 선택할 때는 보안, 사용 편의성, 시스템 관리의 용이성 등을 고려해야 하는데, 개인 사용자나 개발 환경에서는 <code>C:\R</code>과 같은 사용자 지정 경로가 더 편리할 수 있으며, 기업 환경이나 보안이 중요한 상황에서는 <code>C:\Program Files</code> 폴더 하에 설치하는 것이 더 적합할 수 있습니다.</p></li>
-</ul>
-<p>설치완료 후에는 시스템환경변수에 R 실행파일경로를 지정해 두어야 합니다.</p>
-<ul>
-<li><p>사용자나 RStdio와 같은 프로그램에서 R을 호출할 때나 package등을 설치할 때 시스템에서 R 실행파일의 설치경로를 알아야 원할히 진행됩니다.</p></li>
-<li><p>Win+R로 실행창을 열고 sysdm.cpl 을 입력하는 방식이 빠르며, 시스템속성 고급탭에서 환경변수를 선택한 후 시스템변수 목록에서 path를 선택한 후 새로만들기 또는 편집으로 R 실행파일의 경로를 지정해 주시면 됩니다.</p></li>
-<li><p>지정 후 확인은, Win+R로 실행창을 열고 cmd 입력하여 커맨드창을 열고 “R” 또는 “R —version”을 입력하여 화면의 버전을 확인하시면 됩니다.</p></li>
+<li><p><code>website</code>: 웹사이트의 제목과 네비게이션 바를 정의합니다.</p></li>
+<li><p><code>format</code>: 문서 형식별 설정을 정의합니다 (예: HTML, PDF).</p></li>
 </ul>
 </section>
-<section id="rtools-설치" class="level4">
-<h4 class="anchored" data-anchor-id="rtools-설치">Rtools 설치</h4>
-<p>Rtools는 R 프로그래밍 언어와 관련된 개발 도구 모음으로, 주로 Windows 운영 체제에서 사용됩니다. Rtools의 주요 역할과 기능은 다음과 같습니다:</p>
-<ul>
-<li><p><strong>패키지 컴파일 및 설치</strong>: R 패키지를 설치하거나 업데이트할 때, 특히 CRAN에서 제공하는 패키지 중 일부는 소스 코드 형태로 제공됩니다. 이 경우 Rtools는 해당 소스 코드를 컴파일하여 설치할 수 있도록 도와줍니다.</p></li>
-<li><p><strong>GNU 빌드 도구 제공</strong>: Rtools는 GCC(gnu 컴파일러 컬렉션), make, tar, git 등과 같은 GNU 빌드 도구를 포함하고 있어, Windows 환경에서도 리눅스와 유사한 빌드 환경을 제공합니다.</p></li>
-<li><p><strong>R 패키지 개발 지원</strong>: R 패키지를 개발하는 과정에서 필요한 다양한 도구와 라이브러리를 제공합니다. 특히, C/C++ 코드와 연동되는 R 패키지를 개발할 때 유용합니다.</p></li>
-<li><p><strong>명령줄 도구</strong>: 명령줄에서 R 및 관련 작업을 수행할 수 있는 도구들을 제공합니다. 이를 통해 보다 정교하고 복잡한 작업을 자동화할 수 있습니다.</p></li>
-</ul>
-<p>Rtools의 설치파일도 역시 CRAN에서 다운로드 하시면 되고, 설치폴더는 C 드라이브 루트가 권장됩니다 (예시 C:\rtools44). 시스템환경변수에서 Rtools 실행파일의 경로설정은 설치과정에서 자동으로 됩니다. (안되어 있으면 수동으로 설정하시길 바랍니다.) 시스템환경변수에 실행파일의 경로설정 확인은 R 콘솔에서 Sys.which(“make”) 실행하여 설치경로를 제대로 반환하면 성공임을 알 수 있습니다.</p>
+<section id="quarto-문서-파일" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-문서-파일">3. Quarto 문서 파일</h4>
+<p>Quarto 문서 파일(<code>.qmd</code> 확장자)은 Markdown 형식으로 작성되며, YAML 헤더, 본문, 코드 청크로 구성됩니다. Quarto 문서는 R, Python, Julia, Observable JavaScript 등의 언어를 포함할 수 있습니다.</p>
+<p><img src="images/clipboard-1442668467.png" class="img-fluid"></p>
 </section>
-<section id="r-통합개발환경-integrated-development-enviroment-ide-선택" class="level4">
-<h4 class="anchored" data-anchor-id="r-통합개발환경-integrated-development-enviroment-ide-선택">R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</h4>
-<p>RStudio와 VS Code는 모두 각자의 특징을 가진 R 프로그래밍을 위한 통합 개발 환경(IDE)입니다. RStudio는 전용화된 환경으로 R 언어와 관련된 다양한 기능을 직관적으로 제공하며, R 코드 작성, 데이터 시각화, 리포팅 등에 최적화되어 있습니다. 반면에 VS Code는 다양한 프로그래밍 언어를 지원하며, Marketplace에서 제공하는 확장 기능을 통해 개발자가 필요한 기능을 추가할 수 있는 유연성을 가지고 있습니다. VS Code는 경량화된 성능과 통합 터미널 기능을 제공하여 다양한 개발 환경에서 활용될 수 있지만, R에 특화된 기능은 상대적으로 부족할 수 있습니다.</p>
-<p>RStudio의 4개의 창 이름은 아래의 그림과 같으며 세부내용은 해당 가이드라인을 참고하시길 바랍니다. <a href="https://docs.posit.co/ide/user/" class="uri">https://docs.posit.co/ide/user/</a></p>
-<p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
+<section id="quarto-문서-작성-및-편집" class="level4">
+<h4 class="anchored" data-anchor-id="quarto-문서-작성-및-편집">4. Quarto 문서 작성 및 편집</h4>
+<p><code>index.qmd</code>, <code>about.qmd</code> 등의 파일을 생성하고 내용을 작성합니다.</p>
 </section>
-<section id="rstudio" class="level4">
-<h4 class="anchored" data-anchor-id="rstudio">RStudio</h4>
-<p>우리 연구회에서는 RStudio를 우선 추천하며 해당사이트 (<a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a>)에서 운영체제에 맞는 설치파일을 다운로드 후 default 폴더에 설치하시고 global option에서 원하는 R 버전을 link하시면 됩니다.</p>
+<section id="문서-렌더링" class="level4">
+<h4 class="anchored" data-anchor-id="문서-렌더링">5. 문서 렌더링</h4>
+<p>Quarto 문서 렌더링은 Quarto 파일(<code>.qmd</code>)을 HTML, PDF, Word, 슬라이드 프레젠테이션 등 다양한 형식으로 변환하는 과정입니다. Quarto는 이 과정을 통해 데이터 분석, 코드 실행, 결과 시각화 등을 포함한 완전한 문서를 생성합니다. 렌더링 과정은 명령어 기반으로 수행되며, Quarto CLI(Command Line Interface)를 통해 이루어집니다.</p>
+<p><img src="images/clipboard-2934308404.png" class="img-fluid"></p>
+<p>연구회에서는 우선 샘플 생존자료를 R로 분석하고 결과가 논문에 자동갱신되도록 만들어 보는 것도 목표로 하고 있습니다. R로 에 자동으로 갱신되도록 하는 것을 목표로 하고 있습니다. 관련된 R 코드의 작성을 공부하기 위해서는 코드를 직접 연구회에 논문RStudio에서 New Project 메뉴로 만듭니다. 디렉토리를 만들면 프로젝트를 생성하면 폴더엑통계분석을 위해 SPSS 등에 수집된 자료를 엑셀로부터 가져오기를 하듯이 직접 입력하던지 엑셀파이를 는 엑셀일 경우가 많다. vld</p>
 </section>
-<section id="r-프로젝트-관리" class="level3">
-<h3 class="anchored" data-anchor-id="r-프로젝트-관리"><strong>R 프로젝트 관리</strong></h3>
-<section id="실행파일-버전관리" class="level4">
-<h4 class="anchored" data-anchor-id="실행파일-버전관리">실행파일 버전관리</h4>
-<p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 아래의 예시와 같은 폴더구조가 추천됩니다.</p>
-<p>C:\R</p>
-<p>├── R-4.4.0</p>
-<p>└── R-4.4.1</p>
 </section>
-<section id="프로젝트-폴더관리" class="level4">
-<h4 class="anchored" data-anchor-id="프로젝트-폴더관리">프로젝트 폴더관리</h4>
-<p>R 실행파일을 C 드라이브 R 폴더 하위에 설치한 것을 고려하면 Project 폴더를 C:\R\Projects 하위폴더에 R 버전과 프로젝트명을 폴더명으로 하여 관리하는 것을 추천합니다.</p>
-<p>C:\ R</p>
-<p>├── R-4.4.0</p>
-<p>├── R-4.4.1</p>
-<p>└── Projects</p>
-<p>|</p>
-<p>| └── R-4.4.1-RPythonStudy_Website</p>
-<p><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></p>
-<p>원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. <code>renv</code>는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.</p>
+<section id="진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" class="level3">
+<h3 class="anchored" data-anchor-id="진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기">1. 진행 중인 프로젝트 파일들을 내 프로젝트로 가져오기</h3>
+<p>R에서는 메모리에 저장하거나 메모리에서 읽어 올 수 있는 모든 데이터 단위를 객체(objects)라고 부릅니다 (<a href="https://kilhwan.github.io/rprogramming/ch-R-List.html#%EA%B0%9D%EC%B2%B4-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%83%80%EC%9E%85-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EC%86%8D%EC%84%B1" class="uri">https://kilhwan.github.io/rprogramming/ch-R-List.html#%EA%B0%9D%EC%B2%B4-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%83%80%EC%9E%85-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EC%86%8D%EC%84%B1</a>). 객체(object)의 종류를 알아보기 위해 3가지 종류의 함수의 결과를 비교해보는 것은 유용합니다.</p>
+<p><img src="images/clipboard-98181618.png" class="img-fluid"></p>
 </section>
-<section id="github" class="level4">
-<h4 class="anchored" data-anchor-id="github">Github</h4>
-<p>GitHub는 버전 관리 시스템인 Git을 기반으로 하여 코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 이를 통해 프로젝트의 과거 버전으로 쉽게 돌아갈 수 있으며, 여러 개발자가 동시에 작업할 때 발생할 수 있는 충돌을 효율적으로 해결할 수 있습니다. 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수 있습니다. GitHub는 또한 프로젝트 관리를 위한 다양한 도구를 제공합니다. 이슈 트래커(issue tracker)를 통해 버그와 기능 개선 사항을 관리할 수 있고, 프로젝트 보드(project board)를 사용하여 작업 흐름을 시각적으로 관리할 수 있습니다.</p>
+<section id="자료형-data-type" class="level3">
+<h3 class="anchored" data-anchor-id="자료형-data-type">자료형 (data type)</h3>
+<section id="numeric" class="level4">
+<h4 class="anchored" data-anchor-id="numeric">numeric</h4>
 </section>
-<section id="설치-및-실행" class="level4">
-<h4 class="anchored" data-anchor-id="설치-및-실행">설치 및 실행</h4>
-<p>Git 공식 사이트(<a href="https://git-scm.com/" class="uri">https://git-scm.com/</a>)에서 자신의 운영체제에 맞는 설치파일로 default 폴더에 설치하고 확인은 커맨드창에서 “git –version”을 실행하여 버전이 맞는지 확인하면 됩니다.</p>
-<p>다음으로 사용자이름과 이메일 주소를 설정해야 합니다. Git은 커밋할 때마다 이 정보를 사용하게 됩니다.&nbsp;</p>
-<p>git config –global user.name “Your Name”</p>
-<p>git config –global user.email “your.email@example.com”</p>
-<p>버전관리를 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 이후에는 RStudio에서 git의 사용 global option과 project option에서 git을 사용하도록 설정해 주시면 됩니다.</p>
-<p>clone</p>
-<p>R 코드예시를 github 원격저장소에서 찾아 볼 수도 있습니다. 찾았을 때 원격저장소의 파일들을 모두 나의 프로젝트 폴더에 다운로드 받는 것을 clone이라 합니다.</p>
-<p>예시로 지금 보시는 website의 원격저장소에 있는 파일들을 clone해 봅시다. RStudio로 프로젝트을 열고 터미널에서 아래의 git 명령을 실행하면 됩니다.</p>
-<p>git clone <a href="https://github.com/RPythonStudy/Website" class="uri">https://github.com/RPythonStudy/Website</a></p>
-<p>프로젝트 폴더 하위에 Website 폴더가 만들어지면서 다운로드 됩니다.</p>
+<section id="double" class="level4">
+<h4 class="anchored" data-anchor-id="double"><strong>double</strong></h4>
+<p>R에서 숫자형 데이터를 가리킬 때 <code>numeric</code>이라는 개념을 사용하며 이는 정수와 소수를 모두 포함합니다. 그래서 스크립트에서 자료형을 알아내는 내장(built in) 함수 <code>typeof</code>로 숫자 1 또는 3.14의 자료형을 확인한다면 모두 <code>double</code>을 반환합니다 (이는 R에서 정수형과 실수형 데이터 모두가 기본적으로는 double 형식으로 저장되기 때문입니다).</p>
+</section>
+<section id="integer" class="level4">
+<h4 class="anchored" data-anchor-id="integer">Integer</h4>
+<p>만약 스크립트에서 변수에 명시적으로 정수만을 할당하여 사용할려면 끝부분에 <code>L</code>을 붙여주거나</p>
+<p>예시) i &lt;- 5L</p>
+<p>as.Integer 함수로 정수형으로 변환해서 사용할 수 있습니다. 이 때는 <code>typeof</code> 해보면 <code>integer</code>를 반환합니다.</p>
+</section>
+<section id="character" class="level4">
+<h4 class="anchored" data-anchor-id="character">character</h4>
+<p>문자형데이터를 기리킵니다.</p>
+</section>
+<section id="logical" class="level4">
+<h4 class="anchored" data-anchor-id="logical">logical</h4>
+<p>논리형데이터 (TRUE/FALSE)를 가리킵니다,</p>
+<p>이외에도 복소수형과 Raw 자료형도 있다.</p>
+</section>
+</section>
+<section id="자료구조-data-structure" class="level3">
+<h3 class="anchored" data-anchor-id="자료구조-data-structure">자료구조 (data structure)</h3>
+<section id="vector" class="level4">
+<h4 class="anchored" data-anchor-id="vector">vector</h4>
+<p>같은 자료형의 일차원적 배열</p>
+</section>
+<section id="matrix" class="level4">
+<h4 class="anchored" data-anchor-id="matrix"><strong>matrix</strong></h4>
+<p>같은 자료형의 이차원적 배열</p>
+</section>
+<section id="array" class="level4">
+<h4 class="anchored" data-anchor-id="array">array</h4>
+<p>같은 자료형의 삼차원적 배열</p>
+</section>
+<section id="data.frame" class="level4">
+<h4 class="anchored" data-anchor-id="data.frame">data.frame</h4>
+<p>컬럼별로 자료형이 다를 수 있는 이차원적 배열</p>
+</section>
+<section id="list" class="level4">
+<h4 class="anchored" data-anchor-id="list">list</h4>
+<p>다른 자료형이나 구조의 일차원적인 배열</p>
+</section>
+<section id="factor" class="level4">
+<h4 class="anchored" data-anchor-id="factor">factor</h4>
+<p>문자열과 level 그리고 값을 가지고 있어 자료형이라기 보다 자료구조라고 보는 것이 맞음</p>
 
 
 </section>
