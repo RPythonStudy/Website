@@ -11,7 +11,7 @@ website:
       - href: index.qmd
         text: Home
       - href: R_IDE.qmd
-        text: R통합개발환경구축
+        text: R개발환경구축
       - href: R_manuscript.qmd
         text: R로 논문쓰기
       - href: preprocessing.qmd
