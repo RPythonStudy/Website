@@ -1,6 +1,8 @@
-### RStudio에서 R 스크립트 실행방법
+### RStudio에서 R 스크립트 실행결과
 
-RStudio에서 R을 실행하는 방법에는 여러 가지가 있습니다. R 콘솔에서 한 줄씩 실행하거나, R 스크립트 파일을 Source Pane에서 실행할 수 있습니다.
+RStudio에서 R 스크립트를 실행하면 주로 콘솔 창에서 결과를 확인할 수 있습니다. 이곳에서 사용자가 직접 코드를 입력하거나, 스크립트 전체를 `Source` 버튼 클릭이나 단축키를 사용해 실행했을 때 결과가 순차적으로 표시됩니다. 그래픽 출력은 오른쪽 하단에 위치한 Plots 창에서 볼 수 있으며, HTML 위젯이나 대화형 문서는 Viewer 창에서 확인 가능합니다. 변수와 데이터셋의 현재 상태는 Environment 창에서 볼 수 있고, 스크립트나 함수가 생성하거나 수정한 파일은 Files 탭을 통해 접근할 수 있습니다.
+
+![](images/clipboard-2730531706.png)
 
 ### R Markdown
 
@@ -20,9 +22,9 @@ R 코드 청크는 R 코드를 포함하여 실행하고 그 결과를 문서에
 
 ### Quarto
 
-R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 `R로 논문쓰기` 프로젝트를 Quarto를 사용하여 진행합니다,
+R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 `R로 논문쓰기` 프로젝트를 Quarto를 사용하여 진행합니다, Quarto 문서의 기본구조는 R Markdown과 같이 TAML 헤더, 본문, R코드청크로 구성됩니다.
 
-#### Quarto 프로젝트 구조
+#### Quarto manuscript 프로젝트 파일구성
 
 #### 1. 프로젝트 폴더
 
@@ -34,7 +36,26 @@ Quarto 프로젝트의 최상위 폴더입니다. 이 폴더는 프로젝트의 
 
 `_quarto.yml` 파일은 Quarto 프로젝트의 설정을 정의합니다. 이 파일에는 프로젝트의 전역 설정, 문서 형식, 테마, 플러그인 등을 정의할 수 있습니다.
 
-![](images/clipboard-126186288.png)
+```{r quarto.yml, eval=FALSE, filename="_quarto.yml"}
+project:
+  type: manuscript
+
+manuscript:
+  article: index.qmd
+
+format:
+  html:
+    comments: 
+      hypothesis: true 
+  docx: default 
+  jats: default
+
+execute:
+  freeze: false
+
+editor: visual
+```
+
 
 `project`: 프로젝트 유형과 출력 디렉토리를 정의합니다.
 
