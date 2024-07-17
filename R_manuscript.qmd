@@ -12,9 +12,11 @@ R Markdown은 markdown이라는 문서작성 언어로 작성된 문서 내에 R
 
 ### Quarto
 
-R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 `R로 논문쓰기` 프로젝트를 Quarto를 사용하여 진행합니다, Quarto 문서의 기본구조는 R Markdown과 같이 TAML 헤더, 본문, R코드청크로 구성됩니다.
+R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 `R로 논문쓰기` 프로젝트를 Quarto를 사용하여 진행합니다, Quarto 문서의 기본구조는 R Markdown과 같이 YAML 헤더, 본문, R코드청크로 구성됩니다.
 
 #### Quarto manuscript 프로젝트 파일구성
+
+R로 논문쓰기에 적합한 프로젝트 종류입니다.
 
 #### 1. 프로젝트 폴더
 
