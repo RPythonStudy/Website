@@ -244,7 +244,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\R\Projects</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>개발자들은 R을 command line interface로 사용하기 보다는 RStudio로 사용한다고 생각됩니다. 그러한 측면에서 R 사용법과 RStudio 사용법은 밀접하게 연계된 셈이며, 사용법에 대한 자료는 RStudio를 개발한 posit에서 만든 RSudio에 내장된 Tutorials가 있습니다. 를 이용해 볼 수 있습니다. 링크를 타고들어가보면 Beginners, Intermediates, Experts 과정들이 있으므로 상황에 맞는 과정들을 선택해서 시작하면 좋습니다.</p>
+<p>RStudio 매뉴얼은 개발사인 posit이 만든 <a href="https://docs.posit.co/ide/user/" class="uri">https://docs.posit.co/ide/user/</a>을 참고하시길 바랍니다.</p>
+<p>개발자들은 R을 command line interface로 사용하기 보다는 RStudio로 사용한다고 생각됩니다. 그러한 측면에서 R 사용법과 RStudio 사용법은 밀접하게 연계된 셈이며, 사용법에 대한 자료는 RStudio를 개발한 posit에서 만든 RSudio에 내장된 Tutorials가 있습니다. 링크를 타고들어가보면 Beginners, Intermediates, Experts 과정들이 있으므로 상황에 맞는 과정들을 선택해서 시작하면 좋습니다.</p>
 </section>
 </section>
 <section id="github" class="level3">
@@ -288,7 +289,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>git config <span class="sc">--</span>global user.email <span class="st">"kimbi.kirams@gmail.com"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 하지만</p>
+<p>버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. Git 사용법에 대해서는 한글 매뉴얼을 참고하시길 바랍니다. <a href="https://git-scm.com/book/ko/v2" class="uri">https://git-scm.com/book/ko/v2</a></p>
+<p>(RStudio에서는 Git 사용여부에 대한 설정이 있고 이를 이용해서 greaphic user interface로 사용할 수 도 있습니다.)</p>
 </section>
 <section id="패키지-종속성-관리를-위한-renv" class="level4">
 <h4 class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h4>
@@ -313,7 +315,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>├── R-4.4.1</p>
 <p>└── Projects</p>
 <p>|</p>
-<p>| └── R-4.4.1-RPythonStudy_Website</p>
+<p>| └── R-4.4.1-RPythonStudy_HANJM</p>
 </section>
 </section>
 <section id="예제-r로-논문쓰기-프로젝트-다운로드" class="level3">
@@ -332,8 +334,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>git repository(=저장소) 만들기와 renv 사용하기 check box는 예제 R프로젝트를 다운로드 하기 위해서는 선택해야 합니다.</p>
-<p>이제 탐색기로 프로젝트 폴더(C:.1-RPythonStudy-HANJM)를 살펴보면 .git 폴더, .Rproj.user 폴더, renv 폴더, .gitignore 파일, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일, renv.lock 파일들이 생성되었음을 확인하실 수 있습니다.</p>
-<p><img src="images/캡처-01.JPG" class="img-fluid"></p>
+<p>이제 탐색기로 프로젝트 폴더(C:.1-RPythonStudy_HANJM)를 살펴보면 .git 폴더, .Rproj.user 폴더, renv 폴더, .gitignore 파일, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일, renv.lock 파일들이 생성되었음을 확인하실 수 있습니다.</p>
+<p><img src="images/folder_example.jpg" class="img-fluid"></p>
 <p>git를 사용하기 때문에 설정이 보관되는 .git 폴더와 버전관리 예외(규칙)이 기록되어 있는 .gitignore 파일이 생성되어 있습니다. renv를 사용하기 때문에 프로젝트에 패키지가 설치되는 renv 폴더가 생성되었고 설치되는 패키지의 대한 기록이 되는 renv.lock 파일 생성되어 있습니다. RStudio에서 프로젝트로 이 폴더를 사용하기 때문에 .Rproj.user 폴더, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일이 생성되어 있습니다.</p>
 </section>
 <section id="git-원격저장소-예제-r프로젝트-파일-다운로드" class="level4">

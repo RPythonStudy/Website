@@ -161,12 +161,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" id="toc-rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" class="nav-link active" data-scroll-target="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는 방법</a></li>
+  <li><a href="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" id="toc-rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" class="nav-link active" data-scroll-target="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는 방법</a>
+  <ul class="collapse">
   <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R Markdown</a></li>
+  </ul></li>
   <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
-  <li><a href="#진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" id="toc-진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" class="nav-link" data-scroll-target="#진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기">1. 진행 중인 프로젝트 파일들을 내 프로젝트로 가져오기</a></li>
+  <li><a href="#예제-r프로젝트에-사용된-r-syntex" id="toc-예제-r프로젝트에-사용된-r-syntex" class="nav-link" data-scroll-target="#예제-r프로젝트에-사용된-r-syntex">예제 R프로젝트에 사용된 R Syntex</a>
+  <ul class="collapse">
   <li><a href="#자료형-data-type" id="toc-자료형-data-type" class="nav-link" data-scroll-target="#자료형-data-type">자료형 (data type)</a></li>
   <li><a href="#자료구조-data-structure" id="toc-자료구조-data-structure" class="nav-link" data-scroll-target="#자료구조-data-structure">자료구조 (data structure)</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -176,18 +180,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는 방법</h3>
+<section id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법" class="level2">
+<h2 class="anchored" data-anchor-id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는 방법</h2>
 <p>RStudio에서 *.R로 생성되는 R 스크립트 파일 내의 특정부분 스크립트를 실행하면 Console pane에서 결과를 확인할 수 있습니다. 그래픽 출력은 Output pane에 위치한 Plots 창에서 볼 수 있으며, HTML 위젯이나 대화형 문서는 Viewer 창에서 확인 가능합니다. 변수와 데이터셋의 현재 상태는 Environment 창에서 볼 수 있고, 스크립트나 함수가 생성하거나 수정한 파일은 Files 탭을 통해 접근할 수 있습니다.</p>
 <p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
 <p>논문에서 그래프를 사용하고 싶다면 Output pane의 Plots 탭에서 Export 하거나 스크립트에서 특정 테이블이나 그래프를 파일로 저장하여 사용하게 됩니다.</p>
-</section>
 <section id="r-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="r-markdown">R Markdown</h3>
 <p>R Markdown은 markdown이라는 문서작성 언어로 작성된 문서 내에 R 코드가 포함된 것으로, R 코드 결과물이 문서의 지정된 부위에 생성되는 개념입니다. 이를 논문작성에 적용하면 작성중인 논문 데이터의 오류를 정정하였을 때 R Markdown에서는 이미 작성한 그래프나 테이블을 연결되어 수정되며 이는 큰 장점입니다.</p>
 </section>
-<section id="quarto" class="level3">
-<h3 class="anchored" data-anchor-id="quarto">Quarto</h3>
+</section>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
 <p>R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원라도, 출력형식도 다양하여 장점이 많으로 연구회에서는 <code>R로 논문쓰기</code> 프로젝트를 Quarto를 사용하여 진행합니다, Quarto 문서의 기본구조는 R Markdown과 같이 YAML 헤더, 본문, R코드청크로 구성됩니다.</p>
 <section id="quarto-manuscript-프로젝트-파일구성" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-manuscript-프로젝트-파일구성">Quarto manuscript 프로젝트 파일구성</h4>
@@ -196,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="프로젝트-폴더" class="level4">
 <h4 class="anchored" data-anchor-id="프로젝트-폴더">1. 프로젝트 폴더</h4>
 <p>Quarto 프로젝트의 최상위 폴더입니다. 이 폴더는 프로젝트의 모든 파일과 디렉토리를 포함합니다. 일반적으로 프로젝트 폴더는 다음과 같은 구조를 가집니다.</p>
-<p><img src="images/clipboard-1017101061.png" class="img-fluid"></p>
+<p><img src="images/folder_example.jpg" class="img-fluid"></p>
 </section>
 <section id="quarto-설정-파일" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-설정-파일">2. Quarto 설정 파일</h4>
@@ -227,14 +231,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><code>project</code>: 프로젝트 유형과 출력 디렉토리를 정의합니다.</p>
 <ul>
-<li><p><code>website</code>: 웹사이트의 제목과 네비게이션 바를 정의합니다.</p></li>
-<li><p><code>format</code>: 문서 형식별 설정을 정의합니다 (예: HTML, PDF).</p></li>
+<li><code>format</code>: 문서 형식별 설정을 정의합니다 (예: HTML, PDF).</li>
 </ul>
 </section>
 <section id="quarto-문서-파일" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-문서-파일">3. Quarto 문서 파일</h4>
 <p>Quarto 문서 파일(<code>.qmd</code> 확장자)은 Markdown 형식으로 작성되며, YAML 헤더, 본문, 코드 청크로 구성됩니다. Quarto 문서는 R, Python, Julia, Observable JavaScript 등의 언어를 포함할 수 있습니다.</p>
-<p><img src="images/clipboard-1442668467.png" class="img-fluid"></p>
 </section>
 <section id="quarto-문서-작성-및-편집" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-문서-작성-및-편집">4. Quarto 문서 작성 및 편집</h4>
@@ -243,15 +245,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="문서-렌더링" class="level4">
 <h4 class="anchored" data-anchor-id="문서-렌더링">5. 문서 렌더링</h4>
 <p>Quarto 문서 렌더링은 Quarto 파일(<code>.qmd</code>)을 HTML, PDF, Word, 슬라이드 프레젠테이션 등 다양한 형식으로 변환하는 과정입니다. Quarto는 이 과정을 통해 데이터 분석, 코드 실행, 결과 시각화 등을 포함한 완전한 문서를 생성합니다. 렌더링 과정은 명령어 기반으로 수행되며, Quarto CLI(Command Line Interface)를 통해 이루어집니다.</p>
-<p><img src="images/clipboard-2934308404.png" class="img-fluid"></p>
-<p>연구회에서는 우선 샘플 생존자료를 R로 분석하고 결과가 논문에 자동갱신되도록 만들어 보는 것도 목표로 하고 있습니다. R로 에 자동으로 갱신되도록 하는 것을 목표로 하고 있습니다. 관련된 R 코드의 작성을 공부하기 위해서는 코드를 직접 연구회에 논문RStudio에서 New Project 메뉴로 만듭니다. 디렉토리를 만들면 프로젝트를 생성하면 폴더엑통계분석을 위해 SPSS 등에 수집된 자료를 엑셀로부터 가져오기를 하듯이 직접 입력하던지 엑셀파이를 는 엑셀일 경우가 많다. vld</p>
 </section>
 </section>
-<section id="진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기" class="level3">
-<h3 class="anchored" data-anchor-id="진행-중인-프로젝트-파일들을-내-프로젝트로-가져오기">1. 진행 중인 프로젝트 파일들을 내 프로젝트로 가져오기</h3>
-<p>R에서는 메모리에 저장하거나 메모리에서 읽어 올 수 있는 모든 데이터 단위를 객체(objects)라고 부릅니다 (<a href="https://kilhwan.github.io/rprogramming/ch-R-List.html#%EA%B0%9D%EC%B2%B4-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%83%80%EC%9E%85-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EC%86%8D%EC%84%B1" class="uri">https://kilhwan.github.io/rprogramming/ch-R-List.html#%EA%B0%9D%EC%B2%B4-%EA%B0%9D%EC%B2%B4%EC%9D%98-%ED%83%80%EC%9E%85-%EA%B0%9D%EC%B2%B4%EC%9D%98-%EC%86%8D%EC%84%B1</a>). 객체(object)의 종류를 알아보기 위해 3가지 종류의 함수의 결과를 비교해보는 것은 유용합니다.</p>
-<p><img src="images/clipboard-98181618.png" class="img-fluid"></p>
-</section>
+<section id="예제-r프로젝트에-사용된-r-syntex" class="level2">
+<h2 class="anchored" data-anchor-id="예제-r프로젝트에-사용된-r-syntex">예제 R프로젝트에 사용된 R Syntex</h2>
+<p>작성 중이며 update 되어야 합니다.</p>
 <section id="자료형-data-type" class="level3">
 <h3 class="anchored" data-anchor-id="자료형-data-type">자료형 (data type)</h3>
 <section id="numeric" class="level4">
@@ -304,6 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>문자열과 level 그리고 값을 가지고 있어 자료형이라기 보다 자료구조라고 보는 것이 맞음</p>
 
 
+</section>
 </section>
 </section>
 
