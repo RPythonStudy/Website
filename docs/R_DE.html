@@ -343,7 +343,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/git_renv_option.JPG" class="img-fluid"></p>
 <p>이제 탐색기로 프로젝트 폴더(C:.1-RPythonStudy_HANJM)를 살펴보면 .git 폴더, .Rproj.user 폴더, renv 폴더, .gitignore 파일, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일, renv.lock 파일들이 생성되었음을 확인하실 수 있습니다.</p>
 <p><img src="images/folder_example.jpg" class="img-fluid"></p>
-<p>git를 사용하기 때문에 설정이 보관되는 .git 폴더와 버전관리 예외(규칙)이 기록되어 있는 .gitignore 파일이 생성되어 있습니다. renv를 사용하기 때문에 프로젝트에 패키지가 설치되는 renv 폴더가 생성되었고 설치되는 패키지의 대한 기록이 되는 renv.lock 파일 생성되어 있습니다. RStudio에서 프로젝트로 이 폴더를 사용하기 때문에 .Rproj.user 폴더, .Rprofile 파일, R-4.4.1-RPythonStudy-HANJM.Rproj 파일이 생성되어 있습니다.</p>
+<p>git를 사용하기 때문에 설정이 보관되는 .git 폴더와 버전관리 예외(규칙)이 기록되어 있는 .gitignore 파일이 생성되어 있습니다. renv를 사용하기 때문에 프로젝트에 패키지가 설치되는 renv 폴더가 생성되었고 설치되는 패키지의 대한 기록이 되는 renv.lock 파일 생성되어 있습니다. RStudio에서 프로젝트로 이 폴더를 사용하기 때문에 .Rproj.user 폴더, .Rprofile 파일, R-4.4.1-RPythonStudy_HANJM.Rproj 파일이 생성되어 있습니다.</p>
 </section>
 <section id="git-원격저장소-예제-r프로젝트-파일-다운로드" class="level4">
 <h4 class="anchored" data-anchor-id="git-원격저장소-예제-r프로젝트-파일-다운로드">2. Git 원격저장소 예제 R프로젝트 파일 다운로드</h4>
@@ -358,7 +358,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>git remote add origin https<span class="sc">:</span><span class="er">//</span>github.com<span class="sc">/</span>RPythonStudy<span class="sc">/</span>HANJM.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>그리고 다운로드 준비를 해야 하는데 git pull 명령으로 원격저장소의 모든 파일을 다운로드 할 예정인데 로컬 폴더에 중복되는 파일이 하나라도 있으면 오류가 발생하므로, 중복이 되는 파일인 .gitignore 와 renv.lock 을 로컬 프로젝트폴더에서 삭제해 줍니다.</p>
+<p>그리고 다운로드 준비를 해야 하는데 git pull 명령으로 원격저장소의 모든 파일을 다운로드 할 예정인데 로컬 폴더에 중복되는 파일이 하나라도 있으면 오류가 발생하므로, 중복이 되는 파일인 .gitignore, .Rprofile과 renv.lock 을 로컬 프로젝트폴더에서 삭제해 줍니다.</p>
 <p>이후 아래의 git 명령으로 원격저장소의 모든 파일을 다운로드 받아 주면 됩니다.</p>
 <div class="cell">
 <div class="code-with-filename">
