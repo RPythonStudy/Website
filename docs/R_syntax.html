@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">R로 논문쓰기</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./preprocessing.html" aria-current="page"> 
+    <a class="nav-link" href="./preprocessing.html"> 
 <span class="menu-text">데이터전처리</span></a>
   </li>  
   <li class="nav-item">
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">생존분석</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R_syntax.html"> 
+    <a class="nav-link active" href="./R_syntax.html" aria-current="page"> 
 <span class="menu-text">R 문법</span></a>
   </li>  
 </ul>
@@ -131,8 +131,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#결측치의-처리" id="toc-결측치의-처리" class="nav-link active" data-scroll-target="#결측치의-처리"><strong>결측치의 처리</strong></a></li>
-  <li><a href="#연속형변수-이상치outlier-검출" id="toc-연속형변수-이상치outlier-검출" class="nav-link" data-scroll-target="#연속형변수-이상치outlier-검출">연속형변수 이상치(outlier) 검출</a></li>
+  <li><a href="#r-data-type-과-structure" id="toc-r-data-type-과-structure" class="nav-link active" data-scroll-target="#r-data-type-과-structure">R data type 과 structure</a></li>
   </ul>
 </nav>
     </div>
@@ -142,39 +141,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="결측치의-처리" class="level3">
-<h3 class="anchored" data-anchor-id="결측치의-처리"><strong>결측치의 처리</strong></h3>
-</section>
-<section id="연속형변수-이상치outlier-검출" class="level3">
-<h3 class="anchored" data-anchor-id="연속형변수-이상치outlier-검출">연속형변수 이상치(outlier) 검출</h3>
-<section id="z--점수-방법" class="level4">
-<h4 class="anchored" data-anchor-id="z--점수-방법">Z -점수 방법</h4>
-<p>데이터가 정규분포를 보인다면 평균으로부터 3 표준편차 이상 떨어져 있으면 이상치로 판단할 수 있습니다. 아래는 제가 만든 시각화의 예시입니다. 히스토그램에 평균과 3 표준편차를 표시하고, 이상치를 붉은색 원으로 표시해 보았습니다 (소스코드는 프로젝트 원격저장소 my_funtions.R 파일 안에 my_histogram_for_outlier_detection 함수로 만들어 두었습니다.)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-3439486912.png" class="img-fluid figure-img" width="700"></p>
-<figcaption>Fig 1. Histogram of AGE</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/clipboard-613543171.png" class="img-fluid figure-img" width="700"></p>
-<figcaption>Fig 2 Histogram of preHR CA19-9</figcaption>
-</figure>
-</div>
-<p>위쪽은 나이 데이터를 히스토그램으로 만든 것이며 이상치가 보이지 않는 경우입니다. 아래쪽은 종양표지자 CA 19-9를 히스토그램으로 만든 것이며 빨간원으로 표시된 이상치가 3개 있는 경우입니다.</p>
-</section>
-<section id="정규분포로의-변환" class="level4">
-<h4 class="anchored" data-anchor-id="정규분포로의-변환">정규분포로의 변환</h4>
-<p><strong>박스-콕스 변환(Box-Cox Transformation)은</strong> 정규분포가 아닌 데이터를 다음의 식을 이용하여 정규분포에 가깝게 변환시켜 줍니다.</p>
-<p><img src="images/clipboard-3433356877.png" class="img-fluid"></p>
-<p>박스-콕스 변환을 취하기 위해서는 데이터가 모두 양수여야 된다는 조건이 필요하며 보통 원 데이터의 최소값이 양수가 되도록 어떤 값을 더하는 shift주는 식으로 해결할 수 있습니다 (<a href="https://blog.naver.com/pmw9440/221713858254" class="uri">https://blog.naver.com/pmw9440/221713858254</a>). 특정 데이터의 최적의 정규화 식을 찾는 과정은 최적의 λ 을 찾는 것이라 할 수 있습니다. 여기서 특기할만한 λ 의 값은 0, 1 인데, λ = 0이면 log(x) 로그변환을 의미하고 λ = 1이면 g(x) = x-1이 되므로 이는 항등변환과 같게 됩니다.</p>
-<p>위의 그림에서와 같이 CA 19-9 측정값은 정규분포를 보이지 않으므로 정규분포로 변환 후 히스토그램을 그리면 아래와 같습니다.</p>
-<p><img src="images/clipboard-3702330201.png" class="img-fluid" width="700"></p>
-<p>x축을 로그를 취하니 정규분포모양이 되었으며 이상치도 1개로 감소되었습니다.</p>
+<section id="r-data-type-과-structure" class="level3">
+<h3 class="anchored" data-anchor-id="r-data-type-과-structure">R data type 과 structure</h3>
+<p>모든 프로그래밍 언어는 메모리에 저장된 데이터를 사용할 수 있는 고유의 방식이 있습니다. R에서는 메모리에 저장하거나 메모리에서 읽어 올 수 있는 모든 데이터 단위를 객체(objects) 라고 부르며 데이터 타입에 따라 메모리에 저장되는 방식이 다릅니다. R에서 각 데이터들은 하나의 data type을 가지고 있으며, 기본적인 데이터 타입 (typeof 함수로 확인할 수 있습니다)에는</p>
+<p>integer</p>
+<p>double</p>
+<p>charactor</p>
+<p>logical</p>
+<p>…… 가 있습니다.</p>
+<p>한편으로 R은 그 전신인 S 언어와의 호환을 위해서 data mode 값도 가지고 있습니다. mode의 종류는</p>
+<p>numeric (integer와 double의 합쳐서)</p>
+<p>charactor</p>
+<p>logical</p>
+<p>…… 가 있습니다.</p>
+<p>R에서는 data type과 mode를 혼용하여 사용하고 있습니다. 예시로 data type을 변환하는 함수 중 as.numeric()이 있는데 double type으로 강제변환 시킵니다.</p>
+<p>R에서는 데이터구조를 위해 vecter와 list란 개념을 사용하는데 같은 데이터 타입으로 구성된 1차원 구조응 vector라 하고, 2차원 구조는 matrix, 3차원 구조는 array가 됩니다. 데이터타입이 다르면 리스트가 됩니다. 데이터프레임은 2차원이지만 컬럼별로 데이터 타입이 다른 경우로 대부분의 엑셀자료에 해당합니다.</p>
+<p><img src="images/data_structure.png" class="img-fluid"></p>
+<p>vector 중에서 element가 하나인 것을 atomic vector라 할 수 있는데 예시는 아래와 같습니다.</p>
+<p><img src="images/obj-vector-atomic-modes.png" class="img-fluid"></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
