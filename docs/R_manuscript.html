@@ -248,11 +248,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="quarto-markdown-문법" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-markdown-문법">3. Quarto markdown 문법</h4>
+<h4 class="anchored" data-anchor-id="quarto-markdown-문법"><strong>3. Quarto markdown 문법</strong></h4>
 <p>Quarto markdown 문법은 R Markdown과 비슷하지만 더 많은 기능을 제공합니다. Quarto markdown 문법은 <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>를 참고하면 됩니다. Quarto는 Visual Editor 모드를 지원하여, WYSIWYG(What You See Is What You Get) 방식으로 문서를 작성할 수 있습니다. Visual Mode를 사용하면, 코드 블록 삽입, 이미지 추가, 테이블 생성 등을 GUI를 통해 쉽게 할 수 있습니다.</p>
 </section>
 <section id="manuscript-프로젝트" class="level4">
-<h4 class="anchored" data-anchor-id="manuscript-프로젝트">4. manuscript 프로젝트</h4>
+<h4 class="anchored" data-anchor-id="manuscript-프로젝트"><strong>4. manuscript 프로젝트</strong></h4>
 <p>Quarto로 새로운 프로젝트를 만들 때 R로 논문쓰기에 적합한 manuscripit 프로젝트가 있으며 예제 R 프로젝트도 manuscript 프로젝트를 이용해 만들어졌습니다. 일반적인 폴더와 파일구성은 다음과 같은 구조를 가질 수 있습니다.</p>
 <p>Project/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ &nbsp;_freeze/<br>
@@ -270,13 +270,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="freeze-폴더의-기능" class="level4">
 <h4 class="anchored" data-anchor-id="freeze-폴더의-기능"><strong>4-1. _freeze 폴더의 기능</strong></h4>
+<p>Quarto는 청크 단위의 실행 결과를 캐싱할 수 있습니다. YAML 헤더의 <code>execute.freeze</code> 옵션을 <code>auto</code> 또는 <code>true</code>로 설정하면 캐싱을 위해 <code>_freeze</code> 폴더가 생성됩니다.</p>
 </section>
 <section id="manuscript-폴더의-기능" class="level4">
 <h4 class="anchored" data-anchor-id="manuscript-폴더의-기능">4-2. _manuscript 폴더의 기능</h4>
+<p>Quarto manuscript 프로젝트에서는 기본적으로 렌더링 결과를 <code>_manuscript</code> 폴더에 만듭니다. 출력 결과를 다른 폴더로 변경하고자 할 때에는 YAML 헤더에서 <code>output-dir: 원하는 폴더명</code>으로 수정하시면 됩니다.</p>
 </section>
 <section id="quarto.yml-파일의-기능" class="level4">
 <h4 class="anchored" data-anchor-id="quarto.yml-파일의-기능">4-3. _quarto.yml 파일의 기능</h4>
-<p><code>_quarto.yml</code> 파일은 Quarto 프로젝트의 설정을 정의합니다. 이 파일에는 프로젝트의 전역 설정, 문서 형식, 테마, 플러그인 등을 정의할 수 있습니다. 새로운 프로젝트를 만들때 유형에 맞게 기본옵션이 설정되어 있습니다.</p>
+<p><code>_quarto.yml</code> 파일은 Quarto 프로젝트의 설정을 관리하는 구성 파일입니다. 이 파일을 통해 프로젝트의 전반적인 설정, 문서 렌더링 옵션, 그리고 특정 문서의 형식과 출력을 제어할 수 있습니다.</p>
+<p>아래는 예제 R 프로젝트에 사용된 <code>_quarto.yml</code> 의 부분입니다.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
