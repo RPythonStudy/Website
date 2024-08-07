@@ -166,8 +166,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" id="toc-rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" class="nav-link active" data-scroll-target="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는기존 방법</a></li>
-  <li><a href="#r-markdown" id="toc-r-markdown" class="nav-link" data-scroll-target="#r-markdown">R Markdown</a></li>
-  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
+  <li><a href="#r-markdown-이란" id="toc-r-markdown-이란" class="nav-link" data-scroll-target="#r-markdown-이란">R Markdown 이란?</a></li>
+  <li><a href="#quarto-란" id="toc-quarto-란" class="nav-link" data-scroll-target="#quarto-란">Quarto 란?</a></li>
+  <li><a href="#quarto-렌더링" id="toc-quarto-렌더링" class="nav-link" data-scroll-target="#quarto-렌더링">5. Quarto 렌더링</a></li>
   <li><a href="#예제-r프로젝트에-사용된-문법syntax" id="toc-예제-r프로젝트에-사용된-문법syntax" class="nav-link" data-scroll-target="#예제-r프로젝트에-사용된-문법syntax">예제 R프로젝트에 사용된 문법(syntax)</a>
   <ul class="collapse">
   <li><a href="#자료형-data-type" id="toc-자료형-data-type" class="nav-link" data-scroll-target="#자료형-data-type">자료형 (data type)</a></li>
@@ -188,13 +189,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
 <p>논문에서 그래프를 사용하고 싶다면 Output pane의 Plots 탭에서 Export 하면되고, 테이블을 사용하고 싶으면 csv 파일로 저장하도록 스크립트 내에서 코딩을 해두면 됩니다. 그래프의 경우도 파일로 저장할 수 있습니다.</p>
 </section>
-<section id="r-markdown" class="level3">
-<h3 class="anchored" data-anchor-id="r-markdown">R Markdown</h3>
+<section id="r-markdown-이란" class="level3">
+<h3 class="anchored" data-anchor-id="r-markdown-이란">R Markdown 이란?</h3>
 <p>R Markdown은 markdown이라는 문서작성 언어로 작성된 문서 내에 R 코드가 포함된 것으로, R 코드 결과물이 문서의 지정된 부위에 생성되는 개념입니다. 이를 논문작성에 적용하면 작성중인 논문 데이터의 오류를 정정하였을 때 R Markdown에서는 이미 작성한 그래프나 테이블을 연결되어 수정되며 이는 큰 장점입니다.</p>
 </section>
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
-<p>R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원하며, 출력형식도 다양하여 장점이 많으로 연구회에서는 <code>R로 논문쓰기</code> 프로젝트를 Quarto를 사용하여 진행합니다, Quarto 문서의 기본구조는 R Markdown과 같이 대쉬3개(—)로 둘러싸인 YAML 헤더 , 3개의 백틱(```)과 {r}로 둘러싸인 R코드청크, quarto markdown 문법에 따라 작성되는 본문으로 구성됩니다.</p>
+<section id="quarto-란" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-란">Quarto 란?</h2>
+<p>R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원하며, 출력형식도 다양하여 장점이 많으로 연구회에서는 <code>R로 논문쓰기</code> 프로젝트를 Quarto를 사용하여 진행합니다.</p>
+<p>Quarto 문서의 기본구조는 R Markdown과 같이 대쉬3개(—)로 둘러싸인 YAML 헤더 , 3개의 백틱(```)과 {r}로 둘러싸인 R코드청크, quarto markdown 문법에 따라 작성되는 본문으로 구성됩니다. 아래의 예제 R프로젝트의 예시입니다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Role of Targeted Therapy after Surgical Resection of Colorectal Liver Metastases</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
@@ -244,8 +246,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: tbl-mytable #테이블의 라벨을 설정 "tbl-" 시작해야 만 함</span></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="in">#| output: false # 텍스트형태의 결과물이 문서에 포함되지 않음</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig.show: 'hide'# 그래프형태의 결과물이 문서에 포함되지 않음</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false # 코드가 실행되지 않음</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig.height: 6 </span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">#| fig.width: 6</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false # 코드가 실행되지 않음</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="quarto-markdown-문법" class="level4">
 <h4 class="anchored" data-anchor-id="quarto-markdown-문법"><strong>3. Quarto markdown 문법</strong></h4>
@@ -295,28 +299,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  html<span class="sc">:</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    comments<span class="sc">:</span> </span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>      hypothesis<span class="sc">:</span> true </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  docx<span class="sc">:</span> default </span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  jats<span class="sc">:</span> default</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  docx: default </span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#  jats: default</span></span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>execute<span class="sc">:</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  freeze<span class="sc">:</span> false</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  freeze<span class="sc">:</span> true</span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>editor<span class="sc">:</span> visual</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
+<p>Quarto 프로젝트 설정은 문서 또는 기사 작성에 주로 사용되며, ‘manuscript’으로 유형이 지정되어 있습니다. 이 설정은 프로젝트의 메인 문서 파일로 ’index.qmd’를 지정하고 있습니다. ’index.qmd’ 파일은 Quarto Markdown 형식으로, 프로젝트의 핵심 내용을 포함하고 있습니다.</p>
+<p>문서의 출력 형식으로 HTML이 지정되어 있어, 생성된 문서가 웹 페이지 형태로 렌더링되어 표시될 것입니다. 이 HTML 출력 설정에는 댓글 기능이 포함되어 있으며, Hypothesis라는 오픈 소스 주석 도구가 활성화되어 있습니다. Hypothesis 도구를 통해 사용자는 웹 페이지에 직접 주석을 추가할 수 있습니다, 이는 인터랙티브한 문서 환경을 조성합니다.</p>
+<p>‘freeze: false’ 설정은 문서 빌드 시 실행 코드의 결과를 캐싱하지 않겠다는 것을 의미합니다. 즉, 이 설정은 문서가 빌드될 때마다 관련 코드가 매번 실행되어 결과가 갱신되도록 합니다.</p>
+<p>추가적으로, ‘docx’와 ’jats’ 형식은 현재 비활성화된 상태로 주석 처리되어 있습니다. 이는 렌더링 시간을 단축하기 위한 조치로, 비활성화된 상태에서는 이 포맷들이 문서 출력 형식으로 사용되지 않습니다.</p>
+<p>마지막으로, ‘editor: visual’ 설정은 Quarto 문서 작성 시 사용되는 에디터 유형을 명시합니다. Visual editor는 사용자가 마크다운 문법을 몰라도 문서를 작성할 수 있도록 지원하는 사용자 친화적인 인터페이스를 제공합니다. 이는 문서 작성 과정을 보다 직관적이고 접근하기 쉽게 만듭니다.</p>
+<p>이러한 설정들은 효과적인 문서 작성과 관리를 가능하게 하며, 사용자에게 다양한 도구와 옵션을 제공하여 유연한 작업 환경을 조성합니다.</p>
 </section>
-<section id="quarto-문서-파일" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-문서-파일">3. Quarto 문서 파일</h4>
-<p>Quarto 문서 파일(<code>.qmd</code> 확장자)은 Markdown 형식으로 작성되며, YAML 헤더, 본문, 코드 청크로 구성됩니다. Quarto 문서는 R, Python, Julia, Observable JavaScript 등의 언어를 포함할 수 있습니다.</p>
+<section id="gitignore-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="gitignore-파일의-기능">4-4. .gitignore 파일의 기능</h4>
+<p><code>.gitignore</code> 파일은 Git 버전 관리 시스템에서 특정 파일이나 디렉토리를 추적하지 않도록 설정하는 데 사용됩니다. 이 파일은 프로젝트 디렉토리 내에 위치하며, Git이 파일을 무시하도록 지시하는 패턴 목록을 포함하고 있습니다.</p>
 </section>
-<section id="quarto-문서-작성-및-편집" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-문서-작성-및-편집">4. Quarto 문서 작성 및 편집</h4>
-<p><code>index.qmd</code>, <code>about.qmd</code> 등의 파일을 생성하고 내용을 작성합니다.</p>
+<section id="rhistory-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="rhistory-파일의-기능">4-5. .Rhistory 파일의 기능</h4>
+<p><code>.Rhistory</code> 파일은 R 프로그래밍 환경에서 사용자가 실행한 모든 명령어의 이력을 저장하는 파일입니다. 이 파일은 R 콘솔에서 직접 입력하거나 스크립트를 실행하는 동안의 사용자의 명령어들을 자동으로 기록합니다. 이 기능은 사용자가 이전 세션에서 수행한 작업을 추적하고, 필요한 경우 명령어를 재사용하거나 참조할 수 있게 해 줍니다.</p>
 </section>
-<section id="문서-렌더링" class="level4">
-<h4 class="anchored" data-anchor-id="문서-렌더링">5. 문서 렌더링</h4>
-<p>Quarto 문서 렌더링은 Quarto 파일(<code>.qmd</code>)을 HTML, PDF, Word, 슬라이드 프레젠테이션 등 다양한 형식으로 변환하는 과정입니다. Quarto는 이 과정을 통해 데이터 분석, 코드 실행, 결과 시각화 등을 포함한 완전한 문서를 생성합니다. 렌더링 과정은 명령어 기반으로 수행되며, Quarto CLI(Command Line Interface)를 통해 이루어집니다.</p>
+<section id="rprofile-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="rprofile-파일의-기능">4-6. .Rprofile 파일의 기능</h4>
+<p><code>.Rprofile</code> 파일은 R 세션의 시작 시 자동으로 실행되는 스크립트를 포함하는 설정 파일입니다. 이 파일은 사용자 또는 특정 프로젝트에 대한 환경 설정을 사용자 정의하고, R 세션을 시작할 때마다 일관된 작업 환경을 구성하는 데 사용됩니다. <code>.Rprofile</code>은 R의 시작 시 자동으로 로드되므로, R을 사용하는 데 필요한 라이브러리 로딩, 옵션 설정, 환경 설정 등을 자동화할 수 있습니다. 예제 R프로젝트에서는 renv 환경이 활성화되도록 설정되어 있습니다.</p>
 </section>
+<section id="index.qmd-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="index.qmd-파일의-기능">4-7. Index.qmd 파일의 기능</h4>
+<p><code>index.qmd</code> 파일은 Quarto 문서 프로젝트에서 중요한 역할을 하는 메인 문서 파일입니다. <code>.qmd</code> 확장자는 Quarto Markdown을 의미하며, 이 파일 형식은 Markdown의 확장 버전으로, Quarto에서 제공하는 다양한 기능을 지원합니다.</p>
+</section>
+<section id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능">4-8. R-4.4.1-RPythonStudy_HANJM.Rproj 파일의 기능</h4>
+<p><code>.Rproj</code> 파일은 RStudio의 프로젝트 파일로, 특정 R 프로젝트와 관련된 설정과 환경을 저장합니다. 이 파일은 RStudio 환경에서 프로젝트를 더 효율적으로 관리할 수 있게 해 주며, 프로젝트별로 별도의 작업 공간과 설정을 유지할 수 있도록 도와줍니다.</p>
+</section>
+<section id="references.bib-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="references.bib-파일의-기능">4-9. references.bib 파일의 기능</h4>
+<p><code>references.bib</code> 파일은 레퍼런스 관리와 문헌 인용을 위한 BibTeX 파일입니다. 이 파일은 주로 LaTeX 문서나 다양한 텍스트 편집 소프트웨어와 통합하여 사용되며, 학술적 작업, 연구 보고서, 논문 등에서 출처를 인용하고 관리하는 데 필요한 정보를 포함합니다.</p>
+</section>
+<section id="renv-폴더의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="renv-폴더의-기능">4-10. renv 폴더의 기능</h4>
+<p><code>renv</code> 폴더는 R 프로젝트에서 프로젝트별 종속성 관리를 위해 사용되는 <code>renv</code> 패키지에 의해 생성되는 디렉토리입니다. 이 폴더는 프로젝트의 라이브러리를 격리시켜 다른 프로젝트나 시스템의 R 패키지 설치와 독립적으로 유지할 수 있도록 도와줍니다. <code>renv</code>는 R의 프로젝트에 대한 복원 가능하고 재현 가능한 환경을 제공하는 데 중점을 두고 있습니다.</p>
+</section>
+<section id="renv.lock-파일의-기능" class="level4">
+<h4 class="anchored" data-anchor-id="renv.lock-파일의-기능">4-11. renv.lock 파일의 기능</h4>
+<p><code>renv.lock</code> 파일은 R 프로젝트에서 <code>renv</code> 패키지를 사용할 때 생성되는 중요한 파일로, 프로젝트의 종속성(의존하는 R 패키지들)을 정확하고 재현 가능하게 기록합니다. 이 파일은 프로젝트에 필요한 모든 R 패키지의 버전과 소스 정보를 포함하여 프로젝트 환경을 재현할 수 있도록 돕습니다.</p>
+</section>
+</section>
+<section id="quarto-렌더링" class="level2">
+<h2 class="anchored" data-anchor-id="quarto-렌더링">5. Quarto 렌더링</h2>
+<p>Quarto 문서 렌더링은 <code>.qmd</code> 파일(Quarto Markdown 파일)을 다양한 출력 형식으로 변환하는 복잡한 과정을 포함합니다. 이 과정은 데이터 분석, 코드 실행, 결과의 시각화를 포함한 종합적인 문서 생성을 목표로 하며, 주로 Quarto의 명령줄 인터페이스(Command Line Interface, CLI)를 통해 실행됩니다. 예를 들어, <code>quarto render mydocument.qmd</code> 명령은 <code>mydocument.qmd</code> 파일을 지정된 형식으로 변환합니다. 이 CLI 명령은 RStudio의 콘솔 창 아래에 있는 터미널에서 실행할 수 있습니다. 추가적으로, RStudio에서는 ‘Render’ 버튼을 사용하여 문서의 미리보기가 가능합니다. 이 버튼은 RStudio 환경 내에서 Quarto 문서를 쉽게 렌더링하고 결과를 실시간으로 확인할 수 있는 사용자 친화적인 방법을 제공합니다. 이를 통해 사용자는 문서의 최종 형태를 확인하고 필요에 따라 수정할 수 있습니다.</p>
 </section>
 <section id="예제-r프로젝트에-사용된-문법syntax" class="level2">
 <h2 class="anchored" data-anchor-id="예제-r프로젝트에-사용된-문법syntax">예제 R프로젝트에 사용된 문법(syntax)</h2>
