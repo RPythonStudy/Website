@@ -8,7 +8,7 @@
 
 <meta name="author" content="Haewon Lee">
 
-<title>RPythonStudy - 통계</title>
+<title>RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -135,20 +135,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">R개발환경구축</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R_manuscript.html"> 
-<span class="menu-text">R로 논문쓰기</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./preprocessing.html"> 
-<span class="menu-text">데이터전처리</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./R_syntax.html"> 
 <span class="menu-text">R 문법</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./basic_statistics.html" aria-current="page"> 
 <span class="menu-text">기초통계</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./R_manuscript.html"> 
+<span class="menu-text">논문쓰기예제공부</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./preprocessing.html"> 
+<span class="menu-text">데이터전처리</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./survival_analysis.html"> 
@@ -188,7 +188,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">통계</h1>
 </div>
 
 
@@ -378,7 +377,7 @@ X-squared = 29.771, df = 1, p-value = 4.862e-08</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(x, <span class="at">simulate.p.value =</span> <span class="cn">TRUE</span>, <span class="at">B =</span> <span class="dv">10000</span>)<span class="sc">$</span>p.value</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.2925707</code></pre>
+<pre><code>[1] 0.2946705</code></pre>
 </div>
 </div>
 </section>

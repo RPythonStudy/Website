@@ -134,20 +134,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">R개발환경구축</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./R_manuscript.html"> 
-<span class="menu-text">R로 논문쓰기</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./preprocessing.html"> 
-<span class="menu-text">데이터전처리</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./R_syntax.html" aria-current="page"> 
 <span class="menu-text">R 문법</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./basic_statistics.html"> 
 <span class="menu-text">기초통계</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./R_manuscript.html"> 
+<span class="menu-text">논문쓰기예제공부</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./preprocessing.html"> 
+<span class="menu-text">데이터전처리</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./survival_analysis.html"> 
@@ -229,8 +229,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>R 객체의 유형(<em>type</em>&nbsp;of R object)을 알려주는&nbsp;<code>typeof</code>&nbsp;이라는 함수를 이용해 반환되는 값들과 그 값들이 무엇인지를 정리하였습니다. (우선은 bolic체만 이해하셔도 됩니다.</p>
 <table class="table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 72%">
+<col style="width: 14%">
+<col style="width: 85%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -793,7 +793,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>current_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_time); <span class="fu">class</span>(current_time); <span class="fu">typeof</span>(current_time)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-08-09 16:02:05 KST"</code></pre>
+<pre><code>[1] "2024-08-09 17:35:29 KST"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
@@ -965,16 +965,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a>df1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score
-1   1  Lee    76
-2   2  Kim    85
-3   3 Park    82
-4   4 Kang    70
-5   5 Shin    81
-6   6  Lim    86
-7   7 Kwon    75
-8   8 Choi    74
+1   1  Lee    67
+2   2  Kim    80
+3   3 Park    74
+4   4 Kang    80
+5   5 Shin    69
+6   6  Lim    76
+7   7 Kwon    79
+8   8 Choi    75
 9   9  Nam    74
-10 10 Baek    67</code></pre>
+10 10 Baek    78</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -982,16 +982,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>merged_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score Department Age
-1   1  Lee    76         PD  43
-2   2  Kim    85         IM  41
-3   3 Park    82       &lt;NA&gt;  NA
-4   4 Kang    70         GS  44
-5   5 Shin    81         GS  46
-6   6  Lim    86         PD  42
-7   7 Kwon    75         PD  37
-8   8 Choi    74         GS  34
-9   9  Nam    74         IM  40
-10 10 Baek    67         GS  42</code></pre>
+1   1  Lee    67         PD  31
+2   2  Kim    80         IM  42
+3   3 Park    74         GY  36
+4   4 Kang    80         GS  46
+5   5 Shin    69         PD  45
+6   6  Lim    76         GY  47
+7   7 Kwon    79         GS  52
+8   8 Choi    75         GY  49
+9   9  Nam    74       &lt;NA&gt;  NA
+10 10 Baek    78         PD  45</code></pre>
 </div>
 </div>
 </section>
