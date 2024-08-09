@@ -204,6 +204,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#그림-삽입" id="toc-그림-삽입" class="nav-link" data-scroll-target="#그림-삽입"><span class="header-section-number">5.1</span> 그림 삽입</a></li>
   <li><a href="#표-삽입" id="toc-표-삽입" class="nav-link" data-scroll-target="#표-삽입"><span class="header-section-number">5.2</span> 표 삽입</a></li>
+  <li><a href="#참고문헌작성" id="toc-참고문헌작성" class="nav-link" data-scroll-target="#참고문헌작성"><span class="header-section-number">5.3</span> 참고문헌작성</a>
+  <ul class="collapse">
+  <li><a href="#참고문헌-파일-준비-.bib-파일" id="toc-참고문헌-파일-준비-.bib-파일" class="nav-link" data-scroll-target="#참고문헌-파일-준비-.bib-파일"><span class="header-section-number">5.3.1</span> 참고문헌 파일 준비 (.bib 파일)</a></li>
+  <li><a href="#quarto-문서에-참고문헌-파일-포함" id="toc-quarto-문서에-참고문헌-파일-포함" class="nav-link" data-scroll-target="#quarto-문서에-참고문헌-파일-포함"><span class="header-section-number">5.3.2</span> Quarto 문서에 참고문헌 파일 포함</a></li>
+  <li><a href="#본문에서-인용하기" id="toc-본문에서-인용하기" class="nav-link" data-scroll-target="#본문에서-인용하기"><span class="header-section-number">5.3.3</span> 본문에서 인용하기</a></li>
+  <li><a href="#참고문헌-목록-생성" id="toc-참고문헌-목록-생성" class="nav-link" data-scroll-target="#참고문헌-목록-생성"><span class="header-section-number">5.3.4</span> 참고문헌 목록 생성</a></li>
+  <li><a href="#citation-style-csl-사용" id="toc-citation-style-csl-사용" class="nav-link" data-scroll-target="#citation-style-csl-사용"><span class="header-section-number">5.3.5</span> Citation Style (CSL) 사용</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -507,8 +515,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="표-삽입" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="표-삽입"><span class="header-section-number">5.2</span> 표 삽입</h2>
 <p>같은 방식으로 표를 삽입할 수 있습니다. 예시는 생략합니다. 다만 chuck label은 <code>tbl-</code>로 시작해야 cross-reference에서 인식됩니다. 그리고 table처럼 보이지만 HTML 테이블형식이 아닌 경우는 인식이 되지 않으므로 주의해야 합니다.</p>
+</section>
+<section id="참고문헌작성" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="참고문헌작성"><span class="header-section-number">5.3</span> 참고문헌작성</h2>
+<p>Quarto에서 참고문헌을 작성하고 관리하는 방법은 매우 유연하며, 주로 <code>.bib</code> 파일과 함께 사용됩니다. Quarto는 LaTeX의 <code>biblatex</code> 스타일과 호환되며, 다양한 인용 스타일(Citation Style Language, CSL) 파일을 지원하여 특정 저널 형식에 맞춘 참고문헌을 생성할 수 있습니다.</p>
+<section id="참고문헌-파일-준비-.bib-파일" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="참고문헌-파일-준비-.bib-파일"><span class="header-section-number">5.3.1</span> 참고문헌 파일 준비 (.bib 파일)</h3>
+<p>참고문헌을 관리하기 위해 먼저 <code>.bib</code> 파일을 준비합니다. 이 파일은 BibTeX 형식으로 작성되며, 모든 참고문헌 항목이 이 파일에 저장됩니다.</p>
+</section>
+<section id="quarto-문서에-참고문헌-파일-포함" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="quarto-문서에-참고문헌-파일-포함"><span class="header-section-number">5.3.2</span> Quarto 문서에 참고문헌 파일 포함</h3>
+<p>Quarto 문서의 YAML 헤더에 참고문헌 파일을 지정합니다. 이를 통해 Quarto는 문서에서 인용된 항목을 자동으로 참조하고, 문서 끝에 참고문헌 목록을 생성합니다.</p>
+</section>
+<section id="본문에서-인용하기" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="본문에서-인용하기"><span class="header-section-number">5.3.3</span> 본문에서 인용하기</h3>
+<p>본문에서 참고문헌 항목을 인용할 때는 <code>[@key]</code> 형식을 사용합니다. 여기서 <code>key</code>는 <code>.bib</code> 파일에서 정의된 항목의 고유 키입니다.</p>
+</section>
+<section id="참고문헌-목록-생성" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="참고문헌-목록-생성"><span class="header-section-number">5.3.4</span> 참고문헌 목록 생성</h3>
+<p>문서의 끝에서 <code># References</code> 섹션을 추가하면 Quarto는 인용된 항목을 자동으로 참고문헌 목록에 포함시킵니다.</p>
+</section>
+<section id="citation-style-csl-사용" class="level3" data-number="5.3.5">
+<h3 data-number="5.3.5" class="anchored" data-anchor-id="citation-style-csl-사용"><span class="header-section-number">5.3.5</span> Citation Style (CSL) 사용</h3>
+<p>특정 저널의 인용 스타일을 사용하려면 CSL 파일을 사용할 수 있습니다. 예를 들어, Nature 스타일을 사용하려면 <code>nature.csl</code> 파일을 다운로드하고, YAML 헤더에 추가합니다.</p>
+<p>예시는 annals of surgery의 citation style langue 을 <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a>로부터 다운로드 받아서 프로젝트 폴더에 위치시킨 후 설정한 것입니다.</p>
+<pre><code>---
+title: Role of Targeted Therapy after Surgical Resection of Colorectal Liver Metastases
+author:
+  - name: Ui Sep Shin
+    orcid: 0000-0002-1714-7469
+    corresponding: true
+    roles: 
+      - Formal Analysis
+      - Supervision
+    affiliations:
+      - name: KIRAMS
+        department: Department of General Surgery
+    email: uisupshin@kirams.re.kr
+bibliography: references.bib
+csl: annals-of-surgery.csl
+number-sections: true
+---</code></pre>
+<p>렌더링 후 결과는 아래와 같습니다.</p>
+<p><img src="images/clipboard-655873129.png" class="img-fluid"></p>
 
 
+</section>
 </section>
 </section>
 
