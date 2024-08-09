@@ -15,10 +15,12 @@ website:
         text: R로 논문쓰기
       - href: preprocessing.qmd
         text: 데이터전처리
-      - href: survival_analysis.qmd
-        text: 생존분석
       - href: R_syntax.qmd
         text: R 문법
+      - href: basic_statistics.qmd
+        text: 기초통계
+      - href: survival_analysis.qmd
+        text: 생존분석
 
 format:
   html:
@@ -26,3 +28,5 @@ format:
     css: styles.css
     code-copy: true
     toc: true
+    number-sections: true
+    mathjax: "default"

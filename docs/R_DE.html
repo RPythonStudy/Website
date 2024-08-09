@@ -142,12 +142,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">데이터전처리</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./survival_analysis.html"> 
-<span class="menu-text">생존분석</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./R_syntax.html"> 
 <span class="menu-text">R 문법</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./basic_statistics.html"> 
+<span class="menu-text">기초통계</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./survival_analysis.html"> 
+<span class="menu-text">생존분석</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,13 +169,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-설치" id="toc-r-설치" class="nav-link active" data-scroll-target="#r-설치">R 설치</a></li>
-  <li><a href="#rtools-설치" id="toc-rtools-설치" class="nav-link" data-scroll-target="#rtools-설치">Rtools 설치</a></li>
-  <li><a href="#r-매뉴얼" id="toc-r-매뉴얼" class="nav-link" data-scroll-target="#r-매뉴얼">R 매뉴얼</a></li>
-  <li><a href="#r-통합개발환경-integrated-development-enviroment-ide-선택" id="toc-r-통합개발환경-integrated-development-enviroment-ide-선택" class="nav-link" data-scroll-target="#r-통합개발환경-integrated-development-enviroment-ide-선택">R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">Github</a></li>
-  <li><a href="#r-rstudio-폴더관리-추천" id="toc-r-rstudio-폴더관리-추천" class="nav-link" data-scroll-target="#r-rstudio-폴더관리-추천"><strong>R &amp; RStudio 폴더관리 추천</strong></a></li>
-  <li><a href="#예제-r로-논문쓰기-프로젝트-다운로드" id="toc-예제-r로-논문쓰기-프로젝트-다운로드" class="nav-link" data-scroll-target="#예제-r로-논문쓰기-프로젝트-다운로드">예제 R로 논문쓰기 프로젝트 다운로드</a></li>
+  <li><a href="#r-설치" id="toc-r-설치" class="nav-link active" data-scroll-target="#r-설치"><span class="header-section-number">0.1</span> R 설치</a></li>
+  <li><a href="#rtools-설치" id="toc-rtools-설치" class="nav-link" data-scroll-target="#rtools-설치"><span class="header-section-number">0.2</span> Rtools 설치</a></li>
+  <li><a href="#r-매뉴얼" id="toc-r-매뉴얼" class="nav-link" data-scroll-target="#r-매뉴얼"><span class="header-section-number">0.3</span> R 매뉴얼</a></li>
+  <li><a href="#r-통합개발환경-integrated-development-enviroment-ide-선택" id="toc-r-통합개발환경-integrated-development-enviroment-ide-선택" class="nav-link" data-scroll-target="#r-통합개발환경-integrated-development-enviroment-ide-선택"><span class="header-section-number">0.4</span> R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</a></li>
+  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github"><span class="header-section-number">0.5</span> Github</a></li>
+  <li><a href="#r-rstudio-폴더관리-추천" id="toc-r-rstudio-폴더관리-추천" class="nav-link" data-scroll-target="#r-rstudio-폴더관리-추천"><span class="header-section-number">0.6</span> <strong>R &amp; RStudio 폴더관리 추천</strong></a></li>
+  <li><a href="#예제-r로-논문쓰기-프로젝트-다운로드" id="toc-예제-r로-논문쓰기-프로젝트-다운로드" class="nav-link" data-scroll-target="#예제-r로-논문쓰기-프로젝트-다운로드"><span class="header-section-number">0.7</span> 예제 R로 논문쓰기 프로젝트 다운로드</a></li>
   </ul>
 </nav>
     </div>
@@ -181,8 +185,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="r-설치" class="level3">
-<h3 class="anchored" data-anchor-id="r-설치">R 설치</h3>
+<section id="r-설치" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="r-설치"><span class="header-section-number">0.1</span> R 설치</h3>
 <p>CRAN (The Comprehensive R Archive Network, <a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)에서 자신의 운영체제에 맞는 최선 버전을 다운로드 받아 설치합니다.</p>
 <p>R 설치에 대한 설명이나 FAQ는 공식사이트 (<a href="https://cran.r-project.org/index.html" class="uri">https://cran.r-project.org/index.html</a>)를 참고하셔도 되지만 아래와 같은 요약을 참고하여 설치 하셔도 됩니다.</p>
 <p>2024년 7월 22일 현재 64 bit 원도우용 최신 설치파일은 R-4.4.1-win.exe 입니다. 윈도우의 경우 설치폴더는 R 버전이 4.4.1이면 default로 C:\Program Files\R\R-4.4.1로 되지만 C:\R\R-4.4.1을 추천합니다.</p>
@@ -198,8 +202,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>지정 후 확인은, Win+R로 실행창을 열고 cmd 입력하여 커맨드창을 열고 “R” 또는 “R —version”을 입력하여 화면의 버전을 확인하시면 됩니다.</p></li>
 </ul>
 </section>
-<section id="rtools-설치" class="level3">
-<h3 class="anchored" data-anchor-id="rtools-설치">Rtools 설치</h3>
+<section id="rtools-설치" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="rtools-설치"><span class="header-section-number">0.2</span> Rtools 설치</h3>
 <p>Rtools는 R 프로그래밍 언어와 관련된 개발 도구 모음으로, 주로 Windows 운영 체제에서 사용됩니다. Rtools의 주요 역할과 기능은 다음과 같습니다:</p>
 <ul>
 <li><p><strong>패키지 컴파일 및 설치</strong>: R 패키지를 설치하거나 업데이트할 때, 특히 CRAN에서 제공하는 패키지 중 일부는 소스 코드 형태로 제공됩니다. 이 경우 Rtools는 해당 소스 코드를 컴파일하여 설치할 수 있도록 도와줍니다.</p></li>
@@ -209,16 +213,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>Rtools의 설치파일도 역시 CRAN에서 다운로드 하시면 되고, 2024년 7월 22일 현재 원도우의 경우 rtools44-6104-6039.exe가 최신 설치파일입니다. 설치폴더는 C 드라이브 루트가 권장됩니다 (예시 C:\rtools44). 시스템환경변수에서 Rtools 실행파일의 경로설정은 설치과정에서 자동으로 됩니다. (안되어 있으면 수동으로 설정하시길 바랍니다.) 시스템환경변수에 실행파일의 경로설정 확인은 R 콘솔에서 Sys.which(“make”) 실행하여 설치경로를 제대로 반환하면 성공임을 알 수 있습니다.</p>
 </section>
-<section id="r-매뉴얼" class="level3">
-<h3 class="anchored" data-anchor-id="r-매뉴얼">R 매뉴얼</h3>
+<section id="r-매뉴얼" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="r-매뉴얼"><span class="header-section-number">0.3</span> R 매뉴얼</h3>
 <p>R을 심도있게 공부할려면 R 개발자들이 만든 매뉴얼 중 <strong>The R language definition과 R Internals</strong>이 적합할 것 같습니다. (<a href="#0" style="font-size: 11pt;">https://cran.r-project.org/manuals.html</a>). 하지만 처음부터 어려운 매뉴얼을 공부하는 것보다 자신의 자료를 분석하는데 필요한 명령과 함수들을 Help 기능 등으로 이해하는 방법으로 진행하는 것도 필요할 것 같습니다.</p>
 </section>
-<section id="r-통합개발환경-integrated-development-enviroment-ide-선택" class="level3">
-<h3 class="anchored" data-anchor-id="r-통합개발환경-integrated-development-enviroment-ide-선택">R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</h3>
+<section id="r-통합개발환경-integrated-development-enviroment-ide-선택" class="level3" data-number="0.4">
+<h3 data-number="0.4" class="anchored" data-anchor-id="r-통합개발환경-integrated-development-enviroment-ide-선택"><span class="header-section-number">0.4</span> R 통합개발환경 (Integrated Development Enviroment, IDE) 선택</h3>
 <p>RStudio와 VS Code는 모두 각자의 특징을 가진 R 프로그래밍을 위한 통합 개발 환경(IDE)입니다. RStudio는 전용화된 환경으로 R 언어와 관련된 다양한 기능을 직관적으로 제공하며, R 코드 작성, 데이터 시각화, 리포팅 등에 최적화되어 있습니다. 반면에 VS Code는 다양한 프로그래밍 언어를 지원하며, Marketplace에서 제공하는 확장 기능을 통해 개발자가 필요한 기능을 추가할 수 있는 유연성을 가지고 있습니다. VS Code는 경량화된 성능과 통합 터미널 기능을 제공하여 다양한 개발 환경에서 활용될 수 있지만, R에 특화된 기능은 상대적으로 부족할 수 있습니다.</p>
 <p>연구회에서는 RStudio를 우선 추천합니다.</p>
-<section id="rstudio-설치" class="level4">
-<h4 class="anchored" data-anchor-id="rstudio-설치">RStudio 설치</h4>
+<section id="rstudio-설치" class="level4" data-number="0.4.1">
+<h4 data-number="0.4.1" class="anchored" data-anchor-id="rstudio-설치"><span class="header-section-number">0.4.1</span> RStudio 설치</h4>
 <p>자신의 운영체제에 맞는 최신버전의 RStudio를 아래의 공식 다운로드 사이트에서 다운로드 후 (2024년 7월 22일 현재 원도우데스크탑용의 최신설치파일은 RStudio-2024.04.2-764.exe입니다.)</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -252,8 +256,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>개발자들은 R을 command line interface로 사용하기 보다는 RStudio로 사용한다고 생각됩니다. 그러한 측면에서 R 사용법과 RStudio 사용법은 밀접하게 연계된 셈이며, 사용법에 대한 자료는 RStudio를 개발한 posit에서 만든 RSudio에 내장된 Tutorials가 있습니다. 링크를 타고들어가보면 Beginners, Intermediates, Experts 과정들이 있으므로 상황에 맞는 과정들을 선택해서 시작하면 좋습니다.</p>
 </section>
 </section>
-<section id="github" class="level3">
-<h3 class="anchored" data-anchor-id="github">Github</h3>
+<section id="github" class="level3" data-number="0.5">
+<h3 data-number="0.5" class="anchored" data-anchor-id="github"><span class="header-section-number">0.5</span> Github</h3>
 <p>Git는 로컬 버전 관리 시스템으로 개발 중인 소스코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 물론 R에 한정된 것이 아니며 범용적입니다.</p>
 <p>Github는 클라우드 개념의 원격저장소를 통해 자신의 프로젝트 버전관리를 하게되며, 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수도 있습니다.</p>
 <p>R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 연구회에서 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다.</p>
@@ -273,8 +277,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>를 클리하여 다운로드 받을 수도 있습니다.</p>
 <p><img src="images/파일다운로드가능한화면.JPG" class="img-fluid"></p>
 <p>그러나 파일과 폴더의 갯수가 적지 않으므로 소수의 파일을 다운로드 할 때나, git 명령어 수행 시 충돌이 발생하는 등 예외상황에서 사용하는 것이 좋습니다.</p>
-<section id="git-설치" class="level4">
-<h4 class="anchored" data-anchor-id="git-설치">Git 설치</h4>
+<section id="git-설치" class="level4" data-number="0.5.1">
+<h4 data-number="0.5.1" class="anchored" data-anchor-id="git-설치"><span class="header-section-number">0.5.1</span> Git 설치</h4>
 <p>운영체제별 설치파일 및 방벙은 <a href="https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98" class="uri">https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98</a>을 참고하시면 됩니다. 2024년 7월 22일 현재 윈도우용 64비트 최신 설치파일은 Git-2.45.2-64-bit.exe 입니다.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -332,23 +336,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </section>
-<section id="패키지-종속성-관리를-위한-renv" class="level4">
-<h4 class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h4>
+<section id="패키지-종속성-관리를-위한-renv" class="level4" data-number="0.5.2">
+<h4 data-number="0.5.2" class="anchored" data-anchor-id="패키지-종속성-관리를-위한-renv"><span class="header-section-number">0.5.2</span> <strong>패키지 종속성 관리를 위한</strong> <code>renv</code></h4>
 <p>원래 R에서 패키지는 해당버전 R의 설치폴더 하부의 library 폴더에 설치됩니다. <code>renv</code>는 R 프로젝트에서 패키지 의존성을 관리하기 위해 설계된 도구로써, renv를 설치하고 활성화하면 해당 프로젝트 폴더 하부에 renv 폴더가 만들어지고, 그 하부에 패키지를 설치하게 됩니다. 또한 설치된 패키지들의 정보를 renv.lock 파일에 관리하게 됩니다. 이러한 방법으로 R에서는 프로젝트별로 패키지를 관리할 수 있으므로 필자를 이를 추천합니다.</p>
 <p>RStudio에서 새로운 프로젝트를 생성할 때 renv 사용여부를 check하면 자동으로 설정됩니다.</p>
 </section>
 </section>
-<section id="r-rstudio-폴더관리-추천" class="level3">
-<h3 class="anchored" data-anchor-id="r-rstudio-폴더관리-추천"><strong>R &amp; RStudio 폴더관리 추천</strong></h3>
-<section id="실행파일-설치-폴더" class="level4">
-<h4 class="anchored" data-anchor-id="실행파일-설치-폴더">실행파일 설치 폴더</h4>
+<section id="r-rstudio-폴더관리-추천" class="level3" data-number="0.6">
+<h3 data-number="0.6" class="anchored" data-anchor-id="r-rstudio-폴더관리-추천"><span class="header-section-number">0.6</span> <strong>R &amp; RStudio 폴더관리 추천</strong></h3>
+<section id="실행파일-설치-폴더" class="level4" data-number="0.6.1">
+<h4 data-number="0.6.1" class="anchored" data-anchor-id="실행파일-설치-폴더"><span class="header-section-number">0.6.1</span> 실행파일 설치 폴더</h4>
 <p>R 새 버전으로 업데이트하면 드물겠지만 기존 코드나 사용 중인 패키지가 예상대로 작동하지 않을 수 있으며, 새 버전에서는 패키지의 지원이 변경될 수 있어 시스템의 안정성을 유지하기 위해 이전 버전의 실행파일을 유지하는 것도 필요합니다. 따라서 아래의 예시와 같은 폴더구조가 추천됩니다.</p>
 <p>C:\R</p>
 <p>├── R-4.4.0</p>
 <p>└── R-4.4.1</p>
 </section>
-<section id="프로젝트-폴더관리" class="level4">
-<h4 class="anchored" data-anchor-id="프로젝트-폴더관리">프로젝트 폴더관리</h4>
+<section id="프로젝트-폴더관리" class="level4" data-number="0.6.2">
+<h4 data-number="0.6.2" class="anchored" data-anchor-id="프로젝트-폴더관리"><span class="header-section-number">0.6.2</span> 프로젝트 폴더관리</h4>
 <p>R 실행파일을 C 드라이브 R 폴더 하위에 설치한 것을 고려하면 Project 폴더를 C:\R\Projects 하위폴더에 R 버전과 프로젝트명을 폴더명으로 하여 관리하는 것을 추천합니다.</p>
 <p>C:\ R</p>
 <p>├── R-4.4.0</p>
@@ -358,10 +362,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>| └── R-4.4.1-RPythonStudy_HANJM</p>
 </section>
 </section>
-<section id="예제-r로-논문쓰기-프로젝트-다운로드" class="level3">
-<h3 class="anchored" data-anchor-id="예제-r로-논문쓰기-프로젝트-다운로드">예제 R로 논문쓰기 프로젝트 다운로드</h3>
-<section id="rstudio-프로젝트-만들기" class="level4">
-<h4 class="anchored" data-anchor-id="rstudio-프로젝트-만들기">1. RStudio 프로젝트 만들기</h4>
+<section id="예제-r로-논문쓰기-프로젝트-다운로드" class="level3" data-number="0.7">
+<h3 data-number="0.7" class="anchored" data-anchor-id="예제-r로-논문쓰기-프로젝트-다운로드"><span class="header-section-number">0.7</span> 예제 R로 논문쓰기 프로젝트 다운로드</h3>
+<section id="rstudio-프로젝트-만들기" class="level4" data-number="0.7.1">
+<h4 data-number="0.7.1" class="anchored" data-anchor-id="rstudio-프로젝트-만들기"><span class="header-section-number">0.7.1</span> 1. RStudio 프로젝트 만들기</h4>
 <p>New Project… &gt; New Directory &gt; New Project를 단계적으로 선택하고</p>
 <p>C:\R\Projects (=Default working directory) 하위에</p>
 <p>Directory name 입력란에는 아래의 예시와 같이 R의 버전과 프로젝트를 상징하는 이름을 조합하여 입력할 것을 추천합니다.</p>
@@ -379,8 +383,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/folder_example.jpg" class="img-fluid"></p>
 <p>git를 사용하기 때문에 설정이 보관되는 .git 폴더와 버전관리 예외(규칙)이 기록되어 있는 .gitignore 파일이 생성되어 있습니다. renv를 사용하기 때문에 프로젝트에 패키지가 설치되는 renv 폴더가 생성되었고 설치되는 패키지의 대한 기록이 되는 renv.lock 파일 생성되어 있습니다. RStudio에서 프로젝트로 이 폴더를 사용하기 때문에 .Rproj.user 폴더, .Rprofile 파일, R-4.4.1-RPythonStudy_HANJM.Rproj 파일이 생성되어 있습니다.</p>
 </section>
-<section id="git-원격저장소-예제-r프로젝트-파일-다운로드" class="level4">
-<h4 class="anchored" data-anchor-id="git-원격저장소-예제-r프로젝트-파일-다운로드">2. Git 원격저장소 예제 R프로젝트 파일 다운로드</h4>
+<section id="git-원격저장소-예제-r프로젝트-파일-다운로드" class="level4" data-number="0.7.2">
+<h4 data-number="0.7.2" class="anchored" data-anchor-id="git-원격저장소-예제-r프로젝트-파일-다운로드"><span class="header-section-number">0.7.2</span> 2. Git 원격저장소 예제 R프로젝트 파일 다운로드</h4>
 <p>아래는 github 원격저장소에 있는 생존분석데이터를 이용한 샘플용 R프로젝트를 나의 R 프로젝트 폴더에 다운로드 받는 방법입니다.</p>
 <p>먼저 현재의git 프로젝트에 github 원격저장소의 URL을 등록해야 합니다. Git 명령을 입력하기 위해 아래의 그림의 console pane의 Terminal 탭으로 이동하여 git remote add 명령을 실행합니다.</p>
 <p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
@@ -404,8 +408,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>(중복이 있더라도 원격저장소으 파일로 강제로 덮어쓰는 명령이 있지만 제가 시도할 때는 오류 메세지가 같이 나오기 때문에 일단 여기에는 소개하지 않습니다.)</p>
 </section>
-<section id="renv.lock-파일로-r-package-설치하기" class="level4">
-<h4 class="anchored" data-anchor-id="renv.lock-파일로-r-package-설치하기">3. renv.lock 파일로 R package 설치하기</h4>
+<section id="renv.lock-파일로-r-package-설치하기" class="level4" data-number="0.7.3">
+<h4 data-number="0.7.3" class="anchored" data-anchor-id="renv.lock-파일로-r-package-설치하기"><span class="header-section-number">0.7.3</span> 3. renv.lock 파일로 R package 설치하기</h4>
 <p>원격저장소에는 예제 R프로젝트 파일은 있지만 이를 위해 필요한 R 패키지까지 같이 있지는 않습니다. 하지만 renv.lock 파일에는 설치된 패키지 버전과 목록이 기록되어 있으므로 이를 이용해서 설치하시면 됩니다.</p>
 <p>Console pane의 Consle 탭으로 이동해서 renv::restore() 명령을 실행하시면 됩니다.</p>
 <div class="cell">
@@ -417,12 +421,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="raw_data-폴더에서-xlsx-파일-붙여넣기" class="level4">
-<h4 class="anchored" data-anchor-id="raw_data-폴더에서-xlsx-파일-붙여넣기">4. raw_data 폴더에서 xlsx 파일 붙여넣기</h4>
+<section id="raw_data-폴더에서-xlsx-파일-붙여넣기" class="level4" data-number="0.7.4">
+<h4 data-number="0.7.4" class="anchored" data-anchor-id="raw_data-폴더에서-xlsx-파일-붙여넣기"><span class="header-section-number">0.7.4</span> 4. raw_data 폴더에서 xlsx 파일 붙여넣기</h4>
 <p>예제 R로 논문쓰기 프로젝트를 실행할 때 raw data로써 “deidentified_han20230213.xlsx”이 필요합니다. 이 파일은 이미 개인정보보호조치(개인정보익명화, 날짜정보를 날짜간의 차이정보로 변환)가 되어 있지만 연구회의 방침상 업로드는 되어 있지는 않습니다. 내부연구자 분들이 실습을 위해 위 파일이 필요한 경우에는 연구회에 연락 바랍니다. 이 파일을 프로젝트 폴더 하부의 raw_data 폴더를 만들고 위 xlsx 파일을 복사해 주시면 됩니다.</p>
 </section>
-<section id="완료" class="level4">
-<h4 class="anchored" data-anchor-id="완료">5. 완료</h4>
+<section id="완료" class="level4" data-number="0.7.5">
+<h4 data-number="0.7.5" class="anchored" data-anchor-id="완료"><span class="header-section-number">0.7.5</span> 5. 완료</h4>
 <p>예제 R로 논문쓰기 프로젝트가 로컬에서 준비가 완료되었습니다. 원하는 기능들이 R청크에서 어떻게 구현되었는지 확인하시고 코드줄, 블록 또는 청크단위로 실행하시면서 구현결과를 확인하시면 됩니다.</p>
 
 

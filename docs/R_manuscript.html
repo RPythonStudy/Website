@@ -142,12 +142,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">데이터전처리</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./survival_analysis.html"> 
-<span class="menu-text">생존분석</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./R_syntax.html"> 
 <span class="menu-text">R 문법</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./basic_statistics.html"> 
+<span class="menu-text">기초통계</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./survival_analysis.html"> 
+<span class="menu-text">생존분석</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -165,14 +169,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" id="toc-rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" class="nav-link active" data-scroll-target="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는기존 방법</a></li>
-  <li><a href="#r-markdown-이란" id="toc-r-markdown-이란" class="nav-link" data-scroll-target="#r-markdown-이란">R Markdown 이란?</a></li>
-  <li><a href="#quarto-란" id="toc-quarto-란" class="nav-link" data-scroll-target="#quarto-란">Quarto 란?</a></li>
-  <li><a href="#quarto-렌더링" id="toc-quarto-렌더링" class="nav-link" data-scroll-target="#quarto-렌더링">5. Quarto 렌더링</a></li>
-  <li><a href="#예제-r프로젝트에-사용된-문법syntax" id="toc-예제-r프로젝트에-사용된-문법syntax" class="nav-link" data-scroll-target="#예제-r프로젝트에-사용된-문법syntax">예제 R프로젝트에 사용된 문법(syntax)</a>
+  <li><a href="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" id="toc-rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" class="nav-link active" data-scroll-target="#rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법"><span class="header-section-number">0.1</span> RStudio에서 R 스크립트 실행결과를 논문에서 사용하는기존 방법</a></li>
+  <li><a href="#r-markdown-이란" id="toc-r-markdown-이란" class="nav-link" data-scroll-target="#r-markdown-이란"><span class="header-section-number">0.2</span> R Markdown 이란?</a></li>
+  <li><a href="#quarto-란" id="toc-quarto-란" class="nav-link" data-scroll-target="#quarto-란"><span class="header-section-number">1</span> Quarto 란?</a></li>
+  <li><a href="#quarto-렌더링" id="toc-quarto-렌더링" class="nav-link" data-scroll-target="#quarto-렌더링"><span class="header-section-number">2</span> 5. Quarto 렌더링</a></li>
+  <li><a href="#예제-r프로젝트에-사용된-문법syntax" id="toc-예제-r프로젝트에-사용된-문법syntax" class="nav-link" data-scroll-target="#예제-r프로젝트에-사용된-문법syntax"><span class="header-section-number">3</span> 예제 R프로젝트에 사용된 문법(syntax)</a>
   <ul class="collapse">
-  <li><a href="#자료형-data-type" id="toc-자료형-data-type" class="nav-link" data-scroll-target="#자료형-data-type">자료형 (data type)</a></li>
-  <li><a href="#자료구조-data-structure" id="toc-자료구조-data-structure" class="nav-link" data-scroll-target="#자료구조-data-structure">자료구조 (data structure)</a></li>
+  <li><a href="#자료형-data-type" id="toc-자료형-data-type" class="nav-link" data-scroll-target="#자료형-data-type"><span class="header-section-number">3.1</span> 자료형 (data type)</a></li>
+  <li><a href="#자료구조-data-structure" id="toc-자료구조-data-structure" class="nav-link" data-scroll-target="#자료구조-data-structure"><span class="header-section-number">3.2</span> 자료구조 (data structure)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -183,18 +187,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법">RStudio에서 R 스크립트 실행결과를 논문에서 사용하는기존 방법</h3>
+<section id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="rstudio에서-r-스크립트-실행결과를-논문에서-사용하는기존-방법"><span class="header-section-number">0.1</span> RStudio에서 R 스크립트 실행결과를 논문에서 사용하는기존 방법</h3>
 <p>RStudio에서 *.R로 생성되는 R 스크립트 파일 내의 특정부분 스크립트를 실행하면 Console pane에서 결과를 확인할 수 있습니다. 그래픽 출력은 Output pane에 위치한 Plots 창에서 볼 수 있으며, HTML 위젯이나 대화형 문서는 Viewer 창에서 확인 가능합니다. 변수와 데이터셋의 현재 상태는 Environment 창에서 볼 수 있고, 스크립트나 함수가 생성하거나 수정한 파일은 Files 탭을 통해 접근할 수 있습니다.</p>
 <p><img src="images/clipboard-2730531706.png" class="img-fluid"></p>
 <p>논문에서 그래프를 사용하고 싶다면 Output pane의 Plots 탭에서 Export 하면되고, 테이블을 사용하고 싶으면 csv 파일로 저장하도록 스크립트 내에서 코딩을 해두면 됩니다. 그래프의 경우도 파일로 저장할 수 있습니다.</p>
 </section>
-<section id="r-markdown-이란" class="level3">
-<h3 class="anchored" data-anchor-id="r-markdown-이란">R Markdown 이란?</h3>
+<section id="r-markdown-이란" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="r-markdown-이란"><span class="header-section-number">0.2</span> R Markdown 이란?</h3>
 <p>R Markdown은 markdown이라는 문서작성 언어로 작성된 문서 내에 R 코드가 포함된 것으로, R 코드 결과물이 문서의 지정된 부위에 생성되는 개념입니다. 이를 논문작성에 적용하면 작성중인 논문 데이터의 오류를 정정하였을 때 R Markdown에서는 이미 작성한 그래프나 테이블을 연결되어 수정되며 이는 큰 장점입니다.</p>
 </section>
-<section id="quarto-란" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-란">Quarto 란?</h2>
+<section id="quarto-란" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="quarto-란"><span class="header-section-number">1</span> Quarto 란?</h2>
 <p>R Markdown이 주로 R 만 지원하고 출력형식이 제한적이지만 최근에 개발된 Quarto는 R 이외에도 Python 등 다양한 프로그램언어를 지원하며, 출력형식도 다양하여 장점이 많으로 연구회에서는 <code>R로 논문쓰기</code> 프로젝트를 Quarto를 사용하여 진행합니다.</p>
 <p>Quarto 문서의 기본구조는 R Markdown과 같이 대쉬3개(—)로 둘러싸인 YAML 헤더 , 3개의 백틱(```)과 {r}로 둘러싸인 R코드청크, quarto markdown 문법에 따라 작성되는 본문으로 구성됩니다. 아래의 예제 R프로젝트의 예시입니다.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
@@ -233,12 +237,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>그러나 아직까지 국내 보험체계는 전이 부위를 포함하는 절제술 후 항암요법에 표적치료제를 추가하는 것에 제한이 없는 상황입니다.</span>
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>따라서 대장암의 간 전이에서 근치적 절제술 후 항암화학요법을 진행한 환자에 대한 분석을 진행하여 표적치료제의 영향력을 평가하고자 하였습니다</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="yaml-문법" class="level4">
-<h4 class="anchored" data-anchor-id="yaml-문법">1. YAML 문법</h4>
+<section id="yaml-문법" class="level4" data-number="1.0.1">
+<h4 data-number="1.0.1" class="anchored" data-anchor-id="yaml-문법"><span class="header-section-number">1.0.1</span> 1. YAML 문법</h4>
 <p>YAML 헤더는 quarto 문법 중 Front Matter (<a href="https://quarto.org/docs/authoring/front-matter.html" class="uri">https://quarto.org/docs/authoring/front-matter.html</a>)를 참고하면 YAML 문법에 맞게 작성할 수 있습니다.</p>
 </section>
-<section id="r코드청크-옵션" class="level4">
-<h4 class="anchored" data-anchor-id="r코드청크-옵션">2. R코드청크 옵션</h4>
+<section id="r코드청크-옵션" class="level4" data-number="1.0.2">
+<h4 data-number="1.0.2" class="anchored" data-anchor-id="r코드청크-옵션"><span class="header-section-number">1.0.2</span> 2. R코드청크 옵션</h4>
 <p>R코드청크(=code cell) 는 그 자체는 일반적인 R 스크립트와 같이 작성하면 되지만 청크의 실행과 출력결과를 조절하기 위한 옵션들(<a href="https://quarto.org/docs/reference/cells/cells-knitr.html" class="uri">https://quarto.org/docs/reference/cells/cells-knitr.html</a>)이 있습니다. R코드청크 내부에 <code>#|</code> 이후에 옵션을 설정하게 되며 아래에 예제 R프로젝트에 사용된 예시들이 있습니다.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{{r}}</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| label: Load-raw-data #제목을 설정, "_"는 오류가 가능하다 하니 "-"로 단어 연결 추천</span></span>
@@ -251,12 +255,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="in">#| eval: false # 코드가 실행되지 않음</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="quarto-markdown-문법" class="level4">
-<h4 class="anchored" data-anchor-id="quarto-markdown-문법"><strong>3. Quarto markdown 문법</strong></h4>
+<section id="quarto-markdown-문법" class="level4" data-number="1.0.3">
+<h4 data-number="1.0.3" class="anchored" data-anchor-id="quarto-markdown-문법"><span class="header-section-number">1.0.3</span> <strong>3. Quarto markdown 문법</strong></h4>
 <p>Quarto markdown 문법은 R Markdown과 비슷하지만 더 많은 기능을 제공합니다. Quarto markdown 문법은 <a href="https://quarto.org/docs/authoring/markdown-basics.html" class="uri">https://quarto.org/docs/authoring/markdown-basics.html</a>를 참고하면 됩니다. Quarto는 Visual Editor 모드를 지원하여, WYSIWYG(What You See Is What You Get) 방식으로 문서를 작성할 수 있습니다. Visual Mode를 사용하면, 코드 블록 삽입, 이미지 추가, 테이블 생성 등을 GUI를 통해 쉽게 할 수 있습니다.</p>
 </section>
-<section id="manuscript-프로젝트" class="level4">
-<h4 class="anchored" data-anchor-id="manuscript-프로젝트"><strong>4. manuscript 프로젝트</strong></h4>
+<section id="manuscript-프로젝트" class="level4" data-number="1.0.4">
+<h4 data-number="1.0.4" class="anchored" data-anchor-id="manuscript-프로젝트"><span class="header-section-number">1.0.4</span> <strong>4. manuscript 프로젝트</strong></h4>
 <p>Quarto로 새로운 프로젝트를 만들 때 R로 논문쓰기에 적합한 manuscripit 프로젝트가 있으며 예제 R 프로젝트도 manuscript 프로젝트를 이용해 만들어졌습니다. 일반적인 폴더와 파일구성은 다음과 같은 구조를 가질 수 있습니다.</p>
 <p>Project/<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ &nbsp;_freeze/<br>
@@ -272,16 +276,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─ &nbsp;renv.lock<br>
 </p>
 </section>
-<section id="freeze-폴더의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="freeze-폴더의-기능"><strong>4-1. _freeze 폴더의 기능</strong></h4>
+<section id="freeze-폴더의-기능" class="level4" data-number="1.0.5">
+<h4 data-number="1.0.5" class="anchored" data-anchor-id="freeze-폴더의-기능"><span class="header-section-number">1.0.5</span> <strong>4-1. _freeze 폴더의 기능</strong></h4>
 <p>Quarto는 청크 단위의 실행 결과를 캐싱할 수 있습니다. YAML 헤더의 <code>execute.freeze</code> 옵션을 <code>auto</code> 또는 <code>true</code>로 설정하면 캐싱을 위해 <code>_freeze</code> 폴더가 생성됩니다.</p>
 </section>
-<section id="manuscript-폴더의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="manuscript-폴더의-기능">4-2. _manuscript 폴더의 기능</h4>
+<section id="manuscript-폴더의-기능" class="level4" data-number="1.0.6">
+<h4 data-number="1.0.6" class="anchored" data-anchor-id="manuscript-폴더의-기능"><span class="header-section-number">1.0.6</span> 4-2. _manuscript 폴더의 기능</h4>
 <p>Quarto manuscript 프로젝트에서는 기본적으로 렌더링 결과를 <code>_manuscript</code> 폴더에 만듭니다. 출력 결과를 다른 폴더로 변경하고자 할 때에는 YAML 헤더에서 <code>output-dir: 원하는 폴더명</code>으로 수정하시면 됩니다.</p>
 </section>
-<section id="quarto.yml-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="quarto.yml-파일의-기능">4-3. _quarto.yml 파일의 기능</h4>
+<section id="quarto.yml-파일의-기능" class="level4" data-number="1.0.7">
+<h4 data-number="1.0.7" class="anchored" data-anchor-id="quarto.yml-파일의-기능"><span class="header-section-number">1.0.7</span> 4-3. _quarto.yml 파일의 기능</h4>
 <p><code>_quarto.yml</code> 파일은 Quarto 프로젝트의 설정을 관리하는 구성 파일입니다. 이 파일을 통해 프로젝트의 전반적인 설정, 문서 렌더링 옵션, 그리고 특정 문서의 형식과 출력을 제어할 수 있습니다.</p>
 <p>아래는 예제 R 프로젝트에 사용된 <code>_quarto.yml</code> 의 부분입니다.</p>
 <div class="cell">
@@ -315,95 +319,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>마지막으로, ‘editor: visual’ 설정은 Quarto 문서 작성 시 사용되는 에디터 유형을 명시합니다. Visual editor는 사용자가 마크다운 문법을 몰라도 문서를 작성할 수 있도록 지원하는 사용자 친화적인 인터페이스를 제공합니다. 이는 문서 작성 과정을 보다 직관적이고 접근하기 쉽게 만듭니다.</p>
 <p>이러한 설정들은 효과적인 문서 작성과 관리를 가능하게 하며, 사용자에게 다양한 도구와 옵션을 제공하여 유연한 작업 환경을 조성합니다.</p>
 </section>
-<section id="gitignore-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="gitignore-파일의-기능">4-4. .gitignore 파일의 기능</h4>
+<section id="gitignore-파일의-기능" class="level4" data-number="1.0.8">
+<h4 data-number="1.0.8" class="anchored" data-anchor-id="gitignore-파일의-기능"><span class="header-section-number">1.0.8</span> 4-4. .gitignore 파일의 기능</h4>
 <p><code>.gitignore</code> 파일은 Git 버전 관리 시스템에서 특정 파일이나 디렉토리를 추적하지 않도록 설정하는 데 사용됩니다. 이 파일은 프로젝트 디렉토리 내에 위치하며, Git이 파일을 무시하도록 지시하는 패턴 목록을 포함하고 있습니다.</p>
 </section>
-<section id="rhistory-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="rhistory-파일의-기능">4-5. .Rhistory 파일의 기능</h4>
+<section id="rhistory-파일의-기능" class="level4" data-number="1.0.9">
+<h4 data-number="1.0.9" class="anchored" data-anchor-id="rhistory-파일의-기능"><span class="header-section-number">1.0.9</span> 4-5. .Rhistory 파일의 기능</h4>
 <p><code>.Rhistory</code> 파일은 R 프로그래밍 환경에서 사용자가 실행한 모든 명령어의 이력을 저장하는 파일입니다. 이 파일은 R 콘솔에서 직접 입력하거나 스크립트를 실행하는 동안의 사용자의 명령어들을 자동으로 기록합니다. 이 기능은 사용자가 이전 세션에서 수행한 작업을 추적하고, 필요한 경우 명령어를 재사용하거나 참조할 수 있게 해 줍니다.</p>
 </section>
-<section id="rprofile-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="rprofile-파일의-기능">4-6. .Rprofile 파일의 기능</h4>
+<section id="rprofile-파일의-기능" class="level4" data-number="1.0.10">
+<h4 data-number="1.0.10" class="anchored" data-anchor-id="rprofile-파일의-기능"><span class="header-section-number">1.0.10</span> 4-6. .Rprofile 파일의 기능</h4>
 <p><code>.Rprofile</code> 파일은 R 세션의 시작 시 자동으로 실행되는 스크립트를 포함하는 설정 파일입니다. 이 파일은 사용자 또는 특정 프로젝트에 대한 환경 설정을 사용자 정의하고, R 세션을 시작할 때마다 일관된 작업 환경을 구성하는 데 사용됩니다. <code>.Rprofile</code>은 R의 시작 시 자동으로 로드되므로, R을 사용하는 데 필요한 라이브러리 로딩, 옵션 설정, 환경 설정 등을 자동화할 수 있습니다. 예제 R프로젝트에서는 renv 환경이 활성화되도록 설정되어 있습니다.</p>
 </section>
-<section id="index.qmd-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="index.qmd-파일의-기능">4-7. Index.qmd 파일의 기능</h4>
+<section id="index.qmd-파일의-기능" class="level4" data-number="1.0.11">
+<h4 data-number="1.0.11" class="anchored" data-anchor-id="index.qmd-파일의-기능"><span class="header-section-number">1.0.11</span> 4-7. Index.qmd 파일의 기능</h4>
 <p><code>index.qmd</code> 파일은 Quarto 문서 프로젝트에서 중요한 역할을 하는 메인 문서 파일입니다. <code>.qmd</code> 확장자는 Quarto Markdown을 의미하며, 이 파일 형식은 Markdown의 확장 버전으로, Quarto에서 제공하는 다양한 기능을 지원합니다.</p>
 </section>
-<section id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능">4-8. R-4.4.1-RPythonStudy_HANJM.Rproj 파일의 기능</h4>
+<section id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능" class="level4" data-number="1.0.12">
+<h4 data-number="1.0.12" class="anchored" data-anchor-id="r-4.4.1-rpythonstudy_hanjm.rproj-파일의-기능"><span class="header-section-number">1.0.12</span> 4-8. R-4.4.1-RPythonStudy_HANJM.Rproj 파일의 기능</h4>
 <p><code>.Rproj</code> 파일은 RStudio의 프로젝트 파일로, 특정 R 프로젝트와 관련된 설정과 환경을 저장합니다. 이 파일은 RStudio 환경에서 프로젝트를 더 효율적으로 관리할 수 있게 해 주며, 프로젝트별로 별도의 작업 공간과 설정을 유지할 수 있도록 도와줍니다.</p>
 </section>
-<section id="references.bib-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="references.bib-파일의-기능">4-9. references.bib 파일의 기능</h4>
+<section id="references.bib-파일의-기능" class="level4" data-number="1.0.13">
+<h4 data-number="1.0.13" class="anchored" data-anchor-id="references.bib-파일의-기능"><span class="header-section-number">1.0.13</span> 4-9. references.bib 파일의 기능</h4>
 <p><code>references.bib</code> 파일은 레퍼런스 관리와 문헌 인용을 위한 BibTeX 파일입니다. 이 파일은 주로 LaTeX 문서나 다양한 텍스트 편집 소프트웨어와 통합하여 사용되며, 학술적 작업, 연구 보고서, 논문 등에서 출처를 인용하고 관리하는 데 필요한 정보를 포함합니다.</p>
 </section>
-<section id="renv-폴더의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="renv-폴더의-기능">4-10. renv 폴더의 기능</h4>
+<section id="renv-폴더의-기능" class="level4" data-number="1.0.14">
+<h4 data-number="1.0.14" class="anchored" data-anchor-id="renv-폴더의-기능"><span class="header-section-number">1.0.14</span> 4-10. renv 폴더의 기능</h4>
 <p><code>renv</code> 폴더는 R 프로젝트에서 프로젝트별 종속성 관리를 위해 사용되는 <code>renv</code> 패키지에 의해 생성되는 디렉토리입니다. 이 폴더는 프로젝트의 라이브러리를 격리시켜 다른 프로젝트나 시스템의 R 패키지 설치와 독립적으로 유지할 수 있도록 도와줍니다. <code>renv</code>는 R의 프로젝트에 대한 복원 가능하고 재현 가능한 환경을 제공하는 데 중점을 두고 있습니다.</p>
 </section>
-<section id="renv.lock-파일의-기능" class="level4">
-<h4 class="anchored" data-anchor-id="renv.lock-파일의-기능">4-11. renv.lock 파일의 기능</h4>
+<section id="renv.lock-파일의-기능" class="level4" data-number="1.0.15">
+<h4 data-number="1.0.15" class="anchored" data-anchor-id="renv.lock-파일의-기능"><span class="header-section-number">1.0.15</span> 4-11. renv.lock 파일의 기능</h4>
 <p><code>renv.lock</code> 파일은 R 프로젝트에서 <code>renv</code> 패키지를 사용할 때 생성되는 중요한 파일로, 프로젝트의 종속성(의존하는 R 패키지들)을 정확하고 재현 가능하게 기록합니다. 이 파일은 프로젝트에 필요한 모든 R 패키지의 버전과 소스 정보를 포함하여 프로젝트 환경을 재현할 수 있도록 돕습니다.</p>
 </section>
 </section>
-<section id="quarto-렌더링" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-렌더링">5. Quarto 렌더링</h2>
+<section id="quarto-렌더링" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="quarto-렌더링"><span class="header-section-number">2</span> 5. Quarto 렌더링</h2>
 <p>Quarto 문서 렌더링은 <code>.qmd</code> 파일(Quarto Markdown 파일)을 다양한 출력 형식으로 변환하는 복잡한 과정을 포함합니다. 이 과정은 데이터 분석, 코드 실행, 결과의 시각화를 포함한 종합적인 문서 생성을 목표로 하며, 주로 Quarto의 명령줄 인터페이스(Command Line Interface, CLI)를 통해 실행됩니다. 예를 들어, <code>quarto render mydocument.qmd</code> 명령은 <code>mydocument.qmd</code> 파일을 지정된 형식으로 변환합니다. 이 CLI 명령은 RStudio의 콘솔 창 아래에 있는 터미널에서 실행할 수 있습니다. 추가적으로, RStudio에서는 ‘Render’ 버튼을 사용하여 문서의 미리보기가 가능합니다. 이 버튼은 RStudio 환경 내에서 Quarto 문서를 쉽게 렌더링하고 결과를 실시간으로 확인할 수 있는 사용자 친화적인 방법을 제공합니다. 이를 통해 사용자는 문서의 최종 형태를 확인하고 필요에 따라 수정할 수 있습니다.</p>
 </section>
-<section id="예제-r프로젝트에-사용된-문법syntax" class="level2">
-<h2 class="anchored" data-anchor-id="예제-r프로젝트에-사용된-문법syntax">예제 R프로젝트에 사용된 문법(syntax)</h2>
+<section id="예제-r프로젝트에-사용된-문법syntax" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="예제-r프로젝트에-사용된-문법syntax"><span class="header-section-number">3</span> 예제 R프로젝트에 사용된 문법(syntax)</h2>
 <p>작성 중이며 update 되어야 합니다.</p>
-<section id="자료형-data-type" class="level3">
-<h3 class="anchored" data-anchor-id="자료형-data-type">자료형 (data type)</h3>
-<section id="numeric" class="level4">
-<h4 class="anchored" data-anchor-id="numeric">numeric</h4>
+<section id="자료형-data-type" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="자료형-data-type"><span class="header-section-number">3.1</span> 자료형 (data type)</h3>
+<section id="numeric" class="level4" data-number="3.1.1">
+<h4 data-number="3.1.1" class="anchored" data-anchor-id="numeric"><span class="header-section-number">3.1.1</span> numeric</h4>
 </section>
-<section id="double" class="level4">
-<h4 class="anchored" data-anchor-id="double"><strong>double</strong></h4>
+<section id="double" class="level4" data-number="3.1.2">
+<h4 data-number="3.1.2" class="anchored" data-anchor-id="double"><span class="header-section-number">3.1.2</span> <strong>double</strong></h4>
 <p>R에서 숫자형 데이터를 가리킬 때 <code>numeric</code>이라는 개념을 사용하며 이는 정수와 소수를 모두 포함합니다. 그래서 스크립트에서 자료형을 알아내는 내장(built in) 함수 <code>typeof</code>로 숫자 1 또는 3.14의 자료형을 확인한다면 모두 <code>double</code>을 반환합니다 (이는 R에서 정수형과 실수형 데이터 모두가 기본적으로는 double 형식으로 저장되기 때문입니다).</p>
 </section>
-<section id="integer" class="level4">
-<h4 class="anchored" data-anchor-id="integer">Integer</h4>
+<section id="integer" class="level4" data-number="3.1.3">
+<h4 data-number="3.1.3" class="anchored" data-anchor-id="integer"><span class="header-section-number">3.1.3</span> Integer</h4>
 <p>만약 스크립트에서 변수에 명시적으로 정수만을 할당하여 사용할려면 끝부분에 <code>L</code>을 붙여주거나</p>
 <p>예시) i &lt;- 5L</p>
 <p>as.Integer 함수로 정수형으로 변환해서 사용할 수 있습니다. 이 때는 <code>typeof</code> 해보면 <code>integer</code>를 반환합니다.</p>
 </section>
-<section id="character" class="level4">
-<h4 class="anchored" data-anchor-id="character">character</h4>
+<section id="character" class="level4" data-number="3.1.4">
+<h4 data-number="3.1.4" class="anchored" data-anchor-id="character"><span class="header-section-number">3.1.4</span> character</h4>
 <p>문자형데이터를 기리킵니다.</p>
 </section>
-<section id="logical" class="level4">
-<h4 class="anchored" data-anchor-id="logical">logical</h4>
+<section id="logical" class="level4" data-number="3.1.5">
+<h4 data-number="3.1.5" class="anchored" data-anchor-id="logical"><span class="header-section-number">3.1.5</span> logical</h4>
 <p>논리형데이터 (TRUE/FALSE)를 가리킵니다,</p>
 <p>이외에도 복소수형과 Raw 자료형도 있다.</p>
 </section>
 </section>
-<section id="자료구조-data-structure" class="level3">
-<h3 class="anchored" data-anchor-id="자료구조-data-structure">자료구조 (data structure)</h3>
-<section id="vector" class="level4">
-<h4 class="anchored" data-anchor-id="vector">vector</h4>
+<section id="자료구조-data-structure" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="자료구조-data-structure"><span class="header-section-number">3.2</span> 자료구조 (data structure)</h3>
+<section id="vector" class="level4" data-number="3.2.1">
+<h4 data-number="3.2.1" class="anchored" data-anchor-id="vector"><span class="header-section-number">3.2.1</span> vector</h4>
 <p>같은 자료형의 일차원적 배열</p>
 </section>
-<section id="matrix" class="level4">
-<h4 class="anchored" data-anchor-id="matrix"><strong>matrix</strong></h4>
+<section id="matrix" class="level4" data-number="3.2.2">
+<h4 data-number="3.2.2" class="anchored" data-anchor-id="matrix"><span class="header-section-number">3.2.2</span> <strong>matrix</strong></h4>
 <p>같은 자료형의 이차원적 배열</p>
 </section>
-<section id="array" class="level4">
-<h4 class="anchored" data-anchor-id="array">array</h4>
+<section id="array" class="level4" data-number="3.2.3">
+<h4 data-number="3.2.3" class="anchored" data-anchor-id="array"><span class="header-section-number">3.2.3</span> array</h4>
 <p>같은 자료형의 삼차원적 배열</p>
 </section>
-<section id="data.frame" class="level4">
-<h4 class="anchored" data-anchor-id="data.frame">data.frame</h4>
+<section id="data.frame" class="level4" data-number="3.2.4">
+<h4 data-number="3.2.4" class="anchored" data-anchor-id="data.frame"><span class="header-section-number">3.2.4</span> data.frame</h4>
 <p>컬럼별로 자료형이 다를 수 있는 이차원적 배열</p>
 </section>
-<section id="list" class="level4">
-<h4 class="anchored" data-anchor-id="list">list</h4>
+<section id="list" class="level4" data-number="3.2.5">
+<h4 data-number="3.2.5" class="anchored" data-anchor-id="list"><span class="header-section-number">3.2.5</span> list</h4>
 <p>다른 자료형이나 구조의 일차원적인 배열</p>
 </section>
-<section id="factor" class="level4">
-<h4 class="anchored" data-anchor-id="factor">factor</h4>
+<section id="factor" class="level4" data-number="3.2.6">
+<h4 data-number="3.2.6" class="anchored" data-anchor-id="factor"><span class="header-section-number">3.2.6</span> factor</h4>
 <p>문자열과 level 그리고 값을 가지고 있어 자료형이라기 보다 자료구조라고 보는 것이 맞음</p>
 
 

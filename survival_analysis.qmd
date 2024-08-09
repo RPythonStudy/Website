@@ -1,11 +1,13 @@
 ---
 title: 생존분석
+author: (Benjamin) Byung Il KIM
 editor: 
   markdown: 
     wrap: 72
 ---
 
-인터넷검색 시 정리가 잘 된 부분을 발췌하였다.
+
+인터넷검색 시 정리가 잘 된 부분을 발췌하였습니다.
 
 지루한 일상의 소중함 중에서 ……. <https://every-day-life.tistory.com/30>
 
