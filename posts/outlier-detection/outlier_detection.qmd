@@ -1,0 +1,102 @@
+---
+title: "Outliers detection in continuous variables"
+description: "How to detect outliers in continuous variables using normal distribution and Box-Cox transformation."
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "July 8, 2024"
+date-modified: "July 8, 2024"
+categories:
+  - R
+  - preprocessing
+  - outlier
+---
+::: {.content-visible when-profile="ko"}
+## 연속형변수 이상치(outlier) 검출
+
+### Z -점수 방법
+
+데이터가 정규분포를 보인다면 평균으로부터 3 표준편차 이상 떨어져 있으면 이상치로 판단할 수 있습니다.
+
+아래 @fig-AGE 는 제가 만든 시각화의 예시입니다. 히스토그램에 평균과 3 표준편차를 표시하고, 이상치를 붉은색 원으로 표시해 보았습니다 (소스코드는 프로젝트 원격저장소 source 폴더의 my_histogram_for_outlier_detection.R에 있습니다.)
+:::
+
+::: {.content-visible when-profile="en"}
+
+## Outliers detection in continuous variables
+
+### Z-score method
+
+If the data follows a normal distribution, we can consider data points that are more than 3 standard deviations away from the mean as outliers.
+
+Below @fig-AGE is an example of visualization I created. I plotted a histogram with the mean and 3 standard deviations marked, and highlighted the outliers with red circles (the source code is in the source folder of the project repository, under the folder source/my_histogram_for_outlier_detection.R).
+:::
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-AGE
+#| fig.cap: Histogram of AGE
+#| fig.height: 6
+#| fig.width: 10
+
+library(readxl)
+
+source("C:/Projects/R-4.4.1-RPythonStudy_Website/source/my_histgram_with_outliers.R")
+raw_data <- read_excel("C:/Projects/R-4.4.1-RPythonStudy_Website/raw_data/deidentified_han20230213.xlsx")
+
+my_histgram_with_outliers(raw_data, "AGE")
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-CA199
+#| fig.cap: Histogram of CA19-9
+#| fig.height: 6
+#| fig.width: 10
+
+my_histgram_with_outliers(raw_data, "preHR_CA199")
+```
+::: {.content-visible when-profile="ko"}
+@fig-AGE 는 나이 데이터를 히스토그램으로 만든 것이며 이상치가 보이지 않는 경우입니다. @fig-CA199 는 종양표지자 CA 19-9를 히스토그램으로 만든 것이며 빨간원으로 표시된 이상치가 3개 있는 경우입니다.
+
+### 정규분포로의 변환
+
+**박스-콕스 변환(Box-Cox Transformation)은** 정규분포가 아닌 데이터를 다음의 식을 이용하여 정규분포에 가깝게 변환시켜 줍니다.
+:::
+
+::: {.content-visible when-profile="en"}
+@fig-AGE is a histogram of age data without any outliers. @fig-CA199 is a histogram of the tumor marker CA 19-9, which shows three outliers marked with red circles.
+
+### Transformation to normal distribution
+
+**Box-Cox Transformation** is a method to transform non-normally distributed data to a distribution that is closer to normal using the following formula.
+:::
+
+![](images/박스코스JPG.JPG)
+
+::: {.content-visible when-profile="ko"}
+박스-콕스 변환을 취하기 위해서는 데이터가 모두 양수여야 된다는 조건이 필요하며 보통 원 데이터의 최소값이 양수가 되도록 어떤 값을 더하는 shift주는 식으로 해결할 수 있습니다 (<https://blog.naver.com/pmw9440/221713858254>). 특정 데이터의 최적의 정규화 식을 찾는 과정은 최적의 λ 을 찾는 것이라 할 수 있습니다. 여기서 특기할만한 λ 의 값은 0, 1 인데, λ = 0이면 log(x) 로그변환을 의미하고 λ = 1이면 g(x) = x-1이 되므로 이는 항등변환과 같게 됩니다.
+
+위의 그림에서와 같이 CA 19-9 측정값은 정규분포를 보이지 않으므로 정규분포로 변환 후 히스토그램을 그리면 @fig-log 와 같습니다.
+:::
+
+::: {.content-visible when-profile="en"}
+
+To apply the Box-Cox transformation, the data must be positive, and typically, this is achieved by adding a shift term to make the minimum value of the original data positive (<https://blog.naver.com/pmw9440/221713858254>). The process of finding the optimal normalization formula for a specific dataset involves finding the optimal λ. Notable values of λ are 0 and 1. When λ = 0, it means log(x) transformation, and when λ = 1, g(x) = x-1, which is equivalent to the identity transformation.
+
+As shown in the figure above, the CA 19-9 measurement values do not follow a normal distribution. After transforming them to a normal distribution, the histogram looks like @fig-log.
+:::
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+#| label: fig-log
+#| fig.cap: Histogram of CA19-9 after log transformation
+#| fig.height: 6
+#| fig.width: 10
+
+my_histogram_log_transformation_with_outliers(raw_data, "preHR_CA199")
+```
+
+::: {.content-visible when-profile="ko"}
+x축을 로그를 취하니 정규분포모양이 되었으며 이상치도 1개로 감소되었습니다 (@fig-log).
+:::
+
+::: {.content-visible when-profile="en"}
+After taking the logarithm of the x-axis, the distribution looks more normal, and the number of outliers has decreased to one (@fig-log).
+:::
+

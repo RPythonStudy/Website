@@ -1,0 +1,26 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/VSCode-setup/VSCode_setup.html",
+      "/posts/group-comparison/group-comparison.html",
+      "/posts/Quarto/introduction_to_Quarto.html",
+      "/posts/Resources/introduction_to_resources.html",
+      "/posts/RStudio-setup/RStudio_setup.html",
+      "/posts/statistics/introduction_to_statistics.html",
+      "/posts/survival-analysis/survival_analysis.html",
+      "/posts/Utilities/introduction_to_utilities.html",
+      "/posts/manuscript-example/manuscript_example.html",
+      "/posts/Python/introduction_to_Python.html",
+      "/posts/Python-setup/Python_setup.html",
+      "/posts/R-syntax/R_syntax.html",
+      "/posts/basic-statistics/basic_statistics.html",
+      "/posts/built-in-dataset/built_in_dataset.html",
+      "/posts/outlier-detection/outlier_detection.html",
+      "/posts/Git-setup/Git_setup.html",
+      "/posts/R-setup/R_setup.html",
+      "/posts/R/introduction_to_R.html",
+      "/posts/about/about.html"
+    ]
+  }
+]

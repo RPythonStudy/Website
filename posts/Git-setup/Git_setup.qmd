@@ -1,0 +1,79 @@
+---
+title: "Git & Github setup"
+description: "Guidance on Installing and Configuring Git & Github"
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "2024-05-06"
+date-modified: "2024-05-27"
+categories:
+  - RStudio
+  - setup
+---
+
+## Github
+
+Git는 로컬 버전 관리 시스템으로 개발 중인 소스코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 물론 R에 한정된 것이 아니며 범용적입니다.
+
+Github는 클라우드 개념의 원격저장소를 통해 자신의 프로젝트 버전관리를 하게되며, 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수도 있습니다.
+
+R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 연구회에서 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다.
+
+만약에 git의 사용이 어려우신 분들은 github 원격저장소를 클라우드처럼 생각하시고 필요한 파일들을 직접 하나씩 다운로드 받으셔도 됩니다. 예를 들어서 아래의 연구회 예제 R로 논문쓰기 원격저장소 주소로 이동한 후
+
+```{r repository_url, eval=FALSE, filename="Git 설치파일 다운로드 사이트"}
+https://github.com/RPythonStudy/HANJM
+```
+
+아래의 원격저장소 그림에 있는 폴더와 파일들을 하나씩 클릭한 후
+
+![](images/예제R_원격저상소_파일.JPG)
+
+아래 그림의
+
+![](images/clipboard-1708260052.png)
+
+를 클리하여 다운로드 받을 수도 있습니다.
+
+![](images/파일다운로드가능한화면.JPG)
+
+그러나 파일과 폴더의 갯수가 적지 않으므로 소수의 파일을 다운로드 할 때나, git 명령어 수행 시 충돌이 발생하는 등 예외상황에서 사용하는 것이 좋습니다.
+
+## Git 설치
+
+운영체제별 설치파일 및 방벙은 <https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98>을 참고하시면 됩니다. 2024년 9월 27일 현재 윈도우용 64비트 최신 설치파일은 Git-2.46.2-64-bit.exe 입니다.
+
+```{r git_download_site, eval=FALSE, filename="Git 설치파일 다운로드 사이트"}
+https://git-scm.com/downloads
+```
+
+정상 설치여부 확인은 커맨드창에서 "git –version"을 실행하여 버전이 맞는지 확인하면 됩니다.
+
+```{r git_installation, eval=FALSE, filename="Command"}
+git -–version
+```
+
+다음으로 사용자이름과 이메일 주소를 아래의 git 명령으로 설정합니다.
+
+```{r git_config_user.name, eval=FALSE, filename="uer.name 설정예시"}
+git config --global user.name "BenKorea"
+```
+
+```{r eval=FALSE, filename="uer.email 설정예시"}
+git config --global user.email "kimbi.kirams@gmail.com"
+```
+
+로컬의 사용자이름과 이메일 주소는 연구회의 github 원격저장소에서 예제 파일들을 다운로드 받을 때 (git pull 명령을 사용할 때)는 필요 없습니다. 단지 자신의 파일을 업로드할 때 (git push 명령) 누가 올렸는지 알기 위해 이 내용이 같이 기록되는 용도입니다. 이는 github 가입할 때의 이름과 이메일과는 무관하므로 github 가입할 때의 이름과 메일을 사용하지 않으셔도 됩니다.
+
+로컬의 사용자이름과 이메일 주소의 설정 성공여부는 아래의 git 명령으로 입력했던 사용자이름과 이메일이 나오면 정상입니다.
+
+```{r git_config_user_confirm, eval=FALSE, filename="uer.name 확인예시"}
+git config user.name
+BenKorea
+git config user.email
+[kimbi.kirams@gmail.com]
+```
+
+버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 일반적으로는 RStudio를 시작할 때 git를 사용하는 옵션을 선택하게 시작하게 됩니다. Git 사용법에 대해서는 한글 매뉴얼을 참고하시길 바랍니다. <https://git-scm.com/book/ko/v2>
+
+(RStudio에서는 아래의 그림과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다. )
+
+![RStudio에서 git 사용여부 설정](images/git설정.JPG)

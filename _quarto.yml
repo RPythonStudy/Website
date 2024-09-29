@@ -1,0 +1,84 @@
+project:
+  type: website
+  
+profile:
+  default: ko
+  group: 
+    - [ko, en]
+    
+website:
+  title: "RPythonStudy"
+  navbar:
+    style: pinned
+    logo: RPythonStudy_logo.png
+    tools:
+      - icon: github
+        href: https://github.com/RPythonStudy/website
+    left:
+      - text: "Blog"
+        href: index.qmd
+      - text: "R"
+        href: posts/R/introduction_to_R.qmd
+      - text: "Python"
+        href: posts/Python/introduction_to_Python.qmd
+      - text: "Quarto"
+        href: posts/Quarto/introduction_to_Quarto.qmd        
+      - text: "Statistics"
+        href: posts/statistics/introduction_to_statistics.qmd
+      - text: "Quiz"        
+        href: https://rpythonstudy.shinyapps.io/Quiz/
+      - text: "Resources"      
+        href: posts/Resources/introduction_to_resources.qmd
+      - text: "Utilities"      
+        href: posts/Utilities/introduction_to_utilities.qmd
+      - text: "About"      
+        href: posts/about/about.qmd    
+        
+  sidebar:
+    - title: "R"
+      style: docked
+      search: true
+      contents:
+        - posts/R/introduction_to_R.qmd
+        - posts/R-setup/R_setup.qmd
+        - posts/RStudio-setup/RStudio_setup.qmd      
+        - posts/R-syntax/R_syntax.qmd    
+        - posts/outlier-detection/outlier_detection.qmd   
+        - posts/built-in-dataset/built_in_dataset.qmd   
+    - title: "Python"
+      contents:
+        - posts/Python/introduction_to_Python.qmd
+        - posts/Python-setup/Python_setup.qmd
+        - posts/VSCode-setup/VSCode_setup.qmd    
+    - title: "Quarto"
+      contents:
+        - posts/Quarto/introduction_to_Quarto.qmd
+        - posts/manuscript-example/manuscript_example.qmd
+    - title: "Statistics"
+      contents:
+        - posts/statistics/introduction_to_statistics.qmd
+        - posts/basic-statistics/basic_statistics.qmd
+        - posts/survival-analysis/survival_analysis.qmd
+        - posts/group-comparison/group_comparison.qmd
+    - title: "Resources"
+      contents:
+        - posts/Resources/introduction_to_resources.qmd 
+    - title: "Utilities"
+      contents:
+        - posts/Utilities/introduction_to_utilities.qmd
+        - posts/Git-setup/Git_setup.qmd        
+    
+execute: 
+  freeze: auto
+  
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    code-copy: true
+    toc: true
+    mathjax: "default"
+    
+resource-paths:
+  - resources/
+  - images/
