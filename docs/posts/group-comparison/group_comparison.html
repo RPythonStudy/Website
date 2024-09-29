@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.55">
@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
-<meta name="dcterms.date" content="2024-09-27">
 <meta name="description" content="Statistics concept in group comparison in continuous variables">
 
 <title>Group comparison in continuous variables – RPythonStudy</title>
@@ -90,17 +89,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
+    "search-no-results-text": "일치 없음",
+    "search-matching-documents-text": "일치된 문서",
+    "search-copy-link-title": "검색 링크 복사",
+    "search-hide-matches-text": "추가 검색 결과 숨기기",
+    "search-more-match-text": "추가 검색결과",
+    "search-more-matches-text": "추가 검색결과",
+    "search-clear-button-title": "제거",
     "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
+    "search-detached-cancel-button-title": "취소",
+    "search-submit-button-title": "검색",
+    "search-label": "검색"
   }
 }</script>
 
@@ -137,7 +136,7 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -151,8 +150,8 @@ window.Quarto = {
     <span class="navbar-title">RPythonStudy</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+            <div id="quarto-search" class="" title="검색"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -174,7 +173,7 @@ window.Quarto = {
 <span class="menu-text">Quarto</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/statistics/introduction_to_statistics.html"> 
+    <a class="nav-link active" href="../../posts/statistics/introduction_to_statistics.html" aria-current="page"> 
 <span class="menu-text">Statistics</span></a>
   </li>  
   <li class="nav-item">
@@ -196,8 +195,8 @@ window.Quarto = {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../.."> 
-<span class="menu-text">Korean</span></a>
+    <a class="nav-link" href="../.././en"> 
+<span class="menu-text">English</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -206,6 +205,19 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/group-comparison/group_comparison.html">Group comparison in continuous variables</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
@@ -227,23 +239,23 @@ window.Quarto = {
   <div class="quarto-title-meta">
 
       <div>
-      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-heading">저자</div>
       <div class="quarto-title-meta-contents">
                <p>RPythonStudyGroup feat. ChatGPT </p>
             </div>
     </div>
       
       <div>
-      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">September 27, 2024</p>
+        <p class="date">2024년 9월 27일</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">September 27, 2024</p>
+        <p class="date-modified">2024년 9월 27일</p>
       </div>
     </div>
       
@@ -252,10 +264,46 @@ window.Quarto = {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="검색"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/statistics/introduction_to_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to statistics</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/basic-statistics/basic_statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic statistics functions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/survival-analysis/survival_analysis.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Survival analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/group-comparison/group_comparison.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Group comparison in continuous variables</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">목차</h2>
    
   <ul>
   <li><a href="#추론통계" id="toc-추론통계" class="nav-link active" data-scroll-target="#추론통계"><strong>추론통계</strong></a></li>
@@ -291,7 +339,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+노트
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -302,7 +350,7 @@ Note
 </section>
 <section id="정규분포" class="level3">
 <h3 class="anchored" data-anchor-id="정규분포">정규분포</h3>
-<p><strong>정규분포(Normal Distribution)</strong>는 다양한 데이터가 평균을 중심으로 대칭적으로 분포하는 확률분포이며 가우스분포라고도 합니다 (<a href="#eq-normal-distribution" class="quarto-xref">Equation&nbsp;1</a> , <a href="#fig-normal-distribution" class="quarto-xref">Figure&nbsp;1</a>) .</p>
+<p><strong>정규분포(Normal Distribution)</strong>는 다양한 데이터가 평균을 중심으로 대칭적으로 분포하는 확률분포이며 가우스분포라고도 합니다 (<a href="#eq-normal-distribution" class="quarto-xref">방정식&nbsp;1</a> , <a href="#fig-normal-distribution" class="quarto-xref">그림&nbsp;1</a>) .</p>
 <div class="grid">
 <div class="g-col-5">
 <p><br></p>
@@ -320,10 +368,10 @@ Note
 <div id="fig-normal-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-normal-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="group-comparison_files/figure-html/fig-normal-distribution-1.png" class="img-fluid figure-img" width="672">
+<img src="group_comparison_files/figure-html/fig-normal-distribution-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normal-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Comparison of Normal Distributions with Different Variances
+그림&nbsp;1: Comparison of Normal Distributions with Different Variances
 </figcaption>
 </figure>
 </div>
@@ -331,11 +379,11 @@ Figure&nbsp;1: Comparison of Normal Distributions with Different Variances
 </div>
 </div>
 </div>
-<p>정규분포는 <a href="#fig-normal-distribution" class="quarto-xref">Figure&nbsp;1</a> 에서처럼 평균(<span class="math inline">\(\mu\)</span>)과 표준편차(<span class="math inline">\(\sigma\)</span>)에 따라 그 형태가 달라집니다. 이로 인해 서로 다른 정규분포를 비교하거나, 특정 데이터가 정규분포 내에서 어떤 위치에 있는지를 평가하는 것이 어렵습니다.</p>
+<p>정규분포는 <a href="#fig-normal-distribution" class="quarto-xref">그림&nbsp;1</a> 에서처럼 평균(<span class="math inline">\(\mu\)</span>)과 표준편차(<span class="math inline">\(\sigma\)</span>)에 따라 그 형태가 달라집니다. 이로 인해 서로 다른 정규분포를 비교하거나, 특정 데이터가 정규분포 내에서 어떤 위치에 있는지를 평가하는 것이 어렵습니다.</p>
 </section>
 <section id="z-분포" class="level3">
 <h3 class="anchored" data-anchor-id="z-분포">Z-분포</h3>
-<p><strong>Z-분포</strong>는 정규분포에서 데이터를 표준화(standardization)하여 얻어진 분포로, 평균이 0이고 표준편차가 1인 표준정규분포입니다 (<a href="#eq-standard-normal-distribution" class="quarto-xref">Equation&nbsp;2</a>, <a href="#fig-standard-normal-distribution" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<p><strong>Z-분포</strong>는 정규분포에서 데이터를 표준화(standardization)하여 얻어진 분포로, 평균이 0이고 표준편차가 1인 표준정규분포입니다 (<a href="#eq-standard-normal-distribution" class="quarto-xref">방정식&nbsp;2</a>, <a href="#fig-standard-normal-distribution" class="quarto-xref">그림&nbsp;2</a>).</p>
 <div class="grid">
 <div class="g-col-5">
 <p><br> <br> <span id="eq-standard-normal-distribution"><span class="math display">\[
@@ -353,10 +401,10 @@ f(z) = \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{z^2}{2}\right)
 <div id="fig-standard-normal-distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-standard-normal-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="group-comparison_files/figure-html/fig-standard-normal-distribution-1.png" class="img-fluid figure-img" width="672">
+<img src="group_comparison_files/figure-html/fig-standard-normal-distribution-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-standard-normal-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Standard Normal Distributions with Z-value
+그림&nbsp;2: Standard Normal Distributions with Z-value
 </figcaption>
 </figure>
 </div>
@@ -364,7 +412,7 @@ Figure&nbsp;2: Standard Normal Distributions with Z-value
 </div>
 </div>
 </div>
-<p>Z-분포에서 Z-값은 <strong>통계검정량(test statistic)</strong>으로 사용되며, 특정 데이터 포인트가 평균으로부터 얼마나 떨어져 있는지를 표준편차 단위로 나타냅니다. Z-값은 다음과 같이 계산됩니다: <a href="#eq-z-value" class="quarto-xref">Equation&nbsp;3</a></p>
+<p>Z-분포에서 Z-값은 <strong>통계검정량(test statistic)</strong>으로 사용되며, 특정 데이터 포인트가 평균으로부터 얼마나 떨어져 있는지를 표준편차 단위로 나타냅니다. Z-값은 다음과 같이 계산됩니다: <a href="#eq-z-value" class="quarto-xref">방정식&nbsp;3</a></p>
 <p><span id="eq-z-value"><span class="math display">\[
 Z = \frac{X - \mu}{\sigma}
 \tag{3}\]</span></span></p>
@@ -383,18 +431,18 @@ Z = \frac{X - \mu}{\sigma}
 </section>
 <section id="중심극한정리" class="level3">
 <h3 class="anchored" data-anchor-id="중심극한정리">중심극한정리</h3>
-<p><strong>어떤 모집단의 분포가 무엇이든 간에</strong> 표본 크기가 충분히 크면(일반적으로 <span class="math inline">\(n≥30\)</span>) 표본 평균의 분포는 정규분포에 근사하게 된다는 것이며, 표본 평균의 분포는 모집단의 평균 <span class="math inline">\(\mu\)</span>를 중심으로 하고, 표준오차(SE, Standard Error)인 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>를 표준편차로 가지는 정규분포에 근사하게 됩니다 <a href="#fig-central-limit-theorem" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p><strong>어떤 모집단의 분포가 무엇이든 간에</strong> 표본 크기가 충분히 크면(일반적으로 <span class="math inline">\(n≥30\)</span>) 표본 평균의 분포는 정규분포에 근사하게 된다는 것이며, 표본 평균의 분포는 모집단의 평균 <span class="math inline">\(\mu\)</span>를 중심으로 하고, 표준오차(SE, Standard Error)인 <span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span>를 표준편차로 가지는 정규분포에 근사하게 됩니다 <a href="#fig-central-limit-theorem" class="quarto-xref">그림&nbsp;3</a>.</p>
 <div id="fig-central-limit-theorem" class="quarto-float quarto-figure quarto-figure-center anchored" alt="(https://velog.io/@ted_log/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC%EC%99%80-%EC%8B%A0%EB%A2%B0%EA%B5%AC%EA%B0%84)">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-central-limit-theorem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <a href="https://velog.io/@ted_log/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC%EC%99%80-%EC%8B%A0%EB%A2%B0%EA%B5%AC%EA%B0%84"><img src="images/IllustrationCentralTheorem.png" class="img-fluid figure-img" alt="(https://velog.io/@ted_log/%EC%A4%91%EC%8B%AC%EA%B7%B9%ED%95%9C%EC%A0%95%EB%A6%AC%EC%99%80-%EC%8B%A0%EB%A2%B0%EA%B5%AC%EA%B0%84)"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-central-limit-theorem-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Illustration of Central Theorem (https://velog.io/ted_log/중심극한정리와와-신뢰구간)
+그림&nbsp;3: Illustration of Central Theorem (https://velog.io/ted_log/중심극한정리와와-신뢰구간)
 </figcaption>
 </figure>
 </div>
-<p>이를 기반으로 모평균의 95% 신뢰구간을 추정하면 다음과 같습니다: <a href="#eq-confidence-interval" class="quarto-xref">Equation&nbsp;4</a></p>
+<p>이를 기반으로 모평균의 95% 신뢰구간을 추정하면 다음과 같습니다: <a href="#eq-confidence-interval" class="quarto-xref">방정식&nbsp;4</a></p>
 <p><span id="eq-confidence-interval"><span class="math display">\[
 \overline{X} \pm Z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}}
 \tag{4}\]</span></span></p>
@@ -403,7 +451,7 @@ Figure&nbsp;3: Illustration of Central Theorem (https://velog.io/ted_log/중심�
 <li><p><span class="math inline">\(Z_{\alpha/2}\)</span> : 95% 신뢰수준에서의 Z-값(약 1.96)</p></li>
 <li><p><span class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span> : 표본 평균의 표준오차</p></li>
 </ul>
-<p>위 신뢰구간 추정식은 모집단의 표준편차 <span class="math inline">\(\sigma\)</span>를 알고 있다는 가정하에 유도되었습니다. 그러나 실제로는 모집단의 표준편차 <span class="math inline">\(\sigma\)</span>를 알 수 없는 경우가 대부분입니다. 이 경우 <span class="math inline">\(\sigma\)</span>를 사용할 수 없으므로 표본 표준편차 <span class="math inline">\(s\)</span>를 사용해야 합니다. 따라서 신뢰구간 추정식은 다음과 같이 수정됩니다: <a href="#eq-confidence-interval-s" class="quarto-xref">Equation&nbsp;5</a></p>
+<p>위 신뢰구간 추정식은 모집단의 표준편차 <span class="math inline">\(\sigma\)</span>를 알고 있다는 가정하에 유도되었습니다. 그러나 실제로는 모집단의 표준편차 <span class="math inline">\(\sigma\)</span>를 알 수 없는 경우가 대부분입니다. 이 경우 <span class="math inline">\(\sigma\)</span>를 사용할 수 없으므로 표본 표준편차 <span class="math inline">\(s\)</span>를 사용해야 합니다. 따라서 신뢰구간 추정식은 다음과 같이 수정됩니다: <a href="#eq-confidence-interval-s" class="quarto-xref">방정식&nbsp;5</a></p>
 <p><span id="eq-confidence-interval-s"><span class="math display">\[
 \overline{X} \pm Z_{\alpha/2} \cdot \frac{s}{\sqrt{n}}
 \tag{5}\]</span></span></p>
@@ -415,14 +463,14 @@ Figure&nbsp;3: Illustration of Central Theorem (https://velog.io/ted_log/중심�
 <p>t-분포는 1908년, 영국의 통계학자 <strong>윌리엄 고셋</strong>에 의해 처음으로 개발되었습니다. 당시 고셋은 맥주 양조 회사인 <strong>기네스(Guinness)</strong>에서 일하고 있었고, 소규모 실험에서 발생하는 불확실성을 다루기 위해 새로운 통계적 방법을 개발할 필요가 있었습니다.</p>
 <p><strong>필명 ‘Student’</strong>: 고셋은 회사의 기밀 유지 정책 때문에 자신의 이름을 사용하지 못했고, 대신 <strong>‘Student’</strong>라는 필명으로 논문을 발표했습니다. 그래서 t-분포는 종종 <strong>Student’s t-distribution</strong>이라고 불립니다.</p>
 <p>고셋은 정규분포와 카이제곱분포의 관계를 사용하여 t-분포를 도출했습니다. 카이제곱분포는 정규분포에서 도출된 분포로, 모집단의 분산을 모를 때 표본 분산을 통해 도출됩니다.</p>
-<p>표본 평균이 정규분포를 따르며, 표본 분산이 독립적인 카이제곱분포를 따른다는 사실에 기초해 t-분포를 수학적으로 유도했습니다 <a href="#eq-t-distribution" class="quarto-xref">Equation&nbsp;6</a>.</p>
+<p>표본 평균이 정규분포를 따르며, 표본 분산이 독립적인 카이제곱분포를 따른다는 사실에 기초해 t-분포를 수학적으로 유도했습니다 <a href="#eq-t-distribution" class="quarto-xref">방정식&nbsp;6</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+노트
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -444,7 +492,7 @@ f(t) = \frac{\Gamma\left(\frac{\nu + 1}{2}\right)}{\sqrt{\nu \pi} \, \Gamma\left
 <li><p><span class="math inline">\(\nu\)</span>가 작을수록, t-분포의 꼬리 부분이 더 두터워져서 극단적인 값이 나올 확률이 더 높습니다.</p></li>
 <li><p><span class="math inline">\(\nu\)</span>가 무한대로 커지면, t-분포는 표준정규분포와 동일하게 됩니다.</p></li>
 </ul>
-<p>t-통계량은 다음과 같이 정의됩니다: <a href="#eq-t-statistic" class="quarto-xref">Equation&nbsp;7</a></p>
+<p>t-통계량은 다음과 같이 정의됩니다: <a href="#eq-t-statistic" class="quarto-xref">방정식&nbsp;7</a></p>
 <p><span id="eq-t-statistic"><span class="math display">\[
 t = \frac{\overline{X} - \mu}{\frac{s}{\sqrt{n}}}
 \tag{7}\]</span></span></p>
@@ -469,14 +517,14 @@ t = \frac{\overline{X} - \mu}{\frac{s}{\sqrt{n}}}
 <img src="images/t분포JPG.JPG" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-t-distribution-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: 표준정규분포와 t분포의 차이
+그림&nbsp;4: 표준정규분포와 t분포의 차이
 </figcaption>
 </figure>
 </div>
 </section>
 <section id="t-분포를-이용한-모평균-신뢰구간" class="level3">
 <h3 class="anchored" data-anchor-id="t-분포를-이용한-모평균-신뢰구간">t-분포를 이용한 모평균 신뢰구간</h3>
-<p>t-분포를 이용하여 모평균의 신뢰구간을 구하는 식은 다음과 같습니다: <a href="#eq-confidence-interval-t" class="quarto-xref">Equation&nbsp;8</a></p>
+<p>t-분포를 이용하여 모평균의 신뢰구간을 구하는 식은 다음과 같습니다: <a href="#eq-confidence-interval-t" class="quarto-xref">방정식&nbsp;8</a></p>
 <p><span id="eq-confidence-interval-t"><span class="math display">\[
 \overline{X} \pm t_{\alpha/2, \, df} \cdot \frac{s}{\sqrt{n}}
 \tag{8}\]</span></span></p>
@@ -492,14 +540,14 @@ Figure&nbsp;4: 표준정규분포와 t분포의 차이
 </section>
 <section id="두-평균의-비교" class="level3">
 <h3 class="anchored" data-anchor-id="두-평균의-비교">두 평균의 비교</h3>
-<p>모평균 추정에서 t-분포 통계량인 t를 산출하는 것은 모평균과 표본평균의 차이를 표준오차로 보정하여 구하지만, 두 평균의 비교(t-검정)에서는 두 평균의 차이를 보정할 때 두 표본의 분산이 모두 사용되므로 결합분산(pooled variance)을 이용하여 보정하게 됩니다 <a href="#eq-t-test-two-sample" class="quarto-xref">Equation&nbsp;9</a>.</p>
+<p>모평균 추정에서 t-분포 통계량인 t를 산출하는 것은 모평균과 표본평균의 차이를 표준오차로 보정하여 구하지만, 두 평균의 비교(t-검정)에서는 두 평균의 차이를 보정할 때 두 표본의 분산이 모두 사용되므로 결합분산(pooled variance)을 이용하여 보정하게 됩니다 <a href="#eq-t-test-two-sample" class="quarto-xref">방정식&nbsp;9</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+노트
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -509,7 +557,7 @@ Note
 <p><span id="eq-t-test-two-sample"><span class="math display">\[
 t = \frac{\overline{X}_1 - \overline{X}_2}{\sqrt{s_p^2 \left(\frac{1}{n_1} + \frac{1}{n_2}\right)}}
 \tag{9}\]</span></span></p>
-<p>여기서: - <span class="math inline">\(\overline{X}_1\)</span>, <span class="math inline">\(\overline{X}_2\)</span> 는 각각 두 표본의 평균입니다. - <span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span> 는 각각 두 표본의 크기입니다. - <span class="math inline">\(s_p^2\)</span>는 두 표본의 결합분산(pooled variance)으로, 다음과 같이 계산됩니다: <a href="#eq-pooled-variance" class="quarto-xref">Equation&nbsp;10</a></p>
+<p>여기서: - <span class="math inline">\(\overline{X}_1\)</span>, <span class="math inline">\(\overline{X}_2\)</span> 는 각각 두 표본의 평균입니다. - <span class="math inline">\(n_1\)</span>, <span class="math inline">\(n_2\)</span> 는 각각 두 표본의 크기입니다. - <span class="math inline">\(s_p^2\)</span>는 두 표본의 결합분산(pooled variance)으로, 다음과 같이 계산됩니다: <a href="#eq-pooled-variance" class="quarto-xref">방정식&nbsp;10</a></p>
 <p><span id="eq-pooled-variance"><span class="math display">\[
 s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}
 \tag{10}\]</span></span></p>
@@ -575,7 +623,7 @@ s_p^2 = \frac{(n_1 - 1)s_1^2 + (n_2 - 1)s_2^2}{n_1 + n_2 - 2}
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">5.2</span>, <span class="fl">4.9</span>, <span class="fl">6.3</span>, <span class="fl">5.8</span>, <span class="fl">5.4</span>, <span class="fl">5.7</span>, <span class="fl">5.1</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 단일 표본 t-검정</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(data, <span class="at">mu =</span> <span class="fl">5.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(data, <span class="at">mu =</span> <span class="fl">5.5</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     One Sample t-test
@@ -601,7 +649,7 @@ mean of x
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>group2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">5.8</span>, <span class="fl">5.7</span>, <span class="fl">5.9</span>, <span class="fl">6.0</span>, <span class="fl">5.6</span>)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 독립 표본 t-검정</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -621,7 +669,7 @@ mean of x mean of y
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 분산이 같다고 가정한 t-검정</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2, <span class="at">var.equal =</span> <span class="cn">TRUE</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Two Sample t-test
@@ -647,7 +695,7 @@ mean of x mean of y
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>after <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">6.0</span>, <span class="fl">5.8</span>, <span class="fl">6.2</span>, <span class="fl">6.1</span>, <span class="fl">6.0</span>)</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 대응 표본 t-검정</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(before, after, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(before, after, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Paired t-test
@@ -678,7 +726,7 @@ mean difference
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 예시</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(group1, group2)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -716,7 +764,7 @@ df = \frac{\left(\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}\right)^2}{\frac{\left(\fr
 <li><strong>비대칭적 신뢰구간</strong>: Welch t-검정은 t-분포를 따르지 않으며, 신뢰구간이 비대칭적일 수 있습니다. 이는 데이터의 분포가 비대칭적일 때 더 정확한 신뢰구간을 제공합니다.</li>
 </ol>
 <p><br></p>
-<p>Welch t-검정의 t-통계량은 다음과 같이 계산됩니다: <a href="#eq-welch-t-statistic" class="quarto-xref">Equation&nbsp;11</a></p>
+<p>Welch t-검정의 t-통계량은 다음과 같이 계산됩니다: <a href="#eq-welch-t-statistic" class="quarto-xref">방정식&nbsp;11</a></p>
 <p><span id="eq-welch-t-statistic"><span class="math display">\[
 t = \frac{\overline{X}_1 - \overline{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
 \tag{11}\]</span></span></p>
@@ -736,7 +784,7 @@ t = \frac{\overline{X}_1 - \overline{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">t.test</span>(group1, group2)</span>
 <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 출력</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(result)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Welch Two Sample t-test
@@ -802,11 +850,11 @@ U_2 = R_2 - \frac{n_2 (n_2 + 1)}{2}
 <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>u_test_p_value <span class="ot">&lt;-</span> u_test_result<span class="sc">$</span>p.value</span>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 결과 출력</span></span>
-<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"t-검정 p-값:"</span>, t_test_p_value, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"t-검정 p-값:"</span>, t_test_p_value, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>t-검정 p-값: 0.1227817 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mann-Whitney U 검정 p-값:"</span>, u_test_p_value, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Mann-Whitney U 검정 p-값:"</span>, u_test_p_value, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Mann-Whitney U 검정 p-값: 0.03576713 </code></pre>
 </div>
@@ -824,11 +872,11 @@ U_2 = R_2 - \frac{n_2 (n_2 + 1)}{2}
 <span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"top"</span>)</span>
 <span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 그래프 출력</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(p)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="group-comparison_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="group_comparison_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -882,12 +930,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // flash "checked"
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
+    button.setAttribute("title", "복사완료!");
     let tooltip;
     if (window.bootstrap) {
       button.setAttribute("data-bs-toggle", "tooltip");
       button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
+      button.setAttribute("data-bs-title", "복사완료!");
       tooltip = new bootstrap.Tooltip(button, 
         { trigger: "manual", 
           customClass: "code-copy-button-tooltip",

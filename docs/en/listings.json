@@ -3,7 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/VSCode-setup/VSCode_setup.html",
-      "/posts/group-comparison/group-comparison.html",
+      "/posts/group-comparison/group_comparison.html",
       "/posts/Quarto/introduction_to_Quarto.html",
       "/posts/Resources/introduction_to_resources.html",
       "/posts/RStudio-setup/RStudio_setup.html",
