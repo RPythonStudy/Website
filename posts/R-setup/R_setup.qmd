@@ -3,25 +3,46 @@ title: "R setup"
 description: "Guidance on Installing and Configuring R and Rtools"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
-date-modified: "2024-05-06"
+date-modified: "2024-06-14"
 categories:
   - R
   - setup
 ---
+::: {.content-visible when-profile="ko"}
+## 설치 안내
+R 공식사이트 CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>)에서 Documentation 중 `Manuals` 중 `R Installation and Administration`을 참고하는 것이 이상적이지만, 아래와 같은 요약을 참고하여 설치 하셔도 됩니다.
 
-## R 설치
+## 설치 파일
+CRAN (<https://cran.r-project.org/index.html>)에서 자신의 운영체제에 맞는 최신 버전을 다운로드 받아 설치합니다. 2024년 6월 14일 현재 64 bit 원도우용 최신 설치파일은 `R-4.4.1-win.exe` 이 최신입니다.
 
-CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>)에서 자신의 운영체제에 맞는 최선 버전을 다운로드 받아 설치합니다.
+## 설치 옵션
+### 설치경로
+윈도우의 경우 기본 설치폴더는 R 버전이 4.4.1이면 default로 `C:\\Program Files\\R\\R-4.4.1`로 되지만 연구회에서는 아래와 같이 추천합니다.
+:::
 
-R 설치에 대한 설명이나 FAQ는 공식사이트 (<https://cran.r-project.org/index.html>)를 참고하셔도 되지만 아래와 같은 요약을 참고하여 설치 하셔도 됩니다.
+::: {.content-visible when-profile="en"}
+## Installation Guide
+While the official R documentation on CRAN (The Comprehensive R Archive Network, <https://cran.r-project.org/index.html>) under `Manuals` and `R Installation and Administration` provides comprehensive guidance, the following summary can also be helpful.
 
-2024년 9월 27일 현재 64 bit 원도우용 최신 설치파일은 R-4.4.1-win.exe 입니다. 윈도우의 경우 설치폴더는 R 버전이 4.4.1이면 default로 C:\\Program Files\\R\\R-4.4.1로 되지만 C:\\R\\R-4.4.1을 추천합니다.
+## Installation File
+Download the latest version of R for your operating system from CRAN (<https://cran.r-project.org/index.html>). As of September 27, 2024, the latest 64-bit Windows installation file is `R-4.4.1-win.exe`.
 
--   `C:\Program Files` 폴더 하에 설치: 대부분의 Windows 애플리케이션은 `program Files` 폴더에 설치되므로 시스템 소프트웨어와 애플리케이션을 관리하는 표준 위치이기 때문에 시스템의 정리가 용이합니다. 또한 `Program Files` 폴더는 특별한 시스템 권한을 요구하므로 일반 사용자가 이 폴더 내의 파일을 쉽게 변경할 수 없으므로, 악의적인 소프트웨어에 의한 변경으로부터 보호할 수 있습니다. 그러나 R 패키지를 설치하거나 업데이트할 때마다 관리자 권한이 필요하여 사용자가 R을 자유롭게 사용하고자 할 때 불편을 초래할 수 있고 \``` Program Files` ``는 경로 내에 공백을 포함하고 있어 일부 오래된 스크립트나 도구에서는 경로 내의 공백을 제대로 처리하지 못할 수 있어 문제가 발생할 수 있습니다.
+## Installation Options
+### Installation Path
+By default, R is installed in `C:\\Program Files\\R\\R-4.4.1` on Windows. However, the following path is recommended by the study group.
+:::
+
+```{r R_install_path, eval=FALSE, filename="R Install Option Window"}
+C:\R\R-4.4.1
+```
+
+::: {.callout-note title="`C:\Program Files\\`와 `C:\\` 경로의 장단점" collapse="true" appearance="minimal"}
+- 대부분의 Windows 애플리케이션은 `program Files` 폴더에 설치되므로 시스템 소프트웨어와 애플리케이션을 관리하는 표준 위치이기 때문에 시스템의 정리가 용이합니다. 또한 `Program Files` 폴더는 특별한 시스템 권한을 요구하므로 일반 사용자가 이 폴더 내의 파일을 쉽게 변경할 수 없으므로, 악의적인 소프트웨어에 의한 변경으로부터 보호할 수 있습니다. 그러나 R 패키지를 설치하거나 업데이트할 때마다 관리자 권한이 필요하여 사용자가 R을 자유롭게 사용하고자 할 때 불편을 초래할 수 있고 \``` Program Files` ``는 경로 내에 공백을 포함하고 있어 일부 오래된 스크립트나 도구에서는 경로 내의 공백을 제대로 처리하지 못할 수 있어 문제가 발생할 수 있습니다.
 
 -   `C:\` 하부에 직접 설치 (예: `C:\R`): 패키지 설치나 업데이트 시 관리자 권한을 요구하지 않고, 경로에 공백이 없기 때문에, 모든 스크립트나 프로그램에서 호환성 문제 없이 이 경로를 사용할 수 있습니다. 그러나 사용자 권한으로 설치된 프로그램은 보안이 상대적으로 약할 수 있으며, 악의적인 소프트웨어에 의해 변경되기 쉽고, 표준 설치 위치를 사용하지 않는 경우, 시스템의 소프트웨어와 애플리케이션이 분산되어 관리가 어려워질 수 있습니다.
 
 -   결론적으로, 설치 위치를 선택할 때는 보안, 사용 편의성, 시스템 관리의 용이성 등을 고려해야 하는데, 개인 사용자나 개발 환경에서는 `C:\R`과 같은 사용자 지정 경로가 더 편리할 수 있으며, 기업 환경이나 보안이 중요한 상황에서는 `C:\Program Files` 폴더 하에 설치하는 것이 더 적합할 수 있습니다.
+:::
 
 설치완료 후에는 시스템환경변수에 R 실행파일경로를 지정해 두어야 합니다.
 
