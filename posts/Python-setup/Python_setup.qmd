@@ -122,7 +122,7 @@ python --V
 
 ## Folder Structure
 
-The general folder structure is as shown in the figure below (@fig-PythonDirectory), and it may vary based on the installation options chosen.
+The general folder structure is as shown in the figure below @fig-PythonDirectory, and it may vary based on the installation options chosen.
 ::::
 
 ::: {#fig-PythonDirectory}

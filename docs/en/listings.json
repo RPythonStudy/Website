@@ -6,7 +6,6 @@
       "/posts/group-comparison/group_comparison.html",
       "/posts/Quarto/introduction_to_Quarto.html",
       "/posts/Resources/introduction_to_resources.html",
-      "/posts/RStudio-setup/RStudio_setup.html",
       "/posts/statistics/introduction_to_statistics.html",
       "/posts/survival-analysis/survival_analysis.html",
       "/posts/Utilities/introduction_to_utilities.html",
@@ -18,6 +17,7 @@
       "/posts/built-in-dataset/built_in_dataset.html",
       "/posts/outlier-detection/outlier_detection.html",
       "/posts/Git-setup/Git_setup.html",
+      "/posts/RStudio-setup/RStudio_setup.html",
       "/posts/R-setup/R_setup.html",
       "/posts/R/introduction_to_R.html",
       "/posts/about/about.html"

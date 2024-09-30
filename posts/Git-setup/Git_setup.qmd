@@ -5,11 +5,12 @@ author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
 date-modified: "2024-05-27"
 categories:
-  - RStudio
+  - Git
   - setup
 ---
 
-## Github
+::: {.content-visible when-profile="ko"}
+## Git
 
 Git는 로컬 버전 관리 시스템으로 개발 중인 소스코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 물론 R에 한정된 것이 아니며 범용적입니다.
 
@@ -18,62 +19,109 @@ Github는 클라우드 개념의 원격저장소를 통해 자신의 프로젝�
 R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 연구회에서 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다.
 
 만약에 git의 사용이 어려우신 분들은 github 원격저장소를 클라우드처럼 생각하시고 필요한 파일들을 직접 하나씩 다운로드 받으셔도 됩니다. 예를 들어서 아래의 연구회 예제 R로 논문쓰기 원격저장소 주소로 이동한 후
+:::
 
-```{r repository_url, eval=FALSE, filename="Git 설치파일 다운로드 사이트"}
+::: {.content-visible when-profile="en"}
+## Git
+
+Git is a local version management system that makes it easy to track and manage changes to the source code being developed. It is not limited to R and is universal.
+
+Github allows you to manage your project version through the concept of cloud-based remote repositories, allowing multiple developers to work on the same project by creating branches to develop independently and then merging the code through Pull Requests.
+
+When working on a statistical project with R, git installation is not absolutely necessary. However, since the example R projects created by the study group are stored in the github remote repository, git installation is recommended.
+
+If you find it difficult to use git, you can think of the github remote repository as a cloud and download the necessary files one by one. For example, you can go to the remote repository address for writing a paper in the study group below.
+:::
+
+```{r repository_url, eval=FALSE, filename="Repository address for manuscript writing example"}
 https://github.com/RPythonStudy/HANJM
 ```
 
-아래의 원격저장소 그림에 있는 폴더와 파일들을 하나씩 클릭한 후
+::: {.content-visible when-profile="ko"}
+ @fig-RepositroyCapture 에서처럼 원하는 파일명을 클릭한 후 우측 상단의 Download raw file 버튼을 클릭하시면 다운로드 됩니다.
+:::
 
-![](images/예제R_원격저상소_파일.JPG)
+::: {.content-visible when-profile="en"}
+As shown in @fig-RepositroyCapture below, click on the desired file name and then click the Download raw file button in the upper right corner to download it.
+:::
 
-아래 그림의
+![Files in remote repository in Github](images/RepositoryCapture.PNG){#fig-RepositroyCapture}
 
-![](images/clipboard-1708260052.png)
-
-를 클리하여 다운로드 받을 수도 있습니다.
-
-![](images/파일다운로드가능한화면.JPG)
-
-그러나 파일과 폴더의 갯수가 적지 않으므로 소수의 파일을 다운로드 할 때나, git 명령어 수행 시 충돌이 발생하는 등 예외상황에서 사용하는 것이 좋습니다.
+::: {.content-visible when-profile="ko"}
+그러나 일반적으로 프로젝트의 파일과 폴더의 갯수가 적지 않아 개별적으로 다운로드 받는 것은 어려우므로, 소수의 파일을 다운로드 할 때나 git 명령어 수행 시 충돌이 발생하는 등 예외상황에서 사용하는 것이 좋습니다.
 
 ## Git 설치
 
 운영체제별 설치파일 및 방벙은 <https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98>을 참고하시면 됩니다. 2024년 9월 27일 현재 윈도우용 64비트 최신 설치파일은 Git-2.46.2-64-bit.exe 입니다.
+:::
 
-```{r git_download_site, eval=FALSE, filename="Git 설치파일 다운로드 사이트"}
+::: {.content-visible when-profile="en"}
+However, since the number of files and folders in a project is generally not small, it is difficult to download them individually. Therefore, it is recommended to use it in exceptional situations such as when downloading a small number of files or when conflicts occur when executing git commands.
+
+## Git Installation
+
+For installation files and methods by operating system, refer to <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>. As of September 27, 2024, the latest installation file for Windows 64-bit is Git-2.46.2-64-bit.exe.
+:::
+
+```{r git_download_site, eval=FALSE, filename="Installation file download site"}
 https://git-scm.com/downloads
 ```
 
+::: {.content-visible when-profile="ko"}
 정상 설치여부 확인은 커맨드창에서 "git –version"을 실행하여 버전이 맞는지 확인하면 됩니다.
+:::
+
+::: {.content-visible when-profile="en"}
+To check if the installation is successful, run "git --version" in the command prompt to verify that the version is correct.
+:::
 
 ```{r git_installation, eval=FALSE, filename="Command"}
 git -–version
 ```
 
+::: {.content-visible when-profile="ko"}
 다음으로 사용자이름과 이메일 주소를 아래의 git 명령으로 설정합니다.
+:::
 
-```{r git_config_user.name, eval=FALSE, filename="uer.name 설정예시"}
+::: {.content-visible when-profile="en"}
+Next, set the username and email address using the following git command.
+:::
+
+```{r git_config_user.name, eval=FALSE, filename="uer.name config example"}
 git config --global user.name "BenKorea"
 ```
 
-```{r eval=FALSE, filename="uer.email 설정예시"}
+```{r eval=FALSE, filename="uer.email config example"}
 git config --global user.email "kimbi.kirams@gmail.com"
 ```
 
+::: {.content-visible when-profile="ko"}
 로컬의 사용자이름과 이메일 주소는 연구회의 github 원격저장소에서 예제 파일들을 다운로드 받을 때 (git pull 명령을 사용할 때)는 필요 없습니다. 단지 자신의 파일을 업로드할 때 (git push 명령) 누가 올렸는지 알기 위해 이 내용이 같이 기록되는 용도입니다. 이는 github 가입할 때의 이름과 이메일과는 무관하므로 github 가입할 때의 이름과 메일을 사용하지 않으셔도 됩니다.
 
 로컬의 사용자이름과 이메일 주소의 설정 성공여부는 아래의 git 명령으로 입력했던 사용자이름과 이메일이 나오면 정상입니다.
+:::
 
-```{r git_config_user_confirm, eval=FALSE, filename="uer.name 확인예시"}
+::: {.content-visible when-profile="en"}
+The local username and email address are not required when downloading example files from the study group's github remote repository (when using the git pull command). It is only for recording who uploaded the file when uploading your own file (git push command). This is unrelated to the name and email address you used when signing up for github, so you do not need to use the name and email address you used when signing up for github.
+:::
+
+```{r git_config_user_confirm, eval=FALSE, filename="uer.name confirm example"}
 git config user.name
 BenKorea
 git config user.email
 [kimbi.kirams@gmail.com]
 ```
 
+::: {.content-visible when-profile="ko"}
 버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 일반적으로는 RStudio를 시작할 때 git를 사용하는 옵션을 선택하게 시작하게 됩니다. Git 사용법에 대해서는 한글 매뉴얼을 참고하시길 바랍니다. <https://git-scm.com/book/ko/v2>
 
-(RStudio에서는 아래의 그림과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다. )
+RStudio에서는 @fig-GitConfiguration 과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다.
+:::
 
-![RStudio에서 git 사용여부 설정](images/git설정.JPG)
+::: {.content-visible when-profile="en"}
+To start version management, run the git init command in the desired folder (= project folder). Typically, you will be prompted to start using git when you start RStudio. For information on how to use git, please refer to the Korean manual. <https://git-scm.com/book/en/v2>
+
+In RStudio, there is a setting for whether to use version control interfaces such as git, as shown in @fig-GitConfiguration. You should check this setting so that the option to use git is available when creating a new project.
+:::
+
+![RStudio에서 git 사용여부 설정](images/git설정.JPG){#fig-GitConfiguration}
