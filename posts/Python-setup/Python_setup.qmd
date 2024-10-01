@@ -12,7 +12,7 @@ categories:
 ::: {.content-visible when-profile="ko"}
 ## 설치 안내
 
-Python 웹사이트에서 제공하는 공식문서(<https://docs.python.org/3/using/index.html>)를 참조하는 것이 이상적이겠지만, 아래와 같이 간단한 안내에 따라 설치하셔도 됩니다.
+Python 공식사이트에서 제공하는 공식문서(<https://docs.python.org/3/using/index.html>)를 참고하는 것이 이상적이겠지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.
 
 ## 설치 파일
 

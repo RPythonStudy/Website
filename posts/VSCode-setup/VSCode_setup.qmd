@@ -17,7 +17,7 @@ Python 개발에 적합한 다양한 통합 개발 환경(IDE) 중에서 PyCharm
 
 ## 설치 안내
 
-공식문서(<https://code.visualstudio.com/docs/setup/setup-overview>)에서 자신의 운영체제에 맞는 안내를 참조하는 것이 이상적이며, 아래와 같이 간단한 안내에 따라 설치하셔도 됩니다.
+공식문서(<https://code.visualstudio.com/docs/setup/setup-overview>)에서 자신의 운영체제에 맞는 안내를 참고하는 것이 이상적이며, 아래의 요약을 참고하여 설치 하셔도 됩니다.
 
 ## 설치 파일
 
