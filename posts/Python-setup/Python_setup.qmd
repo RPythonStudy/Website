@@ -22,7 +22,7 @@ Python 공식사이트에서 제공하는 공식문서(<https://docs.python.org/
 
 ### Install Now와 Customize installation 중의 선택
 
-윈도우에 처음 설치하는 경우에는 연구회에서는 Install Now 대신 Customize installation 선택을 추천합니다 (@fig-CustomizeInstallation). 이는 설치경로를 우리가 원하는데로 `C:\Python\Python-x.y.z`로 설정할 수 있는 장점이 있습니다(Command line interface 에서 경로를 입력할 때를 가정하면 짧고 직관적인게 좋습니다.).
+윈도우에 처음 설치하는 경우에는 연구회에서는 Install Now 대신 Customize installation 선택을 추천합니다 (@fig-CustomizeInstallation). 이는 설치경로를 우리가 원하는데로 `C:\Python\Python-x.y.z`로 설정할 수 있는 장점이 있습니다. (개인의 취향에 따라 `Python`을 `P`로 `x.y.z`를 `xyz`로 줄이셔도 됩니다.) (Command line interface 에서 경로를 입력할 때를 가정하면 짧고 직관적인게 좋습니다.).
 
 ### Add python.exe to PATH
 
@@ -44,7 +44,7 @@ Download and install Python interpreter from the official Python website (<https
 
 ### Choose between Install Now and Customize installation
 
-For first-time installations on Windows, it is advisable to choose Customized installation instead of Install Now (@fig-CustomizeInstallation). This option allows you to set the installation path to `C:\Python\Python-x.y.z` as desired. (Assuming that you prefer short and intuitive paths when entering paths in the command line interface.)
+For first-time installations on Windows, it is recommended to choose Customize installation instead of Install Now (@fig-CustomizeInstallation). This option allows you to set the installation path to `C:\Python\Python-x.y.z` as desired. (You may abbreviate `Python` to `P` and `x.y.z` to `xyz` according to your preference.) (Assuming that you will enter the path in the command line interface, it is better to keep it short and intuitive).
 
 ### Add python.exe to PATH
 
@@ -141,4 +141,51 @@ C:\Python\Python-x.y.z\                # Top-level Python installation directory
 ```
 
 Python Installation Directory Structure with Full Option
+:::
+
+::: {.content-visible when-profile="ko"}
+## 새로운 버전의 Python 실행파일 설치하기
+새로운 버전의 실행파일의 설치 시 `Upgrade Now`가 아닌 `Customize installation`을 추천합니다 @fig-UpgradePython. 
+:::
+
+::: {.content-visible when-profile="en"}
+## Installing New Versions of Python Executables
+When installing a new version of the executable file, it is recommended to choose `Customize installation` instead of `Upgrade Now` @fig-UpgradePython.
+:::
+
+![Selecting customize installation option during upgrading](images/UpgradePython.png){#fig-UpgradePython}
+
+:::: {.content-visible when-profile="ko"}
+이 때 아래와 같은 명명방식으로 새로운 경로에 설치하는 것을 추천합니다. (개인의 취향에 따라 `Python`을 `P`로 `x.y.z`를 `xyz`로 줄이셔도 됩니다.)
+::::
+
+:::: {.content-visible when-profile="en"}
+It is recommended to install in a new path with the following naming convention. (You may abbreviate `Python` to `P` and `x.y.z` to `xyz` according to your preference.)
+::::
+
+```{r Python_uprade, eval=FALSE, filename="Install Window"}
+C:\Python\Python-x'.y'.z'\  
+```
+
+:::: {.content-visible when-profile="ko"}
+::: {.callout-note title="새로운 경로에 설치하는 이유는 ......," collapse="true" appearance="minimal"}
+기존의 실행파일로 된 프로젝트를 그대로 유지하기 위해서입니다. 이는 드물겠지만 새로운 실행파일이 기존의 프로젝트에서 오류가 발생하거나 혹은 기존의 패키지와 새로운 실행파일의 호환이 제한되거나 오류가 발생할 수도 있기 때문입니다. 
+새로운 경로에 설치하면 폴더 구조는 @fig-PythonNewDirectory 와 같이 될 것입니다.
+:::
+::::
+
+:::: {.content-visible when-profile="en"}
+::: {.callout-note title="The reason for installing in a new path is ......," collapse="true" appearance="minimal"}
+To maintain existing projects with the old executable file. This is because, although rare, the new executable file may cause errors in existing projects or may have limited compatibility or errors with existing packages.
+If you install in a new path, the folder structure will be as shown in @fig-PythonNewDirectory.
+:::
+::::
+
+::: {#fig-PythonNewDirectory}
+```         
+C:\Python\Python-x.y.z\     # existing Python installation directory
+       └─ Python-x'.y'.z'\  # New Python installation directory
+```
+
+Python customize Installation with new release and Directory Structure
 :::

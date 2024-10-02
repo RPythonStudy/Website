@@ -266,7 +266,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">목차</h2>
    
   <ul>
-  <li><a href="#git" id="toc-git" class="nav-link active" data-scroll-target="#git">Git</a></li>
+  <li><a href="#git란" id="toc-git란" class="nav-link active" data-scroll-target="#git란">Git란?</a></li>
+  <li><a href="#github란" id="toc-github란" class="nav-link" data-scroll-target="#github란">Github란?</a></li>
   <li><a href="#git-설치" id="toc-git-설치" class="nav-link" data-scroll-target="#git-설치">Git 설치</a></li>
   </ul>
 </nav>
@@ -278,8 +279,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="git" class="level2">
-<h2 class="anchored" data-anchor-id="git">Git</h2>
+<section id="git란" class="level2">
+<h2 class="anchored" data-anchor-id="git란">Git란?</h2>
+<p>Git은 2005년 리누스 토르발스가 개발한 <strong>오픈 소스 분산 버전 관리 시스템(DVCS, Distributed Version Control System)</strong>으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.</p>
+</section>
+<section id="github란" class="level2">
+<h2 class="anchored" data-anchor-id="github란">Github란?</h2>
+<p>GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 분산 버전 관리 시스템인 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. <strong>Pull Request(PR)</strong>를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, <strong>Continuous Integration/Continuous Deployment(CI/CD)</strong>와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다. GitHub는 오픈 소스 프로젝트부터 상용 소프트웨어까지 다양한 개발 환경에서 광범위하게 사용되며, 전 세계 개발자들이 협업하는 대표적인 플랫폼으로 자리잡았습니다.</p>
 <p>Git는 로컬 버전 관리 시스템으로 개발 중인 소스코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 물론 R에 한정된 것이 아니며 범용적입니다.</p>
 <p>Github는 클라우드 개념의 원격저장소를 통해 자신의 프로젝트 버전관리를 하게되며, 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수도 있습니다.</p>
 <p>R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 연구회에서 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다.</p>

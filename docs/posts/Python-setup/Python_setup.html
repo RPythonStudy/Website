@@ -282,6 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#설치-확인" id="toc-설치-확인" class="nav-link" data-scroll-target="#설치-확인">설치 확인</a></li>
   <li><a href="#폴더-구조" id="toc-폴더-구조" class="nav-link" data-scroll-target="#폴더-구조">폴더 구조</a></li>
+  <li><a href="#새로운-버전의-python-실행파일-설치하기" id="toc-새로운-버전의-python-실행파일-설치하기" class="nav-link" data-scroll-target="#새로운-버전의-python-실행파일-설치하기">새로운 버전의 Python 실행파일 설치하기</a></li>
   </ul>
 </nav>
     </div>
@@ -294,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="설치-안내" class="level2">
 <h2 class="anchored" data-anchor-id="설치-안내">설치 안내</h2>
-<p>Python 웹사이트에서 제공하는 공식문서(<a href="https://docs.python.org/3/using/index.html" class="uri">https://docs.python.org/3/using/index.html</a>)를 참조하는 것이 이상적이겠지만, 아래와 같이 간단한 안내에 따라 설치하셔도 됩니다.</p>
+<p>Python 공식사이트에서 제공하는 공식문서(<a href="https://docs.python.org/3/using/index.html" class="uri">https://docs.python.org/3/using/index.html</a>)를 참고하는 것이 이상적이겠지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.</p>
 </section>
 <section id="설치-파일" class="level2">
 <h2 class="anchored" data-anchor-id="설치-파일">설치 파일</h2>
@@ -304,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="설치옵션">설치옵션</h2>
 <section id="install-now와-customize-installation-중의-선택" class="level3">
 <h3 class="anchored" data-anchor-id="install-now와-customize-installation-중의-선택">Install Now와 Customize installation 중의 선택</h3>
-<p>윈도우에 처음 설치하는 경우에는 연구회에서는 Install Now 대신 Customize installation 선택을 추천합니다 (<a href="#fig-CustomizeInstallation" class="quarto-xref">그림&nbsp;1</a>). 이는 설치경로를 우리가 원하는데로 <code>C:\Python\Python-x.y.z</code>로 설정할 수 있는 장점이 있습니다(Command line interface 에서 경로를 입력할 때를 가정하면 짧고 직관적인게 좋습니다.).</p>
+<p>윈도우에 처음 설치하는 경우에는 연구회에서는 Install Now 대신 Customize installation 선택을 추천합니다 (<a href="#fig-CustomizeInstallation" class="quarto-xref">그림&nbsp;1</a>). 이는 설치경로를 우리가 원하는데로 <code>C:\Python\Python-x.y.z</code>로 설정할 수 있는 장점이 있습니다. (개인의 취향에 따라 <code>Python</code>을 <code>P</code>로 <code>x.y.z</code>를 <code>xyz</code>로 줄이셔도 됩니다.) (Command line interface 에서 경로를 입력할 때를 가정하면 짧고 직관적인게 좋습니다.).</p>
 </section>
 <section id="add-python.exe-to-path" class="level3">
 <h3 class="anchored" data-anchor-id="add-python.exe-to-path">Add python.exe to PATH</h3>
@@ -401,6 +402,56 @@ Python이 올바르게 설치되었는지 확인하려면,
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PythonDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 그림&nbsp;3: Python Installation Directory Structure with Full Option
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="새로운-버전의-python-실행파일-설치하기" class="level2">
+<h2 class="anchored" data-anchor-id="새로운-버전의-python-실행파일-설치하기">새로운 버전의 Python 실행파일 설치하기</h2>
+<p>새로운 버전의 실행파일의 설치 시 <code>Upgrade Now</code>가 아닌 <code>Customize installation</code>을 추천합니다 <a href="#fig-UpgradePython" class="quarto-xref">그림&nbsp;4</a>.</p>
+<div id="fig-UpgradePython" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-UpgradePython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/UpgradePython.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-UpgradePython-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;4: Selecting customize installation option during upgrading
+</figcaption>
+</figure>
+</div>
+<p>이 때 아래와 같은 명명방식으로 새로운 경로에 설치하는 것을 추천합니다. (개인의 취향에 따라 <code>Python</code>을 <code>P</code>로 <code>x.y.z</code>를 <code>xyz</code>로 줄이셔도 됩니다.)</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Install Window</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>C<span class="sc">:</span>\Python\Python<span class="sc">-</span>x<span class="st">'.y'</span>.z<span class="st">'\  </span></span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled" title="새로운 경로에 설치하는 이유는 ......,">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+새로운 경로에 설치하는 이유는 ……,
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>기존의 실행파일로 된 프로젝트를 그대로 유지하기 위해서입니다. 이는 드물겠지만 새로운 실행파일이 기존의 프로젝트에서 오류가 발생하거나 혹은 기존의 패키지와 새로운 실행파일의 호환이 제한되거나 오류가 발생할 수도 있기 때문입니다. 새로운 경로에 설치하면 폴더 구조는 <a href="#fig-PythonNewDirectory" class="quarto-xref">그림&nbsp;5</a> 와 같이 될 것입니다.</p>
+</div>
+</div>
+</div>
+<div id="fig-PythonNewDirectory" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PythonNewDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-PythonNewDirectory"><code>C:\Python\Python-x.y.z\     # existing Python installation directory
+       └─ Python-x'.y'.z'\  # New Python installation directory</code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PythonNewDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;5: Python customize Installation with new release and Directory Structure
 </figcaption>
 </figure>
 </div>

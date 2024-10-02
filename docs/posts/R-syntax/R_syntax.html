@@ -894,7 +894,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>today <span class="ot">&lt;-</span> <span class="fu">Sys.Date</span>(); <span class="fu">print</span>(today); <span class="fu">class</span>(today); <span class="fu">typeof</span>(today)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-09-30"</code></pre>
+<pre><code>[1] "2024-10-02"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
@@ -915,7 +915,7 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>current_time <span class="ot">&lt;-</span> <span class="fu">Sys.time</span>()</span>
 <span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(current_time); <span class="fu">class</span>(current_time); <span class="fu">typeof</span>(current_time)</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-09-30 10:14:13 KST"</code></pre>
+<pre><code>[1] "2024-10-02 15:37:43 KST"</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "POSIXct" "POSIXt" </code></pre>
@@ -1087,16 +1087,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb95-8"><a href="#cb95-8" aria-hidden="true" tabindex="-1"></a>df1</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score
-1   1  Lee    83
-2   2  Kim    87
+1   1  Lee    80
+2   2  Kim    80
 3   3 Park    78
-4   4 Kang    97
-5   5 Shin    75
-6   6  Lim    87
-7   7 Kwon    78
-8   8 Choi    74
-9   9  Nam    77
-10 10 Baek    82</code></pre>
+4   4 Kang    76
+5   5 Shin    82
+6   6  Lim    81
+7   7 Kwon    83
+8   8 Choi    78
+9   9  Nam    72
+10 10 Baek    86</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1104,16 +1104,16 @@ Levels: 낮음 &lt; 중간 &lt; 높음</code></pre>
 <span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a>merged_df</span></code><button title="클립보드 복사" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   ID Name Score Department Age
-1   1  Lee    83       &lt;NA&gt;  NA
-2   2  Kim    87         IM  37
-3   3 Park    78         IM  38
-4   4 Kang    97         GY  46
-5   5 Shin    75         GS  45
-6   6  Lim    87         PD  42
-7   7 Kwon    78         GS  43
-8   8 Choi    74         IM  37
-9   9  Nam    77         GS  35
-10 10 Baek    82         IM  38</code></pre>
+1   1  Lee    80         GS  39
+2   2  Kim    80         GY  33
+3   3 Park    78       &lt;NA&gt;  NA
+4   4 Kang    76         GS  40
+5   5 Shin    82         PD  37
+6   6  Lim    81         IM  33
+7   7 Kwon    83         GS  31
+8   8 Choi    78         IM  36
+9   9  Nam    72         GS  41
+10 10 Baek    86         GS  40</code></pre>
 </div>
 </div>
 </section>
