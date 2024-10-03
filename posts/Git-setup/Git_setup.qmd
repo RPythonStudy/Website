@@ -3,130 +3,407 @@ title: "Git & Github setup"
 description: "Guidance on Installing and Configuring Git & Github"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-05-06"
-date-modified: "2024-05-27"
+date-modified: "2024-09-23"
 categories:
   - Git
   - setup
 ---
 
 ::: {.content-visible when-profile="ko"}
-## Git란? 
+## Git란?
+
 Git은 2005년 리누스 토르발스가 개발한 **오픈 소스 분산 버전 관리 시스템(DVCS, Distributed Version Control System)**으로, 소스코드의 스냅샷을 기록하여, 변경이력관리와 특정 시점으로 복귀하거나 다수의 개발자가 동시에 분산된 환경에서 브랜칭을 통해 코드를 개발하고, 병합 절차를 통해 충돌을 해결할 수 있는 기능이 있습니다. 이러한 분산형 구조와 성능 최적화 덕분에, Git은 전 세계적으로 대다수 개발팀에서 사용되는 표준 버전 관리 도구로 자리잡았습니다.
 
-## Github란?
-GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 분산 버전 관리 시스템인 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. **Pull Request(PR)**를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, **Continuous Integration/Continuous Deployment(CI/CD)**와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다. GitHub는 오픈 소스 프로젝트부터 상용 소프트웨어까지 다양한 개발 환경에서 광범위하게 사용되며, 전 세계 개발자들이 협업하는 대표적인 플랫폼으로 자리잡았습니다.
+## Git 유용성
 
+코딩초보에게는 Git 사용법이 다소 어려울 수 있지만, 코드를 수정하다가 문제가 발생했을 때, 변경이력관리 기능을 이용해 특정시점으로 되돌릴 수 있으며 이 자체가 백업 기능도 되므로 유용하기에 연구회에서는 Git 사용을 추천합니다.
 
-Git는 로컬 버전 관리 시스템으로 개발 중인 소스코드의 변경 내역을 쉽게 추적하고 관리할 수 있게 해줍니다. 물론 R에 한정된 것이 아니며 범용적입니다.
+## 설치안내문서
 
-Github는 클라우드 개념의 원격저장소를 통해 자신의 프로젝트 버전관리를 하게되며, 여러 개발자가 동일한 프로젝트에서 작업할 수 있도록 브랜치를 만들어 독립적으로 개발한 후, Pull Request를 통해 코드를 병합할 수도 있습니다.
+Git 설치에 대한 공식문서(<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>)를 참고하는 것이 이상적이지만 , 아래의 요약을 참고하여 설치 하셔도 됩니다.
 
-R로 통계 프로젝트를 할 때, git 설치가 반드시 필요한 것은 아닙니다. 하지만 연구회에서 만든 예제 R프로젝트가 github 원격저장소에 보관되어 있으므로 git의 설치가 추천됩니다.
+## 설치파일
 
-만약에 git의 사용이 어려우신 분들은 github 원격저장소를 클라우드처럼 생각하시고 필요한 파일들을 직접 하나씩 다운로드 받으셔도 됩니다. 예를 들어서 아래의 연구회 예제 R로 논문쓰기 원격저장소 주소로 이동한 후
+Git 공식다운로드사이트(<https://git-scm.com/downloads>)에서 자신의 운영체제에 적합한 최신 설치파일을 다운로드하고 설치합니다. 2024년 9월 23일 현재 윈도우용 64비트 최신 설치파일은 Git-2.46.2-64-bit.exe 입니다.
+
+## 설치옵션
+
+### 설치경로
+
+기본값은 `C:\Program Files\Git`이며 기본값을 추천합니다.
+
+### 구성요소 선택
+
+기본값은 @fig-SelectingComponents 와 같으며 기본값을 추천합니다.
 :::
 
 ::: {.content-visible when-profile="en"}
-## Git
+## What's Git ?
 
-Git is a local version management system that makes it easy to track and manage changes to the source code being developed. It is not limited to R and is universal.
+Git is an **open-source distributed version control system (DVCS)** developed by Linus Torvalds in 2005. It records snapshots of source code, allowing you to manage change history, revert to a specific point in time, and develop code in a distributed environment with branching, where multiple developers can work simultaneously. Git has become the standard version control tool used by the majority of development teams worldwide, thanks to its distributed structure and performance optimization.
 
-Github allows you to manage your project version through the concept of cloud-based remote repositories, allowing multiple developers to work on the same project by creating branches to develop independently and then merging the code through Pull Requests.
+## Usefulness of Git
 
-When working on a statistical project with R, git installation is not absolutely necessary. However, since the example R projects created by the study group are stored in the github remote repository, git installation is recommended.
+Although the Git usage may be somewhat difficult for coding beginners, it is useful for them to revert to a point in time when there was no problem using the revision history management feature when a problem occurs during code modification. This feature itself serves as a backup function.
 
-If you find it difficult to use git, you can think of the github remote repository as a cloud and download the necessary files one by one. For example, you can go to the remote repository address for writing a paper in the study group below.
+## Installation Guide
+
+It is ideal to refer to the official Git installation document (<https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>), but you can also refer to the summary below for installation.
+
+## Installation File
+
+Download the latest installation file suitable for your operating system from the official Git download site (<https://git-scm.com/downloads>) and install it. As of September 23, 2024, the latest installation file for Windows 64-bit is Git-2.46.2-64-bit.exe.
+
+## Installation Options
+
+### Installation Path
+
+The default is `C:\Program Files\Git`, and the default is recommended.
+
+### Selecting Components
+
+The default is as shown in @fig-SelectingComponents, and the default is recommended.
 :::
 
-```{r repository_url, eval=FALSE, filename="Repository address for manuscript writing example"}
-https://github.com/RPythonStudy/HANJM
+![Options to select Components](images/SelectingComponents.jpg){#fig-SelectingComponents}
+
+::: {.content-visible when-profile="ko"}
+### 바로가기아이콘
+
+기본값은 Git이란 시작메뉴폴더에 바로가기아이콘을 만드는 것입니다 @fig-SelectingStartMenuFolder . 하지만 RStudio엣 Git을 사용할 경우 RStudio에서 Git을 사용할 수 있으므로 바로가기아이콘을 만들지 않는 것을 추천합니다.
+:::
+
+::: {.content-visible when-profile="en"}
+### Shortcut Icon
+
+The default is to create a shortcut icon in the Git Start Menu folder as shown in @fig-SelectingStartMenuFolder. However, if you use Git in RStudio, you can use Git in RStudio, so it is recommended not to create a shortcut icon.
+:::
+
+![Options to select Start Menu Folder for programs' shortcut](images/SelectingStartMenuFolder.jpg){#fig-SelectingStartMenuFolder}
+
+::: {.content-visible when-profile="ko"}
+### 텍스트 에디터
+
+기본값은 Vim이며, 연구회는 Python IDE로 VS Code를 추천하고 있고 상대적으로 Vim보다 사용이 쉬우므로 이를 추천합니다 @fig-TextEditor.
+:::
+
+::: {.content-visible when-profile="en"}
+### Text Editor
+
+The default is Vim, but the research group recommends VS Code as a Python IDE, which is relatively easier to use than Vim, as shown in @fig-TextEditor.
+:::
+
+![Options to select Text Editor](images/SelectingTextEditor.jpg){#fig-TextEditor}
+
+::: {.content-visible when-profile="ko"}
+### 기본 브렌치명
+
+기본값은 master이며, 2020년 10월 1일부터 GitHub에서는 기본 브렌치명을 master에서 main으로 변경하였습니다. 이에 따라 Git 설치 시 기본 브렌치명을 main으로 설정하는 것을 추천합니다 @fig-DefaultBranchName.
+:::
+
+::: {.content-visible when-profile="en"}
+### Default Branch Name
+
+The default is master, but since October 1, 2020, GitHub has changed the default branch name from master to main. Therefore, it is recommended to set the default branch name to main when installing Git, as shown in @fig-DefaultBranchName.
+:::
+
+![Options to select Default Branch Name](images/SelectingDefaultBranchName.jpg){#fig-DefaultBranchName}
+
+::: {.content-visible when-profile="ko"}
+### 환경변수 설정
+
+기본값은 환경변수에 Git 실행파일경로를 추가하는 것이며 @fig-PathEnviroment, 기본값을 추천합니다.
+:::
+
+::: {.content-visible when-profile="en"}
+### Environment Variable Setting
+
+The default is to add the Git executable file path to the environment variable, as shown in @fig-PathEnviroment, and the default is recommended.
+:::
+
+![Options to select Path Environment](images/PathEnviroment.jpg){#fig-PathEnviroment}
+
+::: {.content-visible when-profile="ko"}
+### SSH 선택
+
+Git은 원격 저장소와의 안전한 통신을 위해 SSH를 사용하는 경우가 많습니다. GitHub, GitLab, Bitbucket과 같은 플랫폼은 SSH 키 기반 인증을 제공하여, 비밀번호 대신 SSH 키를 사용해 원격 저장소에 안전하게 접속할 수 있습니다. OpenSSH는 오픈 소스 소프트웨어로, Git 설치 시 선택적으로 설치할 수 있으며, SSH 기반 인증을 설정할 때 주로 사용됩니다. 설치 과정에서 OpenSSH는 기본적으로 선택되어 있으며 @fig-OpenSSH, 특별한 이유가 없다면 기본값을 사용하는 것이 권장됩니다.
+:::
+
+::: {.content-visible when-profile="en"}
+### SSH Selection
+
+Git often uses SSH for secure communication with remote repositories. Platforms such as GitHub, GitLab, and Bitbucket provide SSH key-based authentication, allowing you to securely connect to remote repositories using SSH keys instead of passwords. OpenSSH is open-source software that can be optionally installed during Git installation and is mainly used when setting up SSH-based authentication. OpenSSH is selected by default during the installation process, as shown in @fig-OpenSSH, and it is recommended to use the default value unless there is a specific reason.
+:::
+
+![Options to select OpenSSH](images/OpenSSH.jpg){#fig-OpenSSH}
+
+::: {.content-visible when-profile="ko"}
+### SSL/TLS 라이브러리 선택
+
+SSL/TLS는 Git이 HTTPS 연결을 통해 원격 저장소와 통신할 때 사용하는 암호화 라이브러리입니다. OpenSSL은 더 넓은 암호화 기능과 최신 표준 지원, 리눅스와의 호환성이 중요한 경우 추천되며, Windows 고유 SSL/TLS 라이브러리(Schannel)는 Windows 시스템과의 통합과 간편한 설정을 원할 때 추천합니다. 연구회에서는 기본값인 OpenSSL을 추천합니다 @fig-OpenSSL.
+:::
+
+::: {.content-visible when-profile="en"}
+### SSL/TLS Library Selection
+
+SSL/TLS is an encryption library used by Git when communicating with remote repositories over HTTPS. OpenSSL is recommended when broader encryption capabilities, support for the latest standards, and compatibility with Linux are important. The Windows-specific SSL/TLS library (Schannel) is recommended when you want integration with Windows systems and easy configuration. The research group recommends the default OpenSSL, as shown in @fig-OpenSSL.
+:::
+
+![Options to select SSL/TLS library](images/OpenSSL.jpg){#fig-OpenSSL}
+
+::: {.content-visible when-profile="ko"}
+### 줄바꿈 변환 설정
+
+윈도우에서는 줄바꿈 기본 설정이 **CRLF(Carriage Return Line Feed)**입니다. 반면, Unix 계열(리눅스, macOS)은 **LF(Line Feed)**를 사용합니다. 운영체제를 오가며 개발할 경우, Git은 이러한 줄바꿈 차이를 해결하기 위해 **줄바꿈 변환 기능(Line Ending Conversion)**을 지원합니다. checkout과 commit 시에 자동으로 줄바꿈을 변환할지 설정할 수 있는데, 기본값은 Checkout Windows-style, commit Unix-style line endings이며, 이는 Windows에서 개발할 때 적합한 설정입니다. Linux 또는 macOS에서 개발할 경우, Checkout as-is, commit Unix-style line endings를 선택하는 것이 좋습니다 @fig-LineEndings.
+:::
+
+::: {.content-visible when-profile="en"}
+### Line Ending Conversion Setting
+
+In Windows, the default line ending setting is **CRLF (Carriage Return Line Feed)**. In contrast, Unix-based systems (Linux, macOS) use **LF (Line Feed)**. When developing across operating systems, Git supports **line ending conversion** to resolve these line ending differences. You can set whether to automatically convert line endings during checkout and commit, with the default being Checkout Windows-style, commit Unix-style line endings, which is suitable for development on Windows. If you are developing on Linux or macOS, it is recommended to select Checkout as-is, commit Unix-style line endings, as shown in @fig-LineEndings.
+:::
+
+![Options to select Line Ending Conversion](images/LineEndings.jpg){#fig-LineEndings}
+
+::: {.content-visible when-profile="ko"}
+### 터미널 에뮬레이터
+
+Git Bash에서 사용할 터미널 환경을 결정하는 옵션입니다. 각 옵션은 Git Bash가 실행될 때 사용할 터미널을 정의하며, 사용자 경험과 터미널 기능에서 차이가 있습니다. MinTTY는 더 발전된 터미널 경험을 제공하며, 유닉스 스타일에 가까운 작업 환경을 제공합니다. 특히, 리눅스/유닉스에 익숙한 사용자나 Git Bash를 주로 사용하는 경우 적합합니다. Windows 기본 콘솔 창은 Windows에서 기본 제공되는 터미널 인터페이스로, CMD와 같은 익숙한 환경을 선호하는 사용자에게 적합합니다. 특히, Windows 사용자나 CMD를 주로 사용하는 경우 적합합니다 @fig-TerminalEmulator.
+:::
+
+::: {.content-visible when-profile="en"}
+### Terminal Emulator
+
+This option determines the terminal environment to use in Git Bash. Each option defines the terminal to be used when Git Bash is run, and there are differences in user experience and terminal functionality. MinTTY provides a more advanced terminal experience and a working environment closer to Unix style. It is particularly suitable for users familiar with Linux/Unix or those who mainly use Git Bash. The Windows default console window is a terminal interface provided by Windows by default, suitable for users who prefer a familiar environment like CMD. It is especially suitable for Windows users or those who mainly use CMD, as shown in @fig-TerminalEmulator.
+:::
+
+![Options to select Terminal Emulator](images/TerminalEmulator.jpg){#fig-TerminalEmulator}
+
+::: {.content-visible when-profile="ko"}
+### git pull 설정
+
+이 설정은 git pull 명령을 실행했을 때, 로컬 브랜치와 원격 브랜치 간의 변경 사항을 어떻게 병합할지를 결정합니다 @fig-GitPull.
+
+1\. Fast-forward or merge (기본 설정) 이 옵션은 기본값으로 설정되어 있으며, Git이 상황에 따라 fast-forward 병합 또는 **병합 커밋(merge commit)**을 선택합니다.
+
+Fast-forward: 만약 로컬 브랜치에서 추가적인 변경 사항이 없고, 단순히 원격 브랜치의 커밋을 가져와서 이어 붙일 수 있는 경우, Git은 fast-forward 병합을 수행합니다. 이 경우 병합 커밋이 생성되지 않고, 기존 커밋의 연속선 상에 새로운 커밋이 추가됩니다.
+
+장점: 이력이 깔끔하게 이어져서, 불필요한 병합 커밋 없이 간결한 로그를 유지할 수 있습니다.
+
+단점: 협업 중 복잡한 병합 기록을 관리하는 데는 한계가 있을 수 있습니다.
+
+Merge: 로컬 브랜치에 변경 사항이 있거나, 원격 브랜치의 변경 사항을 단순히 이어 붙일 수 없는 경우에는 **병합 커밋(merge commit)**이 생성됩니다. 이 커밋은 두 브랜치의 이력을 병합하면서, 병합 지점을 명확하게 표시합니다.
+
+장점: 병합이 발생한 지점을 명확하게 구분할 수 있어, 누가 어떤 작업을 했는지 추적하기 쉽습니다.
+
+단점: 병합 커밋이 많아지면 로그가 복잡해질 수 있습니다. 
+
+2\. Rebase Rebase 옵션은 원격 브랜치의 변경 사항을 로컬 브랜치에 병합 커밋 없이 적용하는 방식입니다. Rebase는 커밋을 재정렬하여 마치 원격 브랜치에서 작업한 것처럼 히스토리를 재작성합니다.
+
+Rebase 동작 방식: 로컬 브랜치에서 발생한 커밋을 잠시 제거한 후, 원격 브랜치의 변경 사항을 먼저 적용하고, 그 뒤에 로컬 커밋을 재적용합니다. 이렇게 하면 이력이 직선으로 이어져, 커밋 로그가 매우 깔끔해집니다.
+
+장점: 히스토리가 간결하고, 직선으로 정렬되어 있어, 로그를 읽기가 쉽습니다. 병합 커밋이 생기지 않기 때문에, 협업 중에도 깔끔한 이력을 유지할 수 있습니다.
+
+단점: Rebase는 히스토리를 재작성하는 방식이므로, 이미 공유된 커밋을 rebase하게 되면 협업 중 충돌이 발생하거나 다른 개발자들의 커밋에 영향을 줄 수 있습니다. 협업 중에는 신중하게 사용해야 하며, 특히 다수의 개발자가 동시에 작업하는 브랜치에서는 rebase가 문제가 될 수 있습니다.
+
+3\. Only ever fast-forward Only ever fast-forward 옵션은 강력한 제약 조건을 설정하여, 항상 fast-forward 병합만 허용하는 방식입니다. 이 옵션을 선택하면 Git은 병합 커밋을 생성하지 않고, fast-forward가 가능한 경우에만 병합을 수행합니다.
+
+동작 방식: 로컬 브랜치가 원격 브랜치보다 앞서거나 충돌이 발생할 경우, 병합을 허용하지 않고 에러를 발생시킵니다. 즉, 단순히 브랜치가 원격 브랜치보다 뒤에 있을 때만 fast-forward 병합이 가능합니다.
+
+장점: 이력을 절대적으로 깔끔하게 유지할 수 있습니다. 병합 커밋이 생기지 않기 때문에, 히스토리가 매우 간결하게 유지됩니다. 히스토리를 관리하기가 쉬우며, 직선형으로 깔끔하게 이어지는 커밋 로그를 선호하는 경우 적합합니다.
+
+단점: 협업 중에 다른 개발자의 변경 사항과 로컬 변경 사항이 병합되어야 하는 경우에도 fast-forward만 허용하므로, Git이 병합을 거부할 수 있습니다. 이런 경우, 병합이 실패하고 수동으로 병합을 수행해야 할 수도 있습니다. 복잡한 협업 상황에서는 제약이 될 수 있습니다. 협업 중에는 병합 커밋이 필요할 수 있기 때문에, 이 옵션은 다소 제한적입니다.
+:::
+
+::: {.content-visible when-profile="en"}
+### git pull Setting
+
+This setting determines how to merge changes between the local branch and the remote branch when the git pull command is executed, as shown in @fig-GitPull.
+
+1\. Fast-forward or merge (default setting) This option is set as the default and Git selects fast-forward merging or **merge commit** depending on the situation.
+
+Fast-forward: If there are no additional changes in the local branch and you can simply append the commits from the remote branch, Git performs a fast-forward merge. In this case, no merge commit is created, and a new commit is added to the existing commit line.
+
+Advantages: You can maintain a clean history, keeping a concise log without unnecessary merge commits.
+
+Disadvantages: There may be limitations in managing complex merge records during collaboration.
+
+Merge: If there are changes in the local branch or you cannot simply append the changes from the remote branch, a **merge commit** is created. This commit merges the histories of the two branches, clearly indicating the merge point.
+
+Advantages: You can clearly distinguish the point where the merge occurred, making it easy to track who did what work.
+
+Disadvantages: The log can become complex as the number of merge commits increases.
+
+2\. Rebase The Rebase option applies changes from the remote branch to the local branch without merge commits. Rebase rewrites the history by rearranging commits to make it look like you worked on the remote branch.
+
+Rebase operation: Temporarily remove the commits made in the local branch, apply the changes from the remote branch first, and then reapply the local commits. This way, the history is straightened out, and the commit log becomes very clean.
+
+Advantages: The history is concise and straightened out, making it easy to read the log. Since no merge commits are created, you can maintain a clean history even during collaboration.
+
+Disadvantages: Since Rebase rewrites the history, if you rebase a commit that has already been shared, conflicts may occur during collaboration or affect other developers' commits. Rebase should be used carefully during collaboration, especially in branches where multiple developers are working simultaneously.
+
+3\. Only ever fast-forward The Only ever fast-forward option sets a strong constraint to allow only fast-forward merges. If you select this option, Git performs a merge only when fast-forward is possible without creating a merge commit.
+
+Operation: If the local branch is ahead of the remote branch or a conflict occurs, it does not allow merging and raises an error. In other words, a fast-forward merge is possible only when the branch is behind the remote branch.
+
+Advantages: You can keep the history absolutely clean. Since no merge commits are created, the history remains very concise. It is easy to manage the history, and it is suitable for those who prefer a clean, linear commit log.
+
+Disadvantages: Even if changes from other developers and local changes need to be merged during collaboration, only fast-forward is allowed, so Git may refuse to merge. In such cases, the merge may fail, and you may need to perform the merge manually. It can be restrictive in complex collaboration situations. Since merge commits may be necessary during collaboration, this option is somewhat limited.
+:::
+
+![Options to select git pull](images/GitPull.jpg){#fig-GitPull}
+
+::: {.content-visible when-profile="ko"}
+### Git Credential Manager
+
+Git Credential Manager는 Git에서 원격 저장소에 대한 인증 정보를 안전하게 저장하고 자동으로 관리해주는 도구입니다. 이를 통해 사용자는 자격 증명을 반복적으로 입력할 필요 없이 안전하게 Git을 사용할 수 있으며, Windows, macOS, Linux 등 다양한 운영체제에서 지원됩니다. OAuth, 토큰 기반 인증 등 최신 인증 방식도 지원하여 보안성과 편리성을 모두 제공합니다. Git Credential Manager는 Git 설치 시 선택적으로 설치할 수 있으며, 기본값을 사용하는 것이 권장됩니다 @fig-GitCredentialManager.
+:::
+
+::: {.content-visible when-profile="en"}
+### Git Credential Manager
+
+Git Credential Manager is a tool that securely stores and automatically manages authentication information for remote repositories in Git. Through this, users can securely use Git without having to repeatedly enter credentials, and it is supported on various operating systems such as Windows, macOS, and Linux. It also supports modern authentication methods such as OAuth and token-based authentication, providing both security and convenience. Git Credential Manager can be optionally installed during Git installation, and it is recommended to use the default value.
+:::
+
+![Options to select Git Credential Manager](images/GitCredentialManager.jpg){#fig-GitCredentialManager}
+
+::: {.content-visible when-profile="ko"}
+### 기타 옵션
+
+File System Caching은 Git이 파일 시스템에 대한 **메타데이터(파일 상태, 권한, 타임스탬프 등)**를 더 빠르게 조회할 수 있도록 캐시를 사용하는 기능입니다. 기본적으로, Git은 파일 시스템에서 파일 변경 사항을 확인하기 위해 파일의 상태(예: 수정 시간, 크기)를 체크합니다. 이 과정이 많은 파일을 포함하는 대형 프로젝트에서는 성능 저하를 일으킬 수 있습니다.
+Symbolic Links(심볼릭 링크)는 파일이나 디렉토리에 대한 참조를 가리키는 특별한 유형의 파일입니다. 심볼릭 링크는 원래 파일 또는 디렉토리의 경로를 저장하고, 이를 참조하는 방식으로 동작합니다. Git에서 Symbolic Links 옵션을 활성화하면, Git은 심볼릭 링크를 파일로 저장하는 대신, 심볼릭 링크 자체를 저장하고 관리할 수 있습니다.
+리눅스 및 macOS에서 심볼릭 링크는 많이 사용되고 지원되므로, 이 옵션을 활성화하는 것이 일반적입니다.
+Windows에서는 심볼릭 링크가 기본적으로 제한되어 있으며, 활성화하려면 관리자 권한이나 특정 설정을 필요로 합니다. 따라서, Windows에서 이 옵션을 활성화하면 제대로 동작하지 않거나 예기치 않은 동작이 발생할 수 있습니다.
+기본값은 File System Caching 활성화입니다 @fig-ExtraOptions.
+:::
+
+::: {.content-visible when-profile="en"}
+### Extra Options
+
+File System Caching is a feature that allows Git to more quickly query **metadata (file status, permissions, timestamps, etc.)** for the file system using a cache. By default, Git checks the status of files (e.g., modification time, size) to detect file changes in the file system. This process can cause performance degradation in large projects containing many files.
+Symbolic Links are a special type of file that points to a reference to a file or directory. Symbolic links store the path of the original file or directory and work by referencing it. When you enable the Symbolic Links option in Git, Git can store and manage the symbolic link itself instead of storing it as a file.
+Symbolic links are widely used and supported in Linux and macOS, so it is common to enable this option.
+Symbolic links are limited by default in Windows and require administrator privileges or specific settings to enable. Therefore, enabling this option in Windows may not work properly or may cause unexpected behavior.
+The default is to enable File System Caching, as shown in @fig-ExtraOptions.
+:::
+
+![Options to select Extra Options](images/ExtraOptions.jpg){#fig-ExtraOptions}
+
+
+::: {.content-visible when-profile="ko"}
+## 설치확인
+
+커맨드창에서 아래의 명령을 실행하여 버전을 확인하시면 됩니다. (Git 설치 시 실행파일의 경로가 환경변수에 자동으로 등록되기 때문에 커맨드창을 여는 폴더위치가 관계 없이 버전이 표시되어야 합니다.)
+:::
+
+::: {.content-visible when-profile="en"}
+## Installation Verification
+
+Run the following command in the command prompt to check the version. (The version should be displayed regardless of the folder location where the command prompt is opened because the path to the executable file is automatically registered in the environment variable when Git is installed.)
+:::
+
+```{r git_installation, eval=FALSE, filename="Command Prompt"}
+git --version
 ```
 
 ::: {.content-visible when-profile="ko"}
- @fig-RepositroyCapture 에서처럼 원하는 파일명을 클릭한 후 우측 상단의 Download raw file 버튼을 클릭하시면 다운로드 됩니다.
+## Git개념과 용어
+
+Git 초기 설정에 앞서 Git에서 사용되는 개념과 용어를 이해하는 것이 좋습니다. Git 공식사이트의 한글매뉴얼(<https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88>)을 학습하시길 추천합니다. \### untracked/staged/committed Git에서는 프로젝트폴더 내의 모든 파일을 추적(=관리)대상파일과 추적대상이 아닌 파일로 구분합니다. 추적대상파일은 인 파일로 @fig-GitConcept.
 :::
 
 ::: {.content-visible when-profile="en"}
-As shown in @fig-RepositroyCapture below, click on the desired file name and then click the Download raw file button in the upper right corner to download it.
+## Git Concepts and Terminology
+
+It is recommended to learn from the Korean manual on the Git official website (<https://git-scm.com/book/en/v2/Getting-Started-Git-Basics>). After learning, you should be able to explain concepts such as add/commit/push/pull/reset and distinguish the status of files as untracked/staged/committed, as shown in @fig-GitConcept.
 :::
 
-![Files in remote repository in Github](images/RepositoryCapture.PNG){#fig-RepositroyCapture}
+![Concept of Git and terminology](images/Git-Reference_Sheet.svg){#fig-GitConcept}
 
 ::: {.content-visible when-profile="ko"}
-그러나 일반적으로 프로젝트의 파일과 폴더의 갯수가 적지 않아 개별적으로 다운로드 받는 것은 어려우므로, 소수의 파일을 다운로드 할 때나 git 명령어 수행 시 충돌이 발생하는 등 예외상황에서 사용하는 것이 좋습니다.
+## Git 설정
 
-## Git 설치
+### 사용자정보 설정
 
-운영체제별 설치파일 및 방벙은 <https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98>을 참고하시면 됩니다. 2024년 9월 27일 현재 윈도우용 64비트 최신 설치파일은 Git-2.46.2-64-bit.exe 입니다.
+Git에서는 커밋을 할 때마다 누가 했는지를 사용자명과 이메일을 기록해둡니다. 이를 위해 설치 시 아래의 예시와 같이 사용자이름과 이메일 설정합니다.
 :::
 
 ::: {.content-visible when-profile="en"}
-However, since the number of files and folders in a project is generally not small, it is difficult to download them individually. Therefore, it is recommended to use it in exceptional situations such as when downloading a small number of files or when conflicts occur when executing git commands.
+## Git Configuration
 
-## Git Installation
+### Setting Username and Email Address
 
-For installation files and methods by operating system, refer to <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>. As of September 27, 2024, the latest installation file for Windows 64-bit is Git-2.46.2-64-bit.exe.
+Git records the username and email address of the person who made the commit each time a commit is made. To do this, set the username and email address as shown below example during installation.
 :::
 
-```{r git_download_site, eval=FALSE, filename="Installation file download site"}
-https://git-scm.com/downloads
-```
-
-::: {.content-visible when-profile="ko"}
-정상 설치여부 확인은 커맨드창에서 "git –version"을 실행하여 버전이 맞는지 확인하면 됩니다.
-:::
-
-::: {.content-visible when-profile="en"}
-To check if the installation is successful, run "git --version" in the command prompt to verify that the version is correct.
-:::
-
-```{r git_installation, eval=FALSE, filename="Command"}
-git -–version
-```
-
-::: {.content-visible when-profile="ko"}
-다음으로 사용자이름과 이메일 주소를 아래의 git 명령으로 설정합니다.
-:::
-
-::: {.content-visible when-profile="en"}
-Next, set the username and email address using the following git command.
-:::
-
-```{r git_config_user.name, eval=FALSE, filename="uer.name config example"}
+```{r git_config_user.name, eval=FALSE, filename="Command Prompt"}
 git config --global user.name "BenKorea"
 ```
 
-```{r eval=FALSE, filename="uer.email config example"}
+```{r eval=FALSE, filename="Command Prompt"}
 git config --global user.email "kimbi.kirams@gmail.com"
 ```
 
 ::: {.content-visible when-profile="ko"}
-로컬의 사용자이름과 이메일 주소는 연구회의 github 원격저장소에서 예제 파일들을 다운로드 받을 때 (git pull 명령을 사용할 때)는 필요 없습니다. 단지 자신의 파일을 업로드할 때 (git push 명령) 누가 올렸는지 알기 위해 이 내용이 같이 기록되는 용도입니다. 이는 github 가입할 때의 이름과 이메일과는 무관하므로 github 가입할 때의 이름과 메일을 사용하지 않으셔도 됩니다.
+### 사용자정보 설정 확인
 
-로컬의 사용자이름과 이메일 주소의 설정 성공여부는 아래의 git 명령으로 입력했던 사용자이름과 이메일이 나오면 정상입니다.
+각각 아래의 명령으로 사용자명과 이메일 주소를 확인할 수 있습니다.
 :::
 
 ::: {.content-visible when-profile="en"}
-The local username and email address are not required when downloading example files from the study group's github remote repository (when using the git pull command). It is only for recording who uploaded the file when uploading your own file (git push command). This is unrelated to the name and email address you used when signing up for github, so you do not need to use the name and email address you used when signing up for github.
+### Confirming User Information Settings
+
+You can check the username and email address with the following commands.
 :::
 
-```{r git_config_user_confirm, eval=FALSE, filename="uer.name confirm example"}
+```{r git_config_username_confirm, eval=FALSE, filename="Command Prompt"}
 git config user.name
-BenKorea
+```
+
+```{r git_config_useremail_confirm, eval=FALSE, filename="Command Prompt"}
 git config user.email
-[kimbi.kirams@gmail.com]
 ```
 
 ::: {.content-visible when-profile="ko"}
-버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 일반적으로는 RStudio를 시작할 때 git를 사용하는 옵션을 선택하게 시작하게 됩니다. Git 사용법에 대해서는 한글 매뉴얼을 참고하시길 바랍니다. <https://git-scm.com/book/ko/v2>
+### 기본브렌치 설정하기
 
-RStudio에서는 @fig-GitConfiguration 과 같이 git와 같은 version control interface 사용여부에 대한 설정이 있으며 이를 check 해야 새로운 프로젝트를 만들 때 git 사용여부가 옵션으로 선택이 가능해집니다.
+기본 브렌치 이름을 master가 아닌 main으로 설정할려면 아래의 같이 init.defautBranch를 main을 설정해 주시면 됩니다.
 :::
 
 ::: {.content-visible when-profile="en"}
-To start version management, run the git init command in the desired folder (= project folder). Typically, you will be prompted to start using git when you start RStudio. For information on how to use git, please refer to the Korean manual. <https://git-scm.com/book/en/v2>
+### Setting the Default Branch
 
-In RStudio, there is a setting for whether to use version control interfaces such as git, as shown in @fig-GitConfiguration. You should check this setting so that the option to use git is available when creating a new project.
+If you want to set the default branch name to main instead of master, you can set init.defaultBranch to main as shown below.
 :::
 
-![RStudio에서 git 사용여부 설정](images/git설정.JPG){#fig-GitConfiguration}
+```{r git_config_default_branch, eval=FALSE, filename="Command Prompt"}
+git config --global init.defaultBranch main
+```
+
+::: {.content-visible when-profile="ko"}
+## 프로젝트에 Git 적용하기
+
+버전관리를 시작할려면 원하는 폴더 (=프로젝트 폴더)에서 git init 명령어를 실행하면 됩니다. 다른 표현으로는 저장소를 만든다고도 합니다. 실행결과로써 `.git` 이라는 숨김폴더가 생성되며, 이 폴더에는 버전관리에 필요한 파일들이 저장됩니다.
+:::
+
+::: {.content-visible when-profile="en"}
+## Applying Git to a Project
+
+To start version management, run the git init command in the desired folder (= project folder). As a result of the execution, a hidden folder named `.git` is created, and this folder contains the files necessary for version management.
+:::
+
+```{r git_init, eval=FALSE, filename="Command Prompt"}
+git init
+```
+
+::: {.content-visible when-profile="ko"}
+## Github란?
+
+GitHub는 Git을 기반으로 한 웹 기반 호스팅 서비스로, 소스 코드 관리와 협업을 위한 플랫폼입니다. GitHub는 Git을 사용하여 프로젝트의 코드베이스를 중앙에서 관리하며, 개발자들이 효율적으로 코드 리뷰, 이슈 관리, 프로젝트 관리, 그리고 협업을 할 수 있도록 다양한 도구와 인터페이스를 제공합니다. **Pull Request(PR)**를 통해 코드 변경 사항을 리뷰하고 병합할 수 있으며, **Continuous Integration/Continuous Deployment(CI/CD)**와 같은 자동화 기능을 지원해 소프트웨어 개발의 생산성과 품질을 높입니다.
+:::
+
+::: {.content-visible when-profile="en"}
+## What is Github?
+
+GitHub is a web-based hosting service based on Git, providing a platform for source code management and collaboration. GitHub uses Git to centrally manage the codebase of projects, providing developers with various tools and interfaces to efficiently conduct code reviews, issue management, project management, and collaboration. Through **Pull Requests (PRs)**, you can review and merge code changes, and it supports automation features such as **Continuous Integration/Continuous Deployment (CI/CD)** to increase the productivity and quality of software development.
+:::

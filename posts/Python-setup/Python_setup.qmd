@@ -10,12 +10,10 @@ categories:
 ---
 
 ::: {.content-visible when-profile="ko"}
-## 설치 안내
-
+## 설치안내문서
 Python 공식사이트에서 제공하는 공식문서(<https://docs.python.org/3/using/index.html>)를 참고하는 것이 이상적이겠지만, 아래의 요약을 참고하여 설치 하셔도 됩니다.
 
 ## 설치 파일
-
 공식 Python 웹사이트(<https://www.python.org/>)에서 운영체제에 적합한 최신 Python 인터프리터를 다운로드하고 설치합니다. 2024년 9월 6일 기준으로 Windows 운영 체제의 경우 `python-3.12.6-amd64.exe` 설치파일(2024년 9월 6일 release)이 최신입니다.
 
 ## 설치옵션

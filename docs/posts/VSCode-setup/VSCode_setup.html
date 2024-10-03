@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
 <meta name="description" content="Guidance on Installing and Configuring VS Code">
 
-<title>RPythonStudy - VS Code Setup</title>
+<title>VS Code Setup – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="검색"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -171,20 +171,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/RPythonStudy/website" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/VSCode-setup/VSCode_setup.html">VS Code Setup</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="vs-code-레이아웃" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-레이아웃">VS Code 레이아웃</h2>
 <p>설정을 설명함에 있어 VS Code 공식문서(<a href="https://code.visualstudio.com/docs" class="uri">https://code.visualstudio.com/docs</a>)에서 사용된 용어를 사용하고자 합니다. 레이아웃 구성요소에 대한 용어는 <a href="#fig-BasicLayout" class="quarto-xref">그림&nbsp;1</a> 을 참고하시길 바랍니다. 그러나 “타이틀 및 메뉴 바”와 같은 용어는 공식 문서에 명시적으로 정의되지 않았지만 명확한 설명을 위해 필요하다고 생각되어 여기에서는 임의적으로 정의하여 사용하겠습니다.</p>
-<div id="fig-BasicLayout" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-BasicLayout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BasicLayout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/BasicLayout.png" class="img-fluid figure-img">
@@ -334,7 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="python-확장기능-설치" class="level2">
 <h2 class="anchored" data-anchor-id="python-확장기능-설치">Python 확장(기능) 설치</h2>
 <p>VS Code에서 Python을 실행코드를 작성 및 실행할려면 Python이라는 확장(기능)을 설치해야 합니다. VS Code를 처음 실행하면 환영 페이지가 표시됩니다. 이 페이지에서 Python 확장을 설치하거나 대신 Ⓐ Activity bar의 확장 메뉴를 사용하여 설치할 수 있습니다. 설치된 확장 프로그램은 확장 프로그램 메뉴의 INSTALLED 섹션에서 확인할 수 있습니다 (<a href="#fig-PythonExtension" class="quarto-xref">그림&nbsp;2</a>). 이로써 VS code에서 Python을 사용할 수 있는 기본적인 설정을 되었습니다.</p>
-<div id="fig-PythonExtension" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-PythonExtension" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PythonExtension-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/PythonExtension.png" class="img-fluid figure-img">
@@ -348,7 +348,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="프로젝트-폴더명-추천" class="level2">
 <h2 class="anchored" data-anchor-id="프로젝트-폴더명-추천">프로젝트 폴더명 추천</h2>
 <p>R 처럼 Python에서도 프로젝트별 독립관리는 프로젝트 폴더 단위로 구현됩니다. 우리 연구회에서는 R과 Python을 사용하므로 C: 루트 디렉토리 아래에 Projects란 폴더를 만들고 각 실행파일의 버전이 폴더명에 먼저 포함되고 이어서 프로젝트를 상징하는 간결한 이름를 부여할 것을 추천합니다 (<a href="#fig-ProjectFolderExample" class="quarto-xref">그림&nbsp;3</a>).</p>
-<div id="fig-ProjectFolderExample" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ProjectFolderExample" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ProjectFolderExample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <pre id="fig-ProjectFolderExample"><code>C:\Projects\R-x'.y'.z'-Project_Name'\            # R project directory and project name example
@@ -374,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="새터미널-생성" class="level3">
 <h3 class="anchored" data-anchor-id="새터미널-생성">새터미널 생성</h3>
 <p>타이틀 및 메뉴 바에서 터미널(T) 메뉴 하부의 새터미널 메뉴를 선택하여 새로운 터미널을 Ⓓ 패널에 열리게 합니다. 이 때 열린 터미널이 만약 powershell이라면 패널 타이틀 바 우측에 있는 <code>+(새 터미널)</code> 기호 옆의 <code>v(시작 프로필)</code>메뉴를 선택하고 (<a href="#fig-CommandPrompt" class="quarto-xref">그림&nbsp;4</a>), 터미널의 종류를 <code>Command Prompt</code>를 선택하여 새로운 Command Prompt 터미널을 생성해 줍니다.</p>
-<div id="fig-CommandPrompt" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CommandPrompt" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CommandPrompt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/CommandPrompt.png" class="img-fluid figure-img">
@@ -418,7 +418,7 @@ python -m venv venv 의미는 ……
 </div>
 </div>
 <p>위 명령의 실행결과로써 프로젝트 폴더아래에 venv 가상화폴더가 생성되었습니다. 이는 탐색기 의 프로젝트폴더 아래에 venv라는 폴더가 보이면 성공한 것입니다 (<a href="#fig-VenvValidation" class="quarto-xref">그림&nbsp;5</a>).</p>
-<div id="fig-VenvValidation" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-VenvValidation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-VenvValidation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/VenvValdiation.png" class="img-fluid figure-img">
@@ -429,7 +429,7 @@ python -m venv venv 의미는 ……
 </figure>
 </div>
 <p>가상화로 만들어진 venv 폴더하부에는 다음과 같은 폴더와 파일이 생성됩니다 (<a href="#fig-VenvDirectory" class="quarto-xref">그림&nbsp;6</a>).</p>
-<div id="fig-VenvDirectory" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-VenvDirectory" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-VenvDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <pre id="fig-VenvDirectory"><code>(venv)/
@@ -454,7 +454,7 @@ python -m venv venv 의미는 ……
 <section id="프로젝트와-가상환경-연결" class="level3">
 <h3 class="anchored" data-anchor-id="프로젝트와-가상환경-연결">프로젝트와 가상환경 연결</h3>
 <p><code>타이틀과 메뉴 바</code>의 <code>보기(V)</code> 메뉴에서 <code>명령 팔레트</code> 메뉴를 선택하면, 선택가능한 명령들이 리스트로 조회되며 이 중에서 <code>Python: 인터프리터 선택</code> 메뉴를 선택합니다 (<a href="#fig-SelectInterpreter" class="quarto-xref">그림&nbsp;7</a>).</p>
-<div id="fig-SelectInterpreter" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-SelectInterpreter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SelectInterpreter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/SelectInterpreter.png" class="img-fluid figure-img">
@@ -465,7 +465,7 @@ python -m venv venv 의미는 ……
 </figure>
 </div>
 <p>위의 선택에 따라 현재 상황에서 선택 가능한 모든 Python 인터프리터가 조회되며, 이중에서 직전에 만든 프로젝트 폴더 아래의 venv 가상화폴더 아래의 Scripts 폴더 내의 python.exe를 선택합니다 (<a href="#fig-InterpreterSelection" class="quarto-xref">그림&nbsp;8</a>).</p>
-<div id="fig-InterpreterSelection" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-InterpreterSelection" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-InterpreterSelection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/InterpreterSelection.png" class="img-fluid figure-img">
@@ -479,7 +479,7 @@ python -m venv venv 의미는 ……
 <section id="가상환경-검증" class="level3">
 <h3 class="anchored" data-anchor-id="가상환경-검증">가상환경 검증</h3>
 <p>가상환경의 python 인터프리터를 선택하여 특정 프로젝트와 특정 가상환경의 인터프리터를 연결하더라도 화면에서는 아무런 변화가 없습니다. 오류없이 연결이 잘 되었는지 확인은 새 터널을 생성하면 <a href="#fig-ValidationVertualization" class="quarto-xref">그림&nbsp;9</a> 에서의 같이 터미널의 프롬프트에 <code>(venv)</code>의 가상화폴더를 괄호로 둘러싼 것이 보이게 되며, 이를 통해 성공적인 연결을 확인할 수 있으며 현재 가상화가 활성화되어 있음을 알 수 있습니다.</p>
-<div id="fig-ValidationVertualization" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ValidationVertualization" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ValidationVertualization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/ValidationVirtualization.png" class="img-fluid figure-img">
@@ -494,7 +494,7 @@ python -m venv venv 의미는 ……
 <section id="프로젝트별-설정저장" class="level2">
 <h2 class="anchored" data-anchor-id="프로젝트별-설정저장">프로젝트별 설정저장</h2>
 <p>프로젝트폴더에 가상환경설정까지 마친 후 이 상태를 저장해 둘 수 있습니다. 이를 위해 <code>타이틀 및 메뉴 바</code>의 <code>파일(F)</code> 메뉴에서 <code>작업영역을 다름이름으로 저장</code> 메뉴를 선택하면 됩니다 (<a href="#fig-WorskspaceSaveas" class="quarto-xref">그림&nbsp;10</a>).</p>
-<div id="fig-WorskspaceSaveas" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-WorskspaceSaveas" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-WorskspaceSaveas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/WorkspaceSaveas.png" class="img-fluid figure-img">
@@ -505,7 +505,7 @@ python -m venv venv 의미는 ……
 </figure>
 </div>
 <p>이 때 프로젝트 폴더에 프로젝트폴더이름.code-workspace 파일이 만들어지면 프로젝트폴더의 설정이 저장됩니다 (<a href="#fig-CodeWorkspace" class="quarto-xref">그림&nbsp;11</a>). 그리고 프로젝트를 다시 열 때 이 파일을 선택하면 프로젝트폴더의 설정이 자동으로 불러와집니다.</p>
-<div id="fig-CodeWorkspace" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CodeWorkspace" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CodeWorkspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/CodeWorkspace.JPG" class="img-fluid figure-img">
@@ -555,18 +555,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -598,7 +587,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -606,7 +617,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
