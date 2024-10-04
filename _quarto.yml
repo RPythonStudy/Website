@@ -44,7 +44,8 @@ website:
         - posts/RStudio-setup/RStudio_setup.qmd      
         - posts/R-syntax/R_syntax.qmd    
         - posts/outlier-detection/outlier_detection.qmd   
-        - posts/built-in-dataset/built_in_dataset.qmd   
+        - posts/built-in-dataset/built_in_dataset.qmd
+        - posts/Chi-square-test-in-R/Chi_square_test_in_R.qmd 
     - title: "Python"
       contents:
         - posts/Python/introduction_to_Python.qmd
