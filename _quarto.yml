@@ -60,6 +60,7 @@ website:
         - posts/basic-statistics/basic_statistics.qmd
         - posts/survival-analysis/survival_analysis.qmd
         - posts/group-comparison/group_comparison.qmd
+        - posts/Chi-square-test/Chi_square_test.qmd
     - title: "Resources"
       contents:
         - posts/Resources/introduction_to_resources.qmd 

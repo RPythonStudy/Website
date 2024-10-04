@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/chi-square-test/Chi_square_test.html",
       "/posts/VSCode-setup/VSCode_setup.html",
       "/posts/group-comparison/group_comparison.html",
       "/posts/Quarto/introduction_to_Quarto.html",
