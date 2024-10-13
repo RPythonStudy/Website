@@ -1,0 +1,252 @@
+---
+Title: "Git Setup in RStudio"
+Description: "Learn how to set up and use Git by creating an example R project"
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "2024-10-05"
+date-modified: "2024-10-05"
+categories:
+  - Git
+  - setup
+---
+
+1단계: Git이 시스템에 설치되어 있고 RStudio에서 사용가능한지 확인하세요.
+
+:::: {.callout-note title="1단계 예시" collapse="true" appearance="minimal"}
+-   RStudio Terminal pane에서 아래의 git 명령어를 실행하여 version을 확인합니다.
+```{r git_install_verfication, eval=FALSE, filename="RStdio Terminal pane"}
+git --version
+```
+-   오류가 있다면 Global Options... Git/SVM 메뉴에서 version control interface for RStudio가 check 되어있는지, git 실행파일의 경로가 제대로 인식되어 있는지 등을 확인하여 오류를 해결하고 진행 하시길 바랍니다.
+::::
+
+
+2단계: `R` 버전이 `4.4.1`일때 `Git_Example`이 프로젝트명에 포함되도록 R프로젝트를 만드세요.
+
+:::: {.callout-note title="2단계 예시" collapse="true" appearance="minimal"}
+-   RStudio에서 `New Project`를 생성
+-   `New Directory`에 생성
+-   `Quarto Project`를 생성
+-   `C:/Projects` 가 상위 디렉토리인지 확인 (=working directory)
+-   Directory name으로 `R-4.4.1-Git_Example` 입력
+-   git repository로 만들기 위해 Create a git repository 체크 유지
+-   `Create Project` 클릭
+```{r git_example, eval=FALSE, filename="recommeded project name"}
+R-4.4.1-Git_Example
+```
+::::
+
+3단계: `.gitignore` 파일을 열어서 버전관리 예외로 설정된 파일/폴더 목록을 확인하세요.
+
+:::: {.callout-note title="3단계 예시" collapse="true" appearance="minimal"}
+-   Output pane Files 탭에서 `.gitignore` 파일을 열면 다음과 같습니다.
+```{r gitignore, eval=FALSE, filename=".gitignore"}
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+```
+::::
+
+4단계: `git status` 실행하여 branch 이름과 untracked file 목록을 확인하세요.
+
+:::: {.callout-note title="4단계 예시" collapse="true" appearance="minimal"}
+```{r git_status, eval=FALSE, filename="RStudio Terminal pane"}
+git status
+```
+```{r git_status_output, eval=FALSE, filename="git status output"}
+C:\Projects\R-4.4.1-Git_Example>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .Rprofile
+        .gitignore
+        R-4.4.1-Git_Example.Rproj
+        R-4.4.1-Git_Example.qmd
+        _quarto.yml
+        renv.lock
+        renv/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+-   branch name은 시스템에 Git 설치과정에서 main으로 설정했다면 main으로 출력됩니다. [참조: 기본브렌치 설정하기](Git_setup.qmd#config_default_branch_name)
+-   프로젝트 생성 시 프로젝트 폴더의 파일들은 git의 관리대상이 아닌 untracked file로 분류되어 보여집니다. 하지만, .gitignore에 설정된 파일들은 untracked file로도 보여지지 않음을 알 수 있습니다. 이로 이내 output pane의 Files탭에서 보이는 파일/폴더 목록과 untracked file들이 다름을 확인하시길 바랍니다.
+-   Git pane에서도 같은 결과를 GUI로 보여집니다. 파일/폴더는 Path 컬럼에 보여지고, Staged는 check되어 있지 않으며 Status는 모두 ?? 표시된 상태입니다.
+::::
+
+5단계: `.gitignore` 파일을 편집하여 .Rprofile, Rproj 확장자인 모든 파일, renv 폴더를 버전관리대상에서 제외하세요.
+
+:::: {.callout-note title="5단계 예시" collapse="true" appearance="minimal"}
+-   RStudio에서 `.gitignore` 파일을 열어서 아래의 내용을 추가합니다.
+```{r gitignore_add, eval=FALSE, filename=".gitignore"}
+.Rprofile
+*.Rproj
+renv/
+```
+-   `git status` 명령을 실행하여 변경사항을 확인합니다
+
+```{r git_status_output_ignore, eval=FALSE, filename="git status output"}
+C:\Projects\R-4.4.1-Git_Example>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        R-4.4.1-Git_Example.qmd
+        _quarto.yml
+        renv.lock
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+-   untracked file 목록에서 .gitignore에 추가했던 파일들이 제외되었음을 알 수 있습니다.
+-   Git pane에서도 .gitignore에 추가했던 파일들이 제외되었음을 알 수 있습니다.
+::::
+
+6단계: `git add .` 명령으로 untracked file들을 staged 상태로 만드세요.
+
+:::: {.callout-note title="6단계 예시" collapse="true" appearance="minimal"}
+-   RStudio Terminal pane에서 아래의 명령어를 실행합니다.
+```{r git_add, eval=FALSE, filename="RStudio Terminal pane"}
+git add .
+```
+-   `git status` 명령을 실행하여 변경사항을 확인합니다
+
+```{r git_status_output_add, eval=FALSE, filename="git status output"}
+C:\Projects\R-4.4.1-Git_Example>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   R-4.4.1-Git_Example.qmd
+        new file:   _quarto.yml
+        new file:   renv.lock
+```
+-   git add . 명령어는 현재 디렉토리 및 모든 하위 폴더의 변경 사항을 staging 영역으로 추가하는 명령어입니다. 이는 새로 생성된 파일뿐만 아니라 수정된 파일도 staging 영역에 추가하게 됩니다.
+-   커밋할 준비가 된 (=staging 된) 파일/폴더들의 목록이 git status 명령어를 통해 확인할 수 있으며, 여기서는 .gitignore, R-4.4.1-Git_Example.qmd, _quarto.yml, renv.lock 파일들이 staging 영역에 추가된 상태입니다.
+-   staging 영역에 추가한 파일을 다시 제거하고 싶다면 git rm --cached <file> 명령을 사용해야 합니다. 이 명령은 staging에서만 해당 파일을 제거하며, 파일 자체는 그대로 유지됩니다.
+-   Environment/git pane에서 refresh 버튼을 클릭하여 목록을 갱신하면, Staged에 체크된 파일들이 나타납니다. 또한, Status 열에 A(added)를 나타내는 표시가 있어 해당 파일들이 staging 영역에 추가되었음을 알 수 있습니다.
+::::
+
+7단계: `git commit -m "initial commit"`를 실행하여 committed 상태로 만드세요.
+
+:::: {.callout-note title="7단계 예시" collapse="true" appearance="minimal"}
+-   RStudio Terminal pane에서 아래의 명령어를 실행하고 결과를 확인합니다.
+```{r git_commit, eval=FALSE, filename="RStudio Terminal pane"}
+git commit -m "initial commit"
+```
+
+```{r git_status_output_commit, eval=FALSE, filename="git status output"}
+C:\Projects\R-4.4.1-Git_Example>git commit -m "initial commit"
+[main (root-commit) bc95de0] initial commit
+ 4 files changed, 357 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 R-4.4.1-Git_Example.qmd
+ create mode 100644 _quarto.yml
+ create mode 100644 renv.lock
+```
+-   `git commit -m "initial commit"` 명령어는 Git 커밋 명령으로, 현재 staging 영역에 있는 변경 사항을 로컬 저장소에 저장(커밋)하고, "initial commit"이라는 메시지를 커밋에 붙입니다.
+-   root-commit: 이 부분은 프로젝트의 첫 번째 커밋임을 나타냅니다. root-commit은 해당 브랜치에서 이전 커밋이 없음을 뜻합니다.
+-   bc95de0: 커밋의 고유한 SHA-1 해시 값입니다. Git은 각 커밋을 식별할 수 있도록 고유 해시 값을 할당합니다.
+-   4 files changed: 총 4개의 파일이 변경되었음을 의미합니다. 여기서는 처음 커밋이기 때문에 파일들이 추가되었다고 간주합니다.
+-   357 insertions(+): 총 357개의 라인이 추가되었음을 의미합니다. 이는 새로운 파일들이 추가되었기 때문에 발생한 추가된 라인 수입니다.
+-   create mode 100644: 파일이 추가됨을 나타냅니다. 100644는 파일의 권한을 의미하며, 읽기/쓰기 가능한 일반 파일이라는 의미입니다.
+-  `git status` 명령으로 변경사항을 확인합니다.
+
+```{r git_status_commit, eval=FALSE, filename="RStudio Terminal pane"}
+git status
+```
+```{r git_status_commit_output, eval=FALSE, filename="git status output"}
+C:\Projects\R-4.4.1-Git_Example>git status
+On branch main
+nothing to commit, working tree clean
+```
+-   커밋 후 변경사항이 없는 상태로 "nothing to commit, working tree clean"이 출력됩니다.
+-   Environment/git pane에서 refresh 버튼을 클릭하여 목록을 갱신하면, Staged에 체크된 파일들이 사라지고, Status 열에 M(modified)를 나타내는 표시가 없어진 것을 확인할 수 있습니다.
+- git log 명령어를 통해 커밋 이력을 확인할 수 있습니다.
+```{r git_log, eval=FALSE, filename="RStudio Terminal pane"}
+git log
+```
+```{r git_log_output, eval=FALSE, filename="git log output"}
+C:\Projects\R-4.4.1-Git_Example>git log
+commit bc95de0f7aeba9d13ace79cf8ac41b1da3870397 (HEAD -> main)
+Author: BenKorea <kimbi.kirams@gmail.com>
+Date:   Sun Oct 6 23:10:28 2024 +0900
+
+    initial commit
+```
+-   git log 명령어를 통해 커밋 이력을 확인할 수 있습니다. 여기서는 커밋 메시지와 커밋한 시간, 커밋한 사람의 정보가 출력됩니다.
+::::
+
+8단계: Github에 계정을 만들고 원격저장소의 이름을 `Git_Example`로 만들어 보세요.
+
+:::: {.callout-note title="8단계 예시" collapse="true" appearance="minimal"}
+-   Github 공식사이트(<https://github.com/>)로 접속합니다.
+-   자신의 이메일과 사용자명을 이용해서 등록합니다 (연구회의 사용자명과 이메일이 아닙니다). 이왕이면 시스템에 git를 설치할 때 global로 설정했던 user.name과 email을 사용하는 것을 추천합니다.
+-   `Git_Example` 이름의 원격저장소를 만듭니다.
+-   Quick setup에서 HTTPS 주소를 복사합니다.
+::::
+
+9단계: 로컬과 원격저장소를 연결하세요.
+
+:::: {.callout-note title="9단계 예시" collapse="true" appearance="minimal"}
+-   Terminal pane에서 아래의 git 명령어를 실행하여 원격저장소를 연결합니다.
+```{r git_remote, eval=FALSE, filename="RStudio Terminal pane"}
+git remote add origin https://github.com/RPythonStudy/Git_Example.git
+```
+-   `git remote add origin` 명령어는 로컬 저장소와 원격 저장소를 연결하는 명령어입니다. origin은 원격 저장소의 이름을 나타냅니다. 이후에 push나 pull 명령을 실행할 때 origin을 사용하여 원격 저장소를 지정할 수 있습니다.
+-   원격저장소의 주소는 앞단계에서 복사해 두었던 주소를 사용합니다.
+-   아래의 명령으로 원격 저장소의 연결 상태를 확인합니다.
+```{r git_remote_v, eval=FALSE, filename="RStudio Terminal pane"}
+git remote -v
+```
+```{r git_remote_V_output, eval=FALSE, filename="git log output"}
+C:\Projects\R-4.4.1-Git_Example>git remote -v
+origin  https://github.com/RPythonStudy/Git_Example.git (fetch)
+origin  https://github.com/RPythonStudy/Git_Example.git (push)
+```
+-   origin은 원격 저장소의 통칭 또는 별칭입니다. 
+-   fetch 원격 저장소에서 최신변경사항을 가져오는 명령어이며 위에서는 명기된 원격저장소에서 가져옴을 보여줍니다.
+-   push 원격 저장소로 변경사항을 보내는 명령어이며 위에서는 명기된 원격저장소로 보냄을 보여줍니다.
+::::
+
+10단계: 로컬에 커밋된 사항들을 원격저장소로 push해 보세요.
+
+:::: {.callout-note title="10단계 예시" collapse="true" appearance="minimal"}
+-   Terminal pane에서 아래의 git 명령어를 실행하여 원격저장소를 연결합니다.
+```{r git_push, eval=FALSE, filename="RStudio Terminal pane"}
+git push origin main
+```
+-   `git push` 명령어는 로컬 저장소의 변경사항을 원격 저장소로 업로드합니다.
+-   `origin`은 원격저장소의 별칭입니다.
+-   `main`은 로컬의 원격저장소 이름입니다. 그리고 위 명령으로 로컬의 main 브랜치에서 원격저장소  main 브랜치로 push합니다.
+`
+```{r git_push_output, eval=FALSE, filename="git log output"}
+C:\Projects\R-4.4.1-Git_Example>git push origin main
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 2.05 KiB | 525.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/RPythonStudy/Git_Example.git
+ * [new branch]      main -> main
+```
+-   Enumerating objects: 객체수 계산에서 특이한 사항은 커밋된 파일은 4개 였는데 여기서는 객체수는 2개가 더 큽니다. 이는 디렉토리구조 파일과 커밋정보파일이 추가되기 때문입니다.
+-   Counting objects: Git이 객체를 전송할 준비가 되었음을 나타냅니다.
+-   Ddelta compression...: Git이 객체를 압축하는 과정입니다. 이 과정에서 4개의 CPU 스레드를 사용해 병렬로 압축을 진행합니다. Delta 압축은 이미 존재하는 데이터와 비교해 변경된 부분만 압축해 전송하는 방식입니다.
+Compressing objects: Git이 전송할 모든 객체를 압축하여 준비를 완료한 상태입니다. 
+-   Writing objects: 압축된 데이터를 원격 저장소에 전송하는 단계입니다. 6개의 객체가 2.05 KiB의 데이터로 전송되었으며, 전송 속도는 525 KiB/s로 전송이 완료되었습니다.는 압축된 객체를 디스크에 쓰는 과정입니다.
+-   Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0): 전송된 객체의 총 개수와 압축된 객체의 크기를 보여줍니다. 여기서는 새로운 브랜치가 생성되었으므로 delta 값이 0으로 나타납니다.
+-   전송된 데이터가 원격 저장소인 https://github.com/RPythonStudy/Git_Example.git로 전송되었음을 나타냅니다.
+-   [new branch] main -> main: 새로운 브랜치가 생성되었음을 나타냅니다. main 브랜치가 원격 저장소 main branch로 전송되었음을 보여줍니다.
+::::
+
+
+

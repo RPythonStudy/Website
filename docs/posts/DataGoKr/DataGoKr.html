@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
-<meta name="description" content="Introducing open source programs that are helpful for research groups">
+<meta name="description" content="How to use OGD and Examples">
 
-<title>RPythonStudy - Introduction to Utilities</title>
+<title>Open Goverment Data – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="검색"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../posts/Utilities/introduction_to_utilities.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts/Utilities/introduction_to_utilities.qmd"> 
 <span class="menu-text">Utilities</span></a>
   </li>  
   <li class="nav-item">
@@ -137,37 +137,25 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/RPythonStudy/website" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/Utilities/introduction_to_utilities.html">Introduction to Utilities</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Introduction to Utilities</h1>
+      <h1 class="title">Open Goverment Data</h1>
                   <div>
         <div class="description">
-          Introducing open source programs that are helpful for research groups
+          How to use OGD and Examples
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">introduction</div>
+                <div class="quarto-category">Resource</div>
+                <div class="quarto-category">medical data</div>
               </div>
                   </div>
   </div>
@@ -185,14 +173,14 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">공개</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">2024년 9월 27일</p>
+        <p class="date">2024년 10월 2일</p>
       </div>
     </div>
     
       <div>
       <div class="quarto-title-meta-heading">Modified</div>
       <div class="quarto-title-meta-contents">
-        <p class="date-modified">2024년 9월 27일</p>
+        <p class="date-modified">2024년 10월 2일</p>
       </div>
     </div>
       
@@ -201,33 +189,19 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="검색"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Utilities/introduction_to_utilities.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction to Utilities</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Git-setup/Git_setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Git &amp; Github setup</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">목차</h2>
+   
+  <ul>
+  <li><a href="#공공데이터open-govement-data란" id="toc-공공데이터open-govement-data란" class="nav-link active" data-scroll-target="#공공데이터open-govement-data란">공공데이터(Open Govement Data)란?</a></li>
+  <li><a href="#회원가입" id="toc-회원가입" class="nav-link" data-scroll-target="#회원가입">회원가입</a></li>
+  <li><a href="#원하는-api-찾기" id="toc-원하는-api-찾기" class="nav-link" data-scroll-target="#원하는-api-찾기">원하는 API 찾기</a></li>
+  <li><a href="#활용신청" id="toc-활용신청" class="nav-link" data-scroll-target="#활용신청">활용신청</a></li>
+  <li><a href="#활용신청-현황" id="toc-활용신청-현황" class="nav-link" data-scroll-target="#활용신청-현황">활용신청 현황</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -236,9 +210,49 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>연구회에 도움이 되는 open source program들을 소개합니다.</p>
+<section id="공공데이터open-govement-data란" class="level2">
+<h2 class="anchored" data-anchor-id="공공데이터open-govement-data란">공공데이터(Open Govement Data)란?</h2>
+<p>공공데이터포털(<a href="https://www.data.go.kr/index.do" class="uri">https://www.data.go.kr/index.do</a>)은 공공기관이 생성 또는 취득하여 관리하고 있는 공공데이터를 한 곳에서 제공하는 통합 창구입니다. 포털에서는 국민이 쉽고편리하게 공공데이터를 이용할 수 있도록 파일데이터, 오픈API, 시각화 등 다양한 방식으로 제공하고 있으며, 누구라도 쉽고 편리한 검색을통해 원하는 공공데이터를 빠르고 정확하게 찾을 수 있습니다.</p>
+</section>
+<section id="회원가입" class="level2">
+<h2 class="anchored" data-anchor-id="회원가입">회원가입</h2>
+<p>가입 단계 중에 스마트폰 등의 본인 인증이 필요합니다. 알파이썬연구회는 사업자등록번호가 없으므로 기업회원으로도 가입하지 않았습니다. 따라서 공공데이터를 활용하기 위해서는 연구회분들이 직접 회원가입을 하셔야 합니다.</p>
+</section>
+<section id="원하는-api-찾기" class="level2">
+<h2 class="anchored" data-anchor-id="원하는-api-찾기">원하는 API 찾기</h2>
+<p>“국립암센터 원격전이 암발생 지표”를 검색하시면 <a href="#fig-API_list" class="quarto-xref">그림&nbsp;1</a> 와 같이 목록을 쉽게 얻을 수 있습니다. 검색은 한글만 지원하는 것 같습니다.</p>
+<div id="fig-API_list" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-API_list-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/API_list.JPG" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-API_list-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;1: API list example
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="활용신청" class="level2">
+<h2 class="anchored" data-anchor-id="활용신청">활용신청</h2>
+<p>API를 사용하기 위한 목적을 기재하고 신청합니다. (이를 <code>개발계정</code>을 신청한다고도 합니다.)</p>
+</section>
+<section id="활용신청-현황" class="level2">
+<h2 class="anchored" data-anchor-id="활용신청-현황">활용신청 현황</h2>
+<p>다음단계로 활용신청 현황을 <a href="#fig-API_status" class="quarto-xref">그림&nbsp;2</a> 와 같이 확인할 수 있습니다.</p>
+<div id="fig-API_status" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-API_status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/API_status.JPG" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-API_status-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+그림&nbsp;2: API status example
+</figcaption>
+</figure>
+</div>
+<p>저자의 경우 이전에 2건을 신청했었기 때문에 활용 3건으로 조회 됩니다. 원하는 목록을 선택하여 진행합니다.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -276,18 +290,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -319,7 +322,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -327,7 +352,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

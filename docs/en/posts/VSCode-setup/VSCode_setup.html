@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-08-31">
 <meta name="description" content="Guidance on Installing and Configuring VS Code">
 
-<title>RPythonStudy - VS Code Setup</title>
+<title>VS Code Setup – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -157,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Utilities/introduction_to_utilities.html"> 
+    <a class="nav-link" href="../../posts/Utilities/introduction_to_utilities.qmd"> 
 <span class="menu-text">Utilities</span></a>
   </li>  
   <li class="nav-item">
@@ -172,20 +172,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/RPythonStudy/website" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/VSCode-setup/VSCode_setup.html">VS Code Setup</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="vs-code-layout" class="level2">
 <h2 class="anchored" data-anchor-id="vs-code-layout">VS Code Layout</h2>
 <p>In explaining the configuration, the terms used in the official VS Code documentation (https://code.visualstudio.com/docs) are adopted. The terms for layout components are referenced in <a href="#fig-BasicLayout" class="quarto-xref">Figure&nbsp;1</a>. However, terms such as “title &amp; menu bar” are not explicitly defined in the official documentation but are used here for clarity.</p>
-<div id="fig-BasicLayout" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-BasicLayout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BasicLayout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/BasicLayout.png" class="img-fluid figure-img">
@@ -334,7 +334,7 @@ Figure&nbsp;1: Basic layout of VS Code
 <section id="installing-python-extensions" class="level2">
 <h2 class="anchored" data-anchor-id="installing-python-extensions">Installing Python Extensions</h2>
 <p>To write and execute Python code in VS Code, you need to install the Python extension. When you first launch VS Code, the Welcome page will appear. Install the Python extension from this page, or alternatively, use the Extensions menu in the Activity Bar (Ⓐ). Once installed, the extension can be verified under the INSTALLED section in the Extensions menu (<a href="#fig-PythonExtension" class="quarto-xref">Figure&nbsp;2</a>). This completes the basic setup for using Python in VS Code.</p>
-<div id="fig-PythonExtension" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-PythonExtension" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PythonExtension-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/PythonExtension.png" class="img-fluid figure-img">
@@ -348,7 +348,7 @@ Figure&nbsp;2: Python Extension in VS Code
 <section id="creating-project-folders" class="level2">
 <h2 class="anchored" data-anchor-id="creating-project-folders">Creating Project Folders</h2>
 <p>Like R, Python also implements independent management for each project at the project folder level. Since our study group uses both R and Python, we recommend creating a Projects folder under the C: root directory. We suggest naming each project folder with the version of the executable file first, followed by a concise name representing the project (<a href="#fig-ProjectFolderExample" class="quarto-xref">Figure&nbsp;3</a>).</p>
-<div id="fig-ProjectFolderExample" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ProjectFolderExample" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ProjectFolderExample-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <pre id="fig-ProjectFolderExample"><code>C:\Projects\R-x'.y'.z'-Project_Name'\            # R project directory and project name example
@@ -374,7 +374,7 @@ Figure&nbsp;3: Project folder location and name example
 <section id="creating-a-new-terminal" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-new-terminal">Creating a New Terminal</h3>
 <p>Select the New Terminal option in the Terminal menu under the title &amp; menu bar to open a new terminal in the Ⓓ panel. If the opened terminal is PowerShell, select the <code>v(Select Default Profile)</code> menu next to the <code>+(New Terminal)</code> icon on the right side of the panel title bar (<a href="#fig-CommandPrompt" class="quarto-xref">Figure&nbsp;4</a>). Then, choose <code>Command Prompt</code> to create a new Command Prompt terminal.</p>
-<div id="fig-CommandPrompt" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CommandPrompt" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CommandPrompt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/CommandPrompt.png" class="img-fluid figure-img">
@@ -418,7 +418,7 @@ Meaning of python -m venv venv
 </div>
 </div>
 <p>The successful execution of the above command will create a venv virtual environment folder under the project folder. If you see a folder named venv under the project folder in the Explorer, the operation was successful (<a href="#fig-VenvValidation" class="quarto-xref">Figure&nbsp;5</a>).</p>
-<div id="fig-VenvValidation" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-VenvValidation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-VenvValidation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/VenvValdiation.png" class="img-fluid figure-img">
@@ -429,7 +429,7 @@ Figure&nbsp;5: Validation of venv Folder Creation
 </figure>
 </div>
 <p>The following folders and files are created under the venv folder generated by the virtual environment (<a href="#fig-VenvDirectory" class="quarto-xref">Figure&nbsp;6</a>).</p>
-<div id="fig-VenvDirectory" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-VenvDirectory" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-VenvDirectory-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <pre id="fig-VenvDirectory"><code>(venv)/
@@ -454,7 +454,7 @@ Figure&nbsp;6: (venv) Directory Structure
 <section id="linking-project-and-virtual-environment" class="level3">
 <h3 class="anchored" data-anchor-id="linking-project-and-virtual-environment">Linking Project and Virtual Environment</h3>
 <p>Select View from the title menu and choose Command Palette. Then select Python: Select Interpreter from the list of available commands (<a href="#fig-SelectInterpreter" class="quarto-xref">Figure&nbsp;7</a>).</p>
-<div id="fig-SelectInterpreter" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-SelectInterpreter" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SelectInterpreter-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/SelectInterpreter.png" class="img-fluid figure-img">
@@ -465,7 +465,7 @@ Figure&nbsp;7: Select Interpreter in Command Palette
 </figure>
 </div>
 <p>Upon selection, all available Python interpreters will be displayed. Choose the python.exe file located in the Scripts folder under the venv virtual environment folder created in the project folder (<a href="#fig-InterpreterSelection" class="quarto-xref">Figure&nbsp;8</a>).</p>
-<div id="fig-InterpreterSelection" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-InterpreterSelection" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-InterpreterSelection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/InterpreterSelection.png" class="img-fluid figure-img">
@@ -479,7 +479,7 @@ Figure&nbsp;8: Interpreter Selection
 <section id="validating-the-virtual-environment" class="level3">
 <h3 class="anchored" data-anchor-id="validating-the-virtual-environment">Validating the Virtual Environment</h3>
 <p>Even after linking the Python interpreter of the virtual environment to a specific project, there will be no visible changes on the screen. To confirm that the connection was successful, open a new terminal. If you see the virtual environment folder <code>(venv)</code> enclosed in parentheses in the terminal prompt, as shown in <a href="#fig-ValidationVertualization" class="quarto-xref">Figure&nbsp;9</a>, it indicates a successful connection. This confirms that the virtual environment is currently active.</p>
-<div id="fig-ValidationVertualization" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ValidationVertualization" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ValidationVertualization-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/ValidationVirtualization.png" class="img-fluid figure-img">
@@ -494,7 +494,7 @@ Figure&nbsp;9: Validation of Virtual Environment Activation
 <section id="saving-project-settings" class="level2">
 <h2 class="anchored" data-anchor-id="saving-project-settings">Saving Project Settings</h2>
 <p>After completing the virtual environment setup in the project folder, you can save this state. To do this, select Save Workspace As from the File menu in the title &amp; menu bar (<a href="#fig-WorskspaceSaveas" class="quarto-xref">Figure&nbsp;10</a>).</p>
-<div id="fig-WorskspaceSaveas" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-WorskspaceSaveas" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-WorskspaceSaveas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/WorkspaceSaveas.png" class="img-fluid figure-img">
@@ -505,7 +505,7 @@ Figure&nbsp;10: Workspaces Save as function in File Menu
 </figure>
 </div>
 <p>When this action is taken, a projectfoldername.code-workspace file will be created in the project folder, saving the project settings (<a href="#fig-CodeWorkspace" class="quarto-xref">Figure&nbsp;11</a>). When you reopen the project, selecting this file will automatically load the project folder settings.</p>
-<div id="fig-CodeWorkspace" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-CodeWorkspace" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-CodeWorkspace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="image/CodeWorkspace.JPG" class="img-fluid figure-img">
@@ -555,18 +555,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -598,7 +587,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -606,7 +617,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

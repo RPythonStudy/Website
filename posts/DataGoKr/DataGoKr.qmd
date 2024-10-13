@@ -1,0 +1,66 @@
+---
+title: "Open Goverment Data"
+description: "How to use OGD and Examples"
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "2024-10-02"
+date-modified: "2024-10-02"
+categories:
+  - Resource
+  - medical data
+---
+
+::: {.content-visible when-profile="ko"}
+## 공공데이터(Open Govement Data)란?
+
+공공데이터포털(<https://www.data.go.kr/index.do>)은 공공기관이 생성 또는 취득하여 관리하고 있는 공공데이터를 한 곳에서 제공하는 통합 창구입니다. 포털에서는 국민이 쉽고편리하게 공공데이터를 이용할 수 있도록 파일데이터, 오픈API, 시각화 등 다양한 방식으로 제공하고 있으며, 누구라도 쉽고 편리한 검색을통해 원하는 공공데이터를 빠르고 정확하게 찾을 수 있습니다.
+
+## 회원가입
+
+가입 단계 중에 스마트폰 등의 본인 인증이 필요합니다. 알파이썬연구회는 사업자등록번호가 없으므로 기업회원으로도 가입하지 않았습니다. 따라서 공공데이터를 활용하기 위해서는 연구회분들이 직접 회원가입을 하셔야 합니다.
+
+## 원하는 API 찾기
+
+"국립암센터 원격전이 암발생 지표"를 검색하시면 @fig-API_list 와 같이 목록을 쉽게 얻을 수 있습니다. 검색은 한글만 지원하는 것 같습니다.
+:::
+
+::: {.content-visible when-profile="en"}
+## What is Open Government Data?
+
+The Public Data Portal (<https://www.data.go.kr/index.do>) is a unified gateway that provides public data generated or acquired and managed by public institutions in one place. The portal provides public data in various ways, such as file data, open API, and visualization, so that citizens can easily and conveniently use public data, and anyone can quickly and accurately find the desired public data through easy and convenient search.
+
+## Sign Up
+
+During the registration process, personal authentication such as a smartphone is required. The Python Research Group has not signed up as a corporate member because it does not have a business registration number. Therefore, in order to use public data, researchers must sign up themselves.
+
+## Finding the Desired API
+
+If you search for "국립암센터 원격전이 암발생 지표" you can easily get a list like @fig-API_list. It seems that only Korean is supported for searching.
+:::
+
+![API list example](images/API_list.JPG){#fig-API_list}
+
+::: {.content-visible when-profile="ko"}
+## 활용신청
+
+API를 사용하기 위한 목적을 기재하고 신청합니다. (이를 `개발계정`을 신청한다고도 합니다.)
+
+## 활용신청 현황
+
+다음단계로 활용신청 현황을 @fig-API_status 와 같이 확인할 수 있습니다.
+:::
+
+::: {.content-visible when-profile="en"}
+## Application for Utilization
+
+State the purpose of using the API and apply.
+
+## Application Status
+
+You can check the application status in the next step as shown in @fig-API_status.
+:::
+
+![API status example](images/API_status.JPG){#fig-API_status}
+
+::: {.content-visible when-profile="ko"}
+저자의 경우 이전에 2건을 신청했었기 때문에 활용 3건으로 조회 됩니다. 원하는 목록을 선택하여 진행합니다.
+:::

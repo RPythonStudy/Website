@@ -365,7 +365,7 @@ git config user.email
 ```
 
 ::: {.content-visible when-profile="ko"}
-### 기본브렌치 설정하기
+### 기본브렌치 설정하기 {#config_default_branch_name}
 
 기본 브렌치 이름을 master가 아닌 main으로 설정할려면 아래의 같이 init.defautBranch를 main을 설정해 주시면 됩니다.
 :::

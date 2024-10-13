@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko-KR" xml:lang="ko-KR"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
 <meta name="description" content="Guidance on Installing and Configuring Git &amp; Github">
 
-<title>RPythonStudy - Git &amp; Github setup</title>
+<title>Git &amp; Github setup – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,7 +35,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="검색"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="탐색 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../posts/Utilities/introduction_to_utilities.html" aria-current="page"> 
+    <a class="nav-link" href="../../posts/Utilities/introduction_to_utilities.qmd"> 
 <span class="menu-text">Utilities</span></a>
   </li>  
   <li class="nav-item">
@@ -171,20 +171,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com/RPythonStudy/website" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/Git-setup/Git_setup.html">Git &amp; Github setup</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="사이드바 전환" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="검색" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -245,11 +245,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../posts/Utilities/introduction_to_utilities.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction to Utilities</span></a>
-  </div>
-</li>
+ <span class="menu-text">posts/Utilities/introduction_to_utilities.qmd</span>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../posts/Git-setup/Git_setup.html" class="sidebar-item-text sidebar-link active">
@@ -292,7 +289,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#사용자정보-설정" id="toc-사용자정보-설정" class="nav-link" data-scroll-target="#사용자정보-설정">사용자정보 설정</a></li>
   <li><a href="#사용자정보-설정-확인" id="toc-사용자정보-설정-확인" class="nav-link" data-scroll-target="#사용자정보-설정-확인">사용자정보 설정 확인</a></li>
-  <li><a href="#기본브렌치-설정하기" id="toc-기본브렌치-설정하기" class="nav-link" data-scroll-target="#기본브렌치-설정하기">기본브렌치 설정하기</a></li>
+  <li><a href="#config_default_branch_name" id="toc-config_default_branch_name" class="nav-link" data-scroll-target="#config_default_branch_name">기본브렌치 설정하기</a></li>
   </ul></li>
   <li><a href="#프로젝트에-git-적용하기" id="toc-프로젝트에-git-적용하기" class="nav-link" data-scroll-target="#프로젝트에-git-적용하기">프로젝트에 Git 적용하기</a></li>
   <li><a href="#github란" id="toc-github란" class="nav-link" data-scroll-target="#github란">Github란?</a></li>
@@ -331,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="구성요소-선택" class="level3">
 <h3 class="anchored" data-anchor-id="구성요소-선택">구성요소 선택</h3>
 <p>기본값은 <a href="#fig-SelectingComponents" class="quarto-xref">그림&nbsp;1</a> 와 같으며 기본값을 추천합니다.</p>
-<div id="fig-SelectingComponents" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-SelectingComponents" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SelectingComponents-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/SelectingComponents.jpg" class="img-fluid figure-img">
@@ -345,7 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="바로가기아이콘" class="level3">
 <h3 class="anchored" data-anchor-id="바로가기아이콘">바로가기아이콘</h3>
 <p>기본값은 Git이란 시작메뉴폴더에 바로가기아이콘을 만드는 것입니다 <a href="#fig-SelectingStartMenuFolder" class="quarto-xref">그림&nbsp;2</a> . 하지만 RStudio엣 Git을 사용할 경우 RStudio에서 Git을 사용할 수 있으므로 바로가기아이콘을 만들지 않는 것을 추천합니다.</p>
-<div id="fig-SelectingStartMenuFolder" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-SelectingStartMenuFolder" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SelectingStartMenuFolder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/SelectingStartMenuFolder.jpg" class="img-fluid figure-img">
@@ -359,7 +356,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="텍스트-에디터" class="level3">
 <h3 class="anchored" data-anchor-id="텍스트-에디터">텍스트 에디터</h3>
 <p>기본값은 Vim이며, 연구회는 Python IDE로 VS Code를 추천하고 있고 상대적으로 Vim보다 사용이 쉬우므로 이를 추천합니다 <a href="#fig-TextEditor" class="quarto-xref">그림&nbsp;3</a>.</p>
-<div id="fig-TextEditor" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-TextEditor" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TextEditor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/SelectingTextEditor.jpg" class="img-fluid figure-img">
@@ -373,7 +370,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="기본-브렌치명" class="level3">
 <h3 class="anchored" data-anchor-id="기본-브렌치명">기본 브렌치명</h3>
 <p>기본값은 master이며, 2020년 10월 1일부터 GitHub에서는 기본 브렌치명을 master에서 main으로 변경하였습니다. 이에 따라 Git 설치 시 기본 브렌치명을 main으로 설정하는 것을 추천합니다 <a href="#fig-DefaultBranchName" class="quarto-xref">그림&nbsp;4</a>.</p>
-<div id="fig-DefaultBranchName" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-DefaultBranchName" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-DefaultBranchName-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/SelectingDefaultBranchName.jpg" class="img-fluid figure-img">
@@ -387,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="환경변수-설정" class="level3">
 <h3 class="anchored" data-anchor-id="환경변수-설정">환경변수 설정</h3>
 <p>기본값은 환경변수에 Git 실행파일경로를 추가하는 것이며 <a href="#fig-PathEnviroment" class="quarto-xref">그림&nbsp;5</a>, 기본값을 추천합니다.</p>
-<div id="fig-PathEnviroment" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-PathEnviroment" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PathEnviroment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/PathEnviroment.jpg" class="img-fluid figure-img">
@@ -401,7 +398,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ssh-선택" class="level3">
 <h3 class="anchored" data-anchor-id="ssh-선택">SSH 선택</h3>
 <p>Git은 원격 저장소와의 안전한 통신을 위해 SSH를 사용하는 경우가 많습니다. GitHub, GitLab, Bitbucket과 같은 플랫폼은 SSH 키 기반 인증을 제공하여, 비밀번호 대신 SSH 키를 사용해 원격 저장소에 안전하게 접속할 수 있습니다. OpenSSH는 오픈 소스 소프트웨어로, Git 설치 시 선택적으로 설치할 수 있으며, SSH 기반 인증을 설정할 때 주로 사용됩니다. 설치 과정에서 OpenSSH는 기본적으로 선택되어 있으며 <a href="#fig-OpenSSH" class="quarto-xref">그림&nbsp;6</a>, 특별한 이유가 없다면 기본값을 사용하는 것이 권장됩니다.</p>
-<div id="fig-OpenSSH" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-OpenSSH" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-OpenSSH-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/OpenSSH.jpg" class="img-fluid figure-img">
@@ -415,7 +412,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ssltls-라이브러리-선택" class="level3">
 <h3 class="anchored" data-anchor-id="ssltls-라이브러리-선택">SSL/TLS 라이브러리 선택</h3>
 <p>SSL/TLS는 Git이 HTTPS 연결을 통해 원격 저장소와 통신할 때 사용하는 암호화 라이브러리입니다. OpenSSL은 더 넓은 암호화 기능과 최신 표준 지원, 리눅스와의 호환성이 중요한 경우 추천되며, Windows 고유 SSL/TLS 라이브러리(Schannel)는 Windows 시스템과의 통합과 간편한 설정을 원할 때 추천합니다. 연구회에서는 기본값인 OpenSSL을 추천합니다 <a href="#fig-OpenSSL" class="quarto-xref">그림&nbsp;7</a>.</p>
-<div id="fig-OpenSSL" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-OpenSSL" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-OpenSSL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/OpenSSL.jpg" class="img-fluid figure-img">
@@ -429,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="줄바꿈-변환-설정" class="level3">
 <h3 class="anchored" data-anchor-id="줄바꿈-변환-설정">줄바꿈 변환 설정</h3>
 <p>윈도우에서는 줄바꿈 기본 설정이 <strong>CRLF(Carriage Return Line Feed)</strong>입니다. 반면, Unix 계열(리눅스, macOS)은 <strong>LF(Line Feed)</strong>를 사용합니다. 운영체제를 오가며 개발할 경우, Git은 이러한 줄바꿈 차이를 해결하기 위해 <strong>줄바꿈 변환 기능(Line Ending Conversion)</strong>을 지원합니다. checkout과 commit 시에 자동으로 줄바꿈을 변환할지 설정할 수 있는데, 기본값은 Checkout Windows-style, commit Unix-style line endings이며, 이는 Windows에서 개발할 때 적합한 설정입니다. Linux 또는 macOS에서 개발할 경우, Checkout as-is, commit Unix-style line endings를 선택하는 것이 좋습니다 <a href="#fig-LineEndings" class="quarto-xref">그림&nbsp;8</a>.</p>
-<div id="fig-LineEndings" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-LineEndings" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LineEndings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/LineEndings.jpg" class="img-fluid figure-img">
@@ -443,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="터미널-에뮬레이터" class="level3">
 <h3 class="anchored" data-anchor-id="터미널-에뮬레이터">터미널 에뮬레이터</h3>
 <p>Git Bash에서 사용할 터미널 환경을 결정하는 옵션입니다. 각 옵션은 Git Bash가 실행될 때 사용할 터미널을 정의하며, 사용자 경험과 터미널 기능에서 차이가 있습니다. MinTTY는 더 발전된 터미널 경험을 제공하며, 유닉스 스타일에 가까운 작업 환경을 제공합니다. 특히, 리눅스/유닉스에 익숙한 사용자나 Git Bash를 주로 사용하는 경우 적합합니다. Windows 기본 콘솔 창은 Windows에서 기본 제공되는 터미널 인터페이스로, CMD와 같은 익숙한 환경을 선호하는 사용자에게 적합합니다. 특히, Windows 사용자나 CMD를 주로 사용하는 경우 적합합니다 <a href="#fig-TerminalEmulator" class="quarto-xref">그림&nbsp;9</a>.</p>
-<div id="fig-TerminalEmulator" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-TerminalEmulator" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-TerminalEmulator-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/TerminalEmulator.jpg" class="img-fluid figure-img">
@@ -472,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>동작 방식: 로컬 브랜치가 원격 브랜치보다 앞서거나 충돌이 발생할 경우, 병합을 허용하지 않고 에러를 발생시킵니다. 즉, 단순히 브랜치가 원격 브랜치보다 뒤에 있을 때만 fast-forward 병합이 가능합니다.</p>
 <p>장점: 이력을 절대적으로 깔끔하게 유지할 수 있습니다. 병합 커밋이 생기지 않기 때문에, 히스토리가 매우 간결하게 유지됩니다. 히스토리를 관리하기가 쉬우며, 직선형으로 깔끔하게 이어지는 커밋 로그를 선호하는 경우 적합합니다.</p>
 <p>단점: 협업 중에 다른 개발자의 변경 사항과 로컬 변경 사항이 병합되어야 하는 경우에도 fast-forward만 허용하므로, Git이 병합을 거부할 수 있습니다. 이런 경우, 병합이 실패하고 수동으로 병합을 수행해야 할 수도 있습니다. 복잡한 협업 상황에서는 제약이 될 수 있습니다. 협업 중에는 병합 커밋이 필요할 수 있기 때문에, 이 옵션은 다소 제한적입니다.</p>
-<div id="fig-GitPull" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-GitPull" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-GitPull-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/GitPull.jpg" class="img-fluid figure-img">
@@ -486,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="git-credential-manager" class="level3">
 <h3 class="anchored" data-anchor-id="git-credential-manager">Git Credential Manager</h3>
 <p>Git Credential Manager는 Git에서 원격 저장소에 대한 인증 정보를 안전하게 저장하고 자동으로 관리해주는 도구입니다. 이를 통해 사용자는 자격 증명을 반복적으로 입력할 필요 없이 안전하게 Git을 사용할 수 있으며, Windows, macOS, Linux 등 다양한 운영체제에서 지원됩니다. OAuth, 토큰 기반 인증 등 최신 인증 방식도 지원하여 보안성과 편리성을 모두 제공합니다. Git Credential Manager는 Git 설치 시 선택적으로 설치할 수 있으며, 기본값을 사용하는 것이 권장됩니다 <a href="#fig-GitCredentialManager" class="quarto-xref">그림&nbsp;11</a>.</p>
-<div id="fig-GitCredentialManager" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-GitCredentialManager" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-GitCredentialManager-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/GitCredentialManager.jpg" class="img-fluid figure-img">
@@ -500,7 +497,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="기타-옵션" class="level3">
 <h3 class="anchored" data-anchor-id="기타-옵션">기타 옵션</h3>
 <p>File System Caching은 Git이 파일 시스템에 대한 <strong>메타데이터(파일 상태, 권한, 타임스탬프 등)</strong>를 더 빠르게 조회할 수 있도록 캐시를 사용하는 기능입니다. 기본적으로, Git은 파일 시스템에서 파일 변경 사항을 확인하기 위해 파일의 상태(예: 수정 시간, 크기)를 체크합니다. 이 과정이 많은 파일을 포함하는 대형 프로젝트에서는 성능 저하를 일으킬 수 있습니다. Symbolic Links(심볼릭 링크)는 파일이나 디렉토리에 대한 참조를 가리키는 특별한 유형의 파일입니다. 심볼릭 링크는 원래 파일 또는 디렉토리의 경로를 저장하고, 이를 참조하는 방식으로 동작합니다. Git에서 Symbolic Links 옵션을 활성화하면, Git은 심볼릭 링크를 파일로 저장하는 대신, 심볼릭 링크 자체를 저장하고 관리할 수 있습니다. 리눅스 및 macOS에서 심볼릭 링크는 많이 사용되고 지원되므로, 이 옵션을 활성화하는 것이 일반적입니다. Windows에서는 심볼릭 링크가 기본적으로 제한되어 있으며, 활성화하려면 관리자 권한이나 특정 설정을 필요로 합니다. 따라서, Windows에서 이 옵션을 활성화하면 제대로 동작하지 않거나 예기치 않은 동작이 발생할 수 있습니다. 기본값은 File System Caching 활성화입니다 <a href="#fig-ExtraOptions" class="quarto-xref">그림&nbsp;12</a>.</p>
-<div id="fig-ExtraOptions" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ExtraOptions" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ExtraOptions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ExtraOptions.jpg" class="img-fluid figure-img">
@@ -527,7 +524,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="git개념과-용어" class="level2">
 <h2 class="anchored" data-anchor-id="git개념과-용어">Git개념과 용어</h2>
 <p>Git 초기 설정에 앞서 Git에서 사용되는 개념과 용어를 이해하는 것이 좋습니다. Git 공식사이트의 한글매뉴얼(<a href="https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88" class="uri">https://git-scm.com/book/ko/v2/%ec%8b%9c%ec%9e%91%ed%95%98%ea%b8%b0-Git-%ea%b8%b0%ec%b4%88</a>)을 학습하시길 추천합니다. ### untracked/staged/committed Git에서는 프로젝트폴더 내의 모든 파일을 추적(=관리)대상파일과 추적대상이 아닌 파일로 구분합니다. 추적대상파일은 인 파일로 <a href="#fig-GitConcept" class="quarto-xref">그림&nbsp;13</a>.</p>
-<div id="fig-GitConcept" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-GitConcept" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-GitConcept-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/Git-Reference_Sheet.svg" class="img-fluid figure-img">
@@ -580,8 +577,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="기본브렌치-설정하기" class="level3">
-<h3 class="anchored" data-anchor-id="기본브렌치-설정하기">기본브렌치 설정하기</h3>
+<section id="config_default_branch_name" class="level3">
+<h3 class="anchored" data-anchor-id="config_default_branch_name">기본브렌치 설정하기</h3>
 <p>기본 브렌치 이름을 master가 아닌 main으로 설정할려면 아래의 같이 init.defautBranch를 main을 설정해 주시면 됩니다.</p>
 <div class="cell">
 <div class="code-with-filename">
@@ -648,18 +645,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -691,7 +677,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -699,7 +707,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
