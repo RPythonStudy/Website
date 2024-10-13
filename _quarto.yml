@@ -29,8 +29,8 @@ website:
         href: https://rpythonstudy.shinyapps.io/Quiz/
       - text: "Resources"      
         href: posts/Resources/introduction_to_resources.qmd
-      - text: "Utilities"      
-        href: posts/Utilities/introduction_to_utilities.qmd
+      - text: "Applications"      
+        href: posts/Applications/introduction_to_applications.qmd
       - text: "About"      
         href: posts/about/about.qmd    
         
@@ -65,10 +65,11 @@ website:
     - title: "Resources"
       contents:
         - posts/Resources/introduction_to_resources.qmd 
-    - title: "Utilities"
+        - posts/DataGoKr/DataGoKr.qmd
+    - title: "Applications"
       contents:
-        - posts/Utilities/introduction_to_utilities.qmd
-        - posts/Git-setup/Git_setup.qmd        
+        - posts/Applications/introduction_to_applications.qmd
+        - posts/Git-setup/Git_setup.qmd
     
 execute: 
   freeze: auto
