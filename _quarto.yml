@@ -70,7 +70,8 @@ website:
       contents:
         - posts/Applications/introduction_to_applications.qmd
         - posts/Git-setup/Git_setup.qmd
-    
+        - posts/Git-setup-in-RStudio/Git_setup_in_RStudio.qmd
+
 execute: 
   freeze: auto
   

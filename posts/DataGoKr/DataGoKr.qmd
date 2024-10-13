@@ -3,7 +3,7 @@ title: "Open Goverment Data"
 description: "How to use OGD and Examples"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-10-02"
-date-modified: "2024-10-02"
+date-modified: "2024-10-13"
 categories:
   - Resource
   - medical data

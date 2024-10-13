@@ -3,9 +3,9 @@
     "listing": "/index.html",
     "items": [
       "/posts/Chi-square-test-in-R/Chi_square_test_in_R.html",
-      "/posts/Git-setup/R-4.4.1-Git_Example.html",
-      "/posts/Chi-square-test/Chi_square_test.html",
       "/posts/DataGoKr/DataGoKr.html",
+      "/posts/Git-setup-in-RStudio/Git_setup_in_RStudio.html",
+      "/posts/Chi-square-test/Chi_square_test.html",
       "/posts/VSCode-setup/VSCode_setup.html",
       "/posts/Applications/introduction_to_applications.html",
       "/posts/group-comparison/group_comparison.html",

@@ -8,8 +8,9 @@
 
 <meta name="author" content="RPythonStudyGroup feat. ChatGPT">
 <meta name="dcterms.date" content="2024-10-05">
+<meta name="description" content="Learn how to set up and use Git in RStudio">
 
-<title>r-4.4.1-git_example – RPythonStudy</title>
+<title>Git Setup in RStudio – RPythonStudy</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -156,7 +157,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/Applications/introduction_to_applications.html"> 
+    <a class="nav-link active" href="../../posts/Applications/introduction_to_applications.html" aria-current="page"> 
 <span class="menu-text">Applications</span></a>
   </li>  
   <li class="nav-item">
@@ -176,13 +177,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../posts/Git-setup-in-RStudio/Git_setup_in_RStudio.html">Git Setup in RStudio</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      
-                                <div class="quarto-categories">
+      <h1 class="title">Git Setup in RStudio</h1>
+                  <div>
+        <div class="description">
+          Learn how to set up and use Git in RStudio
+        </div>
+      </div>
+                          <div class="quarto-categories">
                 <div class="quarto-category">Git</div>
                 <div class="quarto-category">setup</div>
               </div>
@@ -218,6 +237,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/Applications/introduction_to_applications.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction to Utilities</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/Git-setup/Git_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Git and Github setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../posts/Git-setup-in-RStudio/Git_setup_in_RStudio.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Git Setup in RStudio</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
@@ -367,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <ul>
-<li>branch name은 시스템에 Git 설치과정에서 main으로 설정했다면 main으로 출력됩니다. <a href="../../posts/Git-setup/Git_setup.html#config_default_branch_name">참조: 기본브렌치 설정하기</a></li>
+<li>branch name은 시스템에 Git 설치과정에서 main으로 설정했다면 main으로 출력됩니다. <a href="Git_setup.qmd#config_default_branch_name">참조: 기본브렌치 설정하기</a></li>
 <li>프로젝트 생성 시 프로젝트 폴더의 파일들은 git의 관리대상이 아닌 untracked file로 분류되어 보여집니다. 하지만, .gitignore에 설정된 파일들은 untracked file로도 보여지지 않음을 알 수 있습니다. 이로 이내 output pane의 Files탭에서 보이는 파일/폴더 목록과 untracked file들이 다름을 확인하시길 바랍니다.</li>
 <li>Git pane에서도 같은 결과를 GUI로 보여집니다. 파일/폴더는 Path 컬럼에 보여지고, Staged는 check되어 있지 않으며 Status는 모두 ?? 표시된 상태입니다.</li>
 </ul>
