@@ -29,8 +29,10 @@ website:
         href: https://rpythonstudy.shinyapps.io/Quiz/
       - text: "Resources"      
         href: posts/Resources/introduction_to_resources.qmd
-      - text: "Applications"      
-        href: posts/Applications/introduction_to_applications.qmd
+      - text: "Tools"      
+        href: posts/tools/introduction_to_tools.qmd
+      - text: "IT"      
+        href: posts/IT/introduction_to_IT.qmd
       - text: "About"      
         href: posts/about/about.qmd    
         
@@ -66,9 +68,9 @@ website:
       contents:
         - posts/Resources/introduction_to_resources.qmd 
         - posts/DataGoKr/DataGoKr.qmd
-    - title: "Applications"
+    - title: "Tools"
       contents:
-        - posts/Applications/introduction_to_applications.qmd
+        - posts/tools/introduction_to_tools.qmd
         - posts/Git-setup/Git_setup.qmd
         - posts/Git-setup-in-RStudio/Git_setup_in_RStudio.qmd
 

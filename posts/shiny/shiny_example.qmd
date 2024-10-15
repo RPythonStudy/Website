@@ -1,0 +1,26 @@
+---
+title: "Shiny Application Example"
+description: "Learn how to set up and use Shiny"
+author: "RPythonStudyGroup feat. ChatGPT"
+date: "2024-10-15"
+date-modified: "2024-10-15"
+categories:
+  - R
+  - example
+  - Shiny
+---
+
+## Introduction
+
+Shiny는 R로 웹 어플리케이션을 만들 수 있게 해주는 패키지입니다. 이 문서에서는 API로 구한 데이터를 이용한 예제를 만들어보겠습니다.
+
+
+1단계: RStudio에서 `R-x.y.z-Shiny_Application_Example` 명칭의 프로젝트를 만들기
+
+:::: {.callout-note title="1단계 예시" collapse="true" appearance="minimal"}
+-   RStudio File 메뉴에서 New Project > New Directory > Shiny Application을 차례로 선택하고 프로젝트 디렉토리를 C:/Projects 하부에 위의 예시와 같은 프로젝트 명으로 프로젝트를 만듭니다. 
+```{r Directory_name, eval=FALSE, filename="Creat Shiny Application message box"}
+R-x.y.z-Shiny_Application_Example
+```
+-   `git repository`와 `renv`도 선택하여 진행하시는 것을  추천 드립니다.
+::::
