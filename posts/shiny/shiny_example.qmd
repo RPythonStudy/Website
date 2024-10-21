@@ -2,12 +2,13 @@
 title: "Shiny Application Example"
 description: "Learn how to set up and use Shiny"
 author: "RPythonStudyGroup feat. ChatGPT"
-date: "2024-10-15"
-date-modified: "2024-10-15"
+date: "2024-10-21"
+date-modified: "2024-10-21"
 categories:
   - R
-  - example
+  - API
   - Shiny
+  - example
 ---
 
 ## Introduction
@@ -135,24 +136,23 @@ shinyApp(ui = ui, server = server)
 
     -   서버 함수는 **server \<- function(input, output) {}**로 구성됩니다. 여기서:
     -   **input**은 사용자가 입력한 값들이 저장된 참조형 반응형 리스트 객체입니다.
-    -    **output**은 변환된 출력값이 저장될 참조형 반응형 리스트 객체입니다.
+    -   **output**은 변환된 출력값이 저장될 참조형 반응형 리스트 객체입니다.
     -   서버 함수 내부에서는 renderText() 함수를 사용해 텍스트를 처리하고, 그 내부에서 paste() 함수를 사용하여 입력된 텍스트를 출력할 텍스트와 결합합니다.
     -   paste() 함수는 **input\$user_input**을 참조하여, UI에서 입력된 값을 가져옵니다. 이 값은 **반응형 객체인 input**을 통해 실시간으로 서버에 전달됩니다.
     -   output\$output_text에 직접 paste() 함수의 결과를 넣는 대신, renderText() 함수를 사용한 후 결과를 참조하게 됩니다. 이는 renderText()가 반응형으로 동작하여, 사용자가 입력할 때마다 출력값을 실시간으로 갱신해주기 때문입니다.
 
 -   마지막 부분은 Shiny 애플리케이션을 실행하는 **shinyApp(ui = ui, server = server)**입니다. 이 함수는 정의된 UI와 서버 로직을 결합하여 애플리케이션을 실행시킵니다.
 
- 이제 @fig-RunApp 에서 보이는 `Run App` 버튼을 틀릭하여 코드를 실행시켜보면 Output/Viewer pane에서 자신의 로컬컴퓨터 상에서 웹 어플리케이션이 실행되는 것을 확인할 수 있습니다.
- 
-- 입력을 하는 textInput 필드에 "Hello, Shiny!"를 입력하면 아래의 출력창에 "사용자가 아래의 문자열을 입력하셨습니다: Hello, Shiny!"가 출력됩니다. 그리고 새로운 문자를 다시 입력해 보시면 새로운 문자가 보임을 알 수 있습니다.
+이제 @fig-RunApp 에서 보이는 `Run App` 버튼을 틀릭하여 코드를 실행시켜보면 Output/Viewer pane에서 자신의 로컬컴퓨터 상에서 웹 어플리케이션이 실행되는 것을 확인할 수 있습니다.
+
+-   입력을 하는 textInput 필드에 "Hello, Shiny!"를 입력하면 아래의 출력창에 "사용자가 아래의 문자열을 입력하셨습니다: Hello, Shiny!"가 출력됩니다. 그리고 새로운 문자를 다시 입력해 보시면 새로운 문자가 보임을 알 수 있습니다.
 -   이로써 핵심기능에 대한 설명을 마칩니다.
-  
 :::
 
 3단계: API 다운로드 데이터 Shiny Application을 통한 시각화 예제
 
 ::: {.callout-note title="3단계 예시" collapse="true" appearance="minimal"}
--   3단계에서 API 데이터를 shiny Application으로 그래프를 그려주는 예제입니다.
+-   3단계에서 API 데이터를 shiny Application으로 그래프를 그려주는 예제입니다. 아래의 코드를 app.R 파일에 복사하여 붙여넣기 하시면 됩니다.
 
 ```{r API_example, eval=FALSE, filename="app.R"}
 
@@ -251,17 +251,47 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 ```
 
--   API를 통해 데이터를 다운로드 하는 것은 생략하겠습니다.
+-   위 코드는 크게 API 데이터 다운로드 부분과 ShinyApp 부분으로 나누어져 있으며 각 부분은 주석으로 구역을 구분해 두었습니다.
+
+-   API를 통해 데이터를 다운로드 하는 부분은 설명을 생략하겠습니다.
+
 -   ui에서 달라진 점은 fluidPage 함수 내부에 titlePanel 함수와 sidebarLayout 함수가 있으며, sidebarPanel과 mainPanel로 구성되어 있습니다.
--   titlePanel 함수는 애플리케이션의 제목을 정의합니다 @fig-sidebar.
+
+-   titlePanel 함수는 애플리케이션의 제목을 정의합니다. @fig-sidebar 
+
 ![Structure of a basic app with sidebar](images/sidebar.png){#fig-sidebar}
 
--   sidebarLayout 함수는 사이드바와 메인 패널을 정의합니다 @fig-sidebar.
--   여기서는 textInput 함수 대신에 selectInput 함수를 사용하여 드롭다운 메뉴를 만들었습니다. 
+-   sidebarLayout 함수는 사이드바와 메인 패널을 정의합니다. @fig-sidebar
+
+-   여기서는 textInput 함수 대신에 selectInput 함수를 사용하여 드롭다운 메뉴를 만들었습니다.
+
 -   출력함수로 textOutput 대신 plotOutput 함수를 사용하여 그래프를 출력합니다.
+
 -   서버로직 내에서는 renderText 대신 renderPlot 함수를 사용하여 그래프를 그립니다.
+
 -   input 객체의 y_var 변수를 참조하여 y 축 값을 선택하고 y 축 제목을 지정하고 있습니다.
+
 -   그래프에서 사용하는 data는 앞단의 API downloaded data를 data.frame으로 만든 df를 그대로 사용하시면 됩니다.
+
+-   위 코드를 실행할 때에는 아래의 패키지들을 설치한 후 진행하셔야 합니다.
+
+-   실행하기 전에 아래의 패키지를 설치해야 합니다.
+
+```{r rjson_install, eval=FALSE, filename="R Console pane"}
+renv::install("rjson")
+```
+
+```{r httr_install, eval=FALSE, filename="R Console pane"}
+renv::install("httr")
+```
+
+```{r ggplot2_install, eval=FALSE, filename="R Console pane"}
+renv::install("ggplot2")
+```
+
+-   실행을 하면 아래와 같은 화면이 나타납니다.
+
+![API data visualization with ShinyApp](images/api-shiny.png){#fig-api-shiny}
+
 -   R Shiny applicaion을 이용한 다양한 시각화 예제는 Posit사의 사이트 (https://shiny.posit.co/r/gallery/)를 참고하시길 바랍니다.
 :::
-
