@@ -89,7 +89,7 @@ shinyApp(ui = ui, server = server)
 2단계: Shiny Application의 핵심 구조 이해하기
 
 ::: {.callout-note title="2단계 예시" collapse="true" appearance="minimal"}
--   1단계에서 로딩한 내장된 예제코드를 아래와 같이 핵심구조만 남기고 삭제하여 매우 단순화 시키고 일부는 대체를 하여 shiny Applicationd의 핵심구조에 대해 설명하겠습니다.
+-   1단계에서 로딩한 내장된 예제코드를 아래와 같이 핵심구조만 남기고 삭제하여 매우 단순화 시키고 일부는 대체를 하여 shiny Application의 핵심구조에 대해 설명하겠습니다.
 
 ```{r simple_example, eval=FALSE, filename="app.R"}
 library(shiny)
