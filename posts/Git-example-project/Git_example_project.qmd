@@ -1,6 +1,6 @@
 ---
-title: "Git Setup in RStudio"
-description: "Learn how to set up and use Git in RStudio"
+title: "Git Example Projecti"
+description: "Learn how to create a project with Git in RStudio using an example"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-10-05"
 date-modified: "2024-10-05"

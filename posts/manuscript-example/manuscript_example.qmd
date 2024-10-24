@@ -1,5 +1,5 @@
 ---
-title: "Manuscripting with Quarto Example"
+title: "Manuscript Example"
 description: "Quarto example how to wwite journal manuscript with unidentified real data"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "2024-08-31"

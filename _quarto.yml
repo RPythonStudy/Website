@@ -57,6 +57,7 @@ website:
     - title: "Quarto"
       contents:
         - posts/Quarto/introduction_to_Quarto.qmd
+        - posts/Quarto-setup/Quarto_setup.qmd
         - posts/manuscript-example/manuscript_example.qmd
     - title: "Statistics"
       contents:
@@ -73,7 +74,7 @@ website:
       contents:
         - posts/tools/introduction_to_tools.qmd
         - posts/Git-setup/Git_setup.qmd
-        - posts/Git-setup-in-RStudio/Git_setup_in_RStudio.qmd
+        - posts/Git-example-project/Git_example_project.qmd
 
 execute: 
   freeze: auto

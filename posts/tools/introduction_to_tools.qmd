@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Utilities"
+title: "Introduction to Tools"
 description: "Introducing open source programs that are helpful for research groups"
 author: "RPythonStudyGroup feat. ChatGPT"
 date: "September 27, 2024"
